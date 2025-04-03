@@ -1,0 +1,5 @@
+# Include Python specific rules
+/gitignore/python/.gitignore
+
+# Include C# specific rules
+/gitignore/csharp/.gitignore
