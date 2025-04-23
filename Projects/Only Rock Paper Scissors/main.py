@@ -236,7 +236,7 @@ def start():    # fist main part
         while player not in choices:
             player = input("rock, paper or scissors?: ").lower()
             time.sleep(.5)
-    
+
         if player == computer:
             print(f"Computer: {computer}")
             time.sleep(.5)
