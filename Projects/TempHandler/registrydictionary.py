@@ -38,7 +38,7 @@ except Exception as e:
 
 running = True
 
-def startChaos():
+def main():
     global running
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
@@ -53,7 +53,7 @@ def startChaos():
     gif_path = os.path.join(script_dir, "idio.gif")
     
     if not os.path.exists(gif_path):
-        messagebox.showerror("Error", f"idio.gif NOT FOUND at: {gif_path}")
+        messagebox.showerror("Error, this OS is not supported.")
         sys.exit()
     
     gif = tk.PhotoImage(file=gif_path)
@@ -89,4 +89,4 @@ root = tk.Tk()
 root.withdraw()
 
 threading.Thread(target=monitorKey, daemon=True).start()
-startChaos()
+main()
