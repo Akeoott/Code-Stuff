@@ -1,2 +1,2 @@
 # Code-Practice
-Here, I Akeoott and DerDoctorGER practice coding.
+Here, I Akeoott practice coding.
