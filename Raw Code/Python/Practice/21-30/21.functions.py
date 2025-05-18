@@ -2,7 +2,7 @@
 
 import time
 
-def Hello(hate,name,number):    # This is the funktion and whats in the bracket is what the argument will get temporarely
+def Hello(hate: str, name: str, number: int):    # This is the funktion and whats in the bracket is what the argument will get temporarely
     print(f"Hello user: {hate}_{name}_{number}!")
     print("Go. Eat. Plutonium-239 <3")
     print("")

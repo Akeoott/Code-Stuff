@@ -1,13 +1,16 @@
 # nested loops =    The "inner loop" will finish all of it's iterations before
 #                   finishing one iteration og the "outer loop"
 
-try:
-    rows = int(input("How many rows?: "))
-    columns = int(input("How many columns?: "))
-    symbol = input("Enter a symbol to use: ")
-except ValueError:
-    print("Invalid input!")
-
+while True:
+    try:
+        rows = int(input("How many rows?: "))
+        columns = int(input("How many columns?: "))
+        symbol = input("Enter a symbol to use: ")
+    except ValueError:
+        print("Invalid input!")
+    else:
+        break
+    
 for i in range(rows):
     for j in range(columns):
         print(symbol, end="") # Dont forget to use (, end="") otherwise it wont work as intended.
