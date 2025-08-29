@@ -1,0 +1,20 @@
+/* -media- */
+@media (min-width: 1600px) {
+    :root {
+        --scale-section-hover: 1.005;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 1rem;
+    }
+    :root {
+        --scale-section-hover: 1.03;
+    }
+}
+@media (max-width: 600px) {
+    nav.page-navigation a {
+        font-size: 1rem;
+    }
+}

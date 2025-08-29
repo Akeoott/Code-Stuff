@@ -3,60 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Akeoott's Portfolio">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <title>akeoot.org - Portfolio</title>
     <meta name="author" content="Ame Janin, Akeoot">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="keywords" content="Portfolio, GitHub, Ame, Akeoot, Akeoott, Developer, Programmer, Python, JavaScript, Linux, Open Source, Backend, Frontend, Full-Stack, Web Development, Projects, Coding, Software Engineer, Creator, Automation, UI/UX, C#, HTML, CSS, Personal Website, Tech Stack, Digital Resume, Creative, Innovation, Technology, Gamer, FOSS, Open Source Contributor, Full Stack, VS Code, PyPI, Steam, osu!, Tiktok, Socials, Contact, Resume, Skills, Tools">
+    <meta name="description" content="Akeoott's personal portfolio and homepage. Discover Ame's projects, skills, open source contributions, tech stack, and contact information. Developer, creator, and Linux enthusiast passionate about coding, automation, and building innovative solutions.">
+    <link rel="stylesheet" href="./css/portfolio/styles.css">
+    <script src="./Practice/script.js" defer></script>
     <script src="./Practice/1-The-Basics.js" defer></script>
 </head>
 <body id="top">
+    <div id="gliter-overlay" class="active">
+        <img src="./assets/gliter.gif" alt="Glitter effect" draggable="false">
+    </div>
+    <nav class="page-navigation" aria-label="Page Navigation">
+        <a href="https://akeoot.org/" title="Portfolio">
+            <p>Portfolio &gt;</p>
+        </a>
+        <a href="https://akeoot.org/pages/js-showcase/" title="Learning JavaScript">
+            <p>Learning JS &gt;</p>
+        </a>
+        <a href="https://akeoot.org/pages/legacy-selection/" title="Former Sites">
+            <p>Former Sites &gt;</p>
+        </a>
+    </nav>
     <main class="container">
-        <div id="gliter-overlay"></div>
-        <header class="page-header">
-            <a href="https://github.com/Akeoott" target="_blank" title="GitHub"><img src="./assets/Akeoott-pfp.jpeg" alt="Akeoott avatar" class="avatar"></a>
+        <header class="root-page-header">
+            <a href="https://github.com/Akeoott" target="_blank" title="GitHub">
+                <img src="./assets/Akeoott-pfp.jpeg" alt="Akeoott's avatar" class="avatar">
+            </a>
             <h1>Ame</h1>
-            <blockquote class="tagline">(Akeoott)</blockquote>
-            <div class="tagline">Developer • Gamer • Creator</div>
-            <div class="socials">
-                <a href="https://github.com/Akeoott" target="_blank" title="GitHub">
+            <div class="tagline">
+                <p id="tagline-top">
+                    (Akeoott)<br>
+                </p>
+                <p id="tagline-bottom">
+                    Developer • Gamer • Creator
+                </p>
+            </div>
+            <nav class="socials" aria-label="Social links">
+                <a href="https://github.com/Akeoott" target="_blank" rel="noopener noreferrer" title="GitHub">
                     <img src="./assets/github-mark-white.svg" alt="GitHub">
                 </a>
-                <a href="https://discord.com/users/898223580104519711" target="_blank" title="Discord">
+                <a href="https://discord.com/users/898223580104519711" target="_blank" rel="noopener noreferrer" title="Discord">
                     <img src="./assets/discord.jpeg" alt="Discord (akeoot)">
                 </a>
-                <a href="https://twitter.com/akeoott" target="_blank" title="Twitter/X">
+                <a href="https://twitter.com/akeoott" target="_blank" rel="noopener noreferrer" title="Twitter/X">
                     <img src="./assets/twitter-x-logo.png" alt="Twitter/X">
                 </a>
-                <a href="mailto:amejanin00@gmail.com" title="Email">
+                <a href="mailto:amejanin00@gmail.com" rel="noopener noreferrer" title="Email">
                     <img src="./assets/gmail-logo.webp" alt="Email">
                 </a>
-            </div>
-            <h2>Learning JavaScript!</h2>
+            </nav>
+            <h2>This Page Is For Learning JavaScript!</h2>
         </header>
-        <section id="js-1" class="page-header">
+        <section class="about-me">
             <header class="header">
-                <h1>Ame</h1>
-                <blockquote class="name-footer">(Akeoott)</blockquote>
+                <h2>About me</h2>
             </header>
             <div class="content">
-                <p>BANANA TEXT! hjkdfahjuikfdhuiodfhuioednufhbdsuijfbhgeisuwdfb hiofdsuhidfshiu hiu fsduih dsfiuh dsfiuhds fhiudshiu sdiuh sd</p>
+                <p>
+                    I'm Ame, primarily known as Akeoot (or Akeoott in development). I'm a self-taught developer born in <time datetime="2009">2009</time>.<br>
+                    I love linux, open source, automation, and building things that help others (and myself). I enjoy learning new technologies, customizing Linux, and collaborating.
+                </p>
+                <p>
+                    My Email: <a href="mailto:amejanin00@gmail.com">amejanin00@gmail.com</a>
+                </p>
+                <figure class="skillicons">
+                    <img src="https://skillicons.dev/icons?i=py" alt="Python Logo">
+                    <img src="https://skillicons.dev/icons?i=vscode" alt="Visual Studio Code Logo">
+                    <img src="https://skillicons.dev/icons?i=bash" alt="Bash Logo">
+                    <img src="https://skillicons.dev/icons?i=linux" alt="Linux Logo">
+                    <img src="https://skillicons.dev/icons?i=arch" alt="Arch Linux Logo">
+                    <img src="https://skillicons.dev/icons?i=html" alt="HTML5 Logo">
+                    <img src="https://skillicons.dev/icons?i=css" alt="CSS Logo">
+                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript Logo">
+                    <img src="https://skillicons.dev/icons?i=cs" alt="C# Logo">
+                    <img src="https://skillicons.dev/icons?i=git" alt="git Logo">
+                    <img src="https://skillicons.dev/icons?i=github" alt="GitHub Logo">
+                    <img src="https://skillicons.dev/icons?i=cloudflare" alt="cloudflare Logo">
+                </figure>
             </div>
         </section>
-        <section id="js-2">
+        <section id="js-1">
             <header class="header">
-                <h1>Nothing here yet</h1>
+                <h2>Nothing here yet</h2>
             </header>
             <div class="content">
                 <p>BANANA TEXT!</p>
             </div>
         </section>
-        <section id="js-3">
+        <section id="js-2">
             <header class="header">
-                <h1>Idk why im empty rn</h1>
+                <h2>Idk why im empty rn</h2>
             </header>
             <div class="content">
                 <p>BANANA TEXT!</p>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <code>
+            &copy; 2025 Akeoott. All rights reserved.<br>
+            Ame is the same person as Akeoott and Akeoot
+        </code>
+    </footer>
 </body>
 </html>
