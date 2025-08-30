@@ -61,8 +61,4 @@
     main section.about-me-details details article.stats {
         padding: .2rem .5rem;
     }
-    main section.about-me-details details article figure.stats {
-        padding: 0;
-        margin: .4rem 0;
-    }
 }
