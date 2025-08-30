@@ -31,7 +31,7 @@ main header .tagline p {
     width: fit-content;
     margin: 0 auto;
     padding: .2rem .6rem;
-    background: var(--text-bg-low-opacity);
+    background: var(--element-primary-low-opacity);
 }
 main header .tagline p#tagline-top {
     border-radius: 20px 20px 0px 0px;
