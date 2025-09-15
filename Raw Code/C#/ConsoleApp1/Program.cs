@@ -130,10 +130,10 @@ namespace MyApp
 
                     int b = Convert.ToInt32(a); // double gets converted to int aka whole number
                     Console.WriteLine($"double a as int b = {b} = {b.GetType()}");
-
+#pragma warning disable // Disable warnings
                     string c = Convert.ToString(b);
                     Console.WriteLine($"int b as string c = {c} = {c.GetType()}");
-
+#pragma warning restore // Restore warnings
                 }
 
                 static void Method_6()
@@ -141,6 +141,41 @@ namespace MyApp
                     /*
                         --- 6 - User Input! ---
                     */
+#pragma warning disable // Disable warnings
+                    Console.WriteLine("Whats your name?");
+                    string name = Console.ReadLine();
+
+                    Console.WriteLine("Whats your age?");
+                    int age = Convert.ToInt32(Console.ReadLine());
+#pragma warning restore // Restore warnings
+                    Console.WriteLine($"Hello {name}! Your {age} years old.");
+
+                }
+                static void Method_7()
+                {
+                    /*
+                        --- 7 - Arithmetic Operations! ---
+                    */
+                    int friends = 65;
+
+                    friends = friends + 1;
+                    friends = friends - 1;
+                    friends = friends * 1;
+                    friends = friends / 1;
+
+                    friends += 2;
+                    friends -= 2;
+                    friends *= 2;
+                    friends /= 2;
+
+                    friends++;
+                    friends--;
+
+                    Console.WriteLine($"Friends: {friends}");
+
+                    int remainder = friends % 3;
+
+                    Console.WriteLine($"Remainder of Friends: {remainder}");
 
                 }
 
@@ -150,6 +185,7 @@ namespace MyApp
                 Method_4();
                 Method_5();
                 Method_6();
+                Method_7();
             }
 
             Practice();
