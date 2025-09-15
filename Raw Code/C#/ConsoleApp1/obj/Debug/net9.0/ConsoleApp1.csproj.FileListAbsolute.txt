@@ -1,0 +1,15 @@
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.deps.json
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.runtimeconfig.json
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.dll
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.pdb
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfoInputs.cache
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfo.cs
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.sourcelink.json
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.dll
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/refint/ConsoleApp1.dll
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.pdb
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.genruntimeconfig.cache
+/home/akeoot/Code/git/Code-Stuff/Raw Code/C#/ConsoleApp1/obj/Debug/net9.0/ref/ConsoleApp1.dll
