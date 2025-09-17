@@ -1,5 +1,8 @@
 ﻿using System;
 
+// Disabeling warnings for practice
+#pragma warning disable CA5394, CS8321, CS8600, CA1305
+
 namespace MyApp
 {
     class Program
@@ -37,7 +40,7 @@ namespace MyApp
                     /*
                         --- 1 - The Beginning! ---
                     */
-                    Console.WriteLine("IM TEXT GETTING PRINTED!");
+                    Console.WriteLine("\nIM TEXT GETTING PRINTED!\n");
                 }
 
                 static void Method_2()
@@ -45,7 +48,7 @@ namespace MyApp
                     /*
                         --- 2 - Output! ---
                     */
-                    Console.Write("Oh, ");             // Just writing this into anything that exists! No new line.
+                    Console.Write("\nOh, ");             // Just writing this into anything that exists! No new line.
                     Console.WriteLine("Hello World!"); // Literally a new line with this text
                     Console.Beep();                    // Makes a BEEP sound on some devices. Depends
 
@@ -83,7 +86,7 @@ namespace MyApp
                     Console.WriteLine(z);
 
                     // The $ sign lets us use variables easier in strings. Like: $"TEXT AHH {variable} MORE TEXT!"
-                    Console.WriteLine($"\nYour age is {age}");
+                    Console.WriteLine($"\nYour age is {age}\n");
 
                     // Basically, container for values:
                     int whole_num = 1;        // int is for whole numbers like 1
@@ -98,7 +101,7 @@ namespace MyApp
                     Console.WriteLine($"bool     = {boolean}    |  bool aka ture or false");
                     Console.WriteLine($"char     = {symbol}       |  char aka a single character");
                     Console.WriteLine($"string   = {name}  |  string aka a series of characters");
-                    Console.WriteLine($"int      = {whole_num}       |  int aka a whole number");
+                    Console.WriteLine($"int      = {whole_num}       |  int aka a whole number\n");
                 }
 
                 static void Method_4()
@@ -126,14 +129,13 @@ namespace MyApp
                     //                  Different data types can do different things.
 
                     double a = 3.14;            // double aka decimal
-                    Console.WriteLine($"double a = {a} = {a.GetType()}");
+                    Console.WriteLine($"\ndouble a = {a} = {a.GetType()}");
 
                     int b = Convert.ToInt32(a); // double gets converted to int aka whole number
                     Console.WriteLine($"double a as int b = {b} = {b.GetType()}");
-#pragma warning disable // Disable warnings
+
                     string c = Convert.ToString(b);
-                    Console.WriteLine($"int b as string c = {c} = {c.GetType()}");
-#pragma warning restore // Restore warnings
+                    Console.WriteLine($"int b as string c = {c} = {c.GetType()}\n");
                 }
 
                 static void Method_6()
@@ -141,14 +143,12 @@ namespace MyApp
                     /*
                         --- 6 - User Input! ---
                     */
-#pragma warning disable // Disable warnings
-                    Console.WriteLine("Whats your name?");
+                    Console.WriteLine("\nWhats your name?");
                     string name = Console.ReadLine();
 
                     Console.WriteLine("Whats your age?");
                     int age = Convert.ToInt32(Console.ReadLine());
-#pragma warning restore // Restore warnings
-                    Console.WriteLine($"Hello {name}! Your {age} years old.");
+                    Console.WriteLine($"Hello {name}! Your {age} years old.\n");
 
                 }
                 static void Method_7()
@@ -171,21 +171,68 @@ namespace MyApp
                     friends++;
                     friends--;
 
-                    Console.WriteLine($"Friends: {friends}");
+                    Console.WriteLine($"\nFriends: {friends}");
 
                     int remainder = friends % 3;
 
-                    Console.WriteLine($"Remainder of Friends: {remainder}");
+                    Console.WriteLine($"Remainder of Friends: {remainder}\n");
 
                 }
 
-                Method_1();
-                Method_2();
-                Method_3();
-                Method_4();
-                Method_5();
-                Method_6();
-                Method_7();
+                static void Method_8()
+                {
+                    /*
+                        --- 8 - Math Class! ---
+                    */
+
+                    double x = 3.99;
+                    double y = Math.Pow(x, 2);
+
+                    Console.WriteLine(  // Print out results
+                        "\nValues\n" +
+                        "double x = 3.99;               // val: 3.99\n" +
+                        "double y = Math.Pow(x, 2);     // val: 9.00\n\n" +
+
+                        $"Math.Pow(x, y):   {Math.Pow(x, y)}\n" +  // Raise the value to the power of someting else.
+                        $"Math.Sqrt(x):     {Math.Sqrt(x)}\n" +    // Get the Square root of a value.
+                        $"Math.Abs(x):      {Math.Abs(x)}\n" +     // Get the absolute number of a value.
+                        $"Math.Round(x):    {Math.Round(x)}\n" +   // Round a value.
+                        $"Math.Ceiling(x):  {Math.Ceiling(x)}\n" + // Round up.
+                        $"Math.Floor(x):    {Math.Floor(x)}\n" +   // Round down.
+                        $"Math.Max(x, y):   {Math.Max(x, y)}\n"    // Get the max between two values.
+                        );
+                }
+
+                static void Method_9()
+                {
+                    /*
+                        --- 9 - Random Numbers! ---
+                    */
+
+                    Random random = new Random();   // Initializes a new instance of the Random class
+
+                    int numa = random.Next(0, 100);     // Returns a random integer that is within a specified range.
+                    double numb = random.NextDouble();  // Returns a random floating-point number that is greater than or equal to 0.0, and less than 1.0.
+
+                    Console.WriteLine(
+                        "\nRandom random = new Random();   // Initializes a new instance of the Random class\n\n" +
+
+                        $"random.Next(0, 100):   {numa}\n" +
+                        $"random.NextDouble():     {numb}\n\n"
+                    );
+                }
+
+                // Remove/Add comment to enable/disable a function.
+
+                //Method_1();
+                //Method_2();
+                //Method_3();
+                //Method_4();
+                //Method_5();
+                //Method_6();
+                //Method_7();
+                //Method_8();
+                Method_9();
             }
 
             Practice();
