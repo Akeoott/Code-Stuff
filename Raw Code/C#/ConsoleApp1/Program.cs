@@ -12,27 +12,27 @@ namespace MyApp
             static void Practice()
             {
                 /*  List of themes covered here:
-
-                  ⇓ #1  the beginning                   | ⇓ #21 arrays                      | ⇓ #41 ToString method
-                    #2  output                          |   #22 foreach loop                |   #42 polymorphism
-                    #3  variables                       |   #23 methods                     |   #43 interfaces
-                    #4  constants                       |   #24 return keyword              |   #44 Lists
-                    #5  type casting                    |   #25 method overloading          |   #45 List of objects
-                    #6  user input                      |   #26 params keyword              |   #46 getters & setters
-                    #7  arithmetic operators            |   #27 exception handling          |   #47 auto implemented properties
-                    #8  Math class                      |   #28 conditional operator        |   #48 enums
-                    #9  random numbers                  |   #29 string interpolation        |   #49 generics
-                    #10 hypotenuse calculator program   |   #30 multidimensional arrays     |   #50 multithreading
-                    #11 string methods                  |   #31 classes
-                    #12 if statements                   |   #32 objects
-                    #13 switches                        |   #33 constructors
-                    #14 logical operators && ||         |   #34 static
-                    #15 while loops                     |   #35 overloaded constructors
-                    #16 for loops                       |   #36 inheritance
-                    #17 nested loops                    |   #37 abstract classes
-                    #18 number guessing game            |   #38 array of objects
-                    #19 rock-paper-scissors game        |   #39 objects as arguments
-                    #20 calculator program              |   #40 method overriding
+                |
+                | ⇓ #1  the beginning                   | ⇓ #21 arrays                      | ⇓ #41 ToString method
+                |   #2  output                          |   #22 foreach loop                |   #42 polymorphism
+                |   #3  variables                       |   #23 methods                     |   #43 interfaces
+                |   #4  constants                       |   #24 return keyword              |   #44 Lists
+                |   #5  type casting                    |   #25 method overloading          |   #45 List of objects
+                |   #6  user input                      |   #26 params keyword              |   #46 getters & setters
+                |   #7  arithmetic operators            |   #27 exception handling          |   #47 auto implemented properties
+                |   #8  Math class                      |   #28 conditional operator        |   #48 enums
+                |   #9  random numbers                  |   #29 string interpolation        |   #49 generics
+                |   #10 hypotenuse calculator program   |   #30 multidimensional arrays     |   #50 multithreading
+                |   #11 string methods                  |   #31 classes                     |
+                |   #12 if statements                   |   #32 objects                     |
+                |   #13 switches                        |   #33 constructors                |
+                |   #14 logical operators && ||         |   #34 static                      |
+                |   #15 while loops                     |   #35 overloaded constructors     |
+                |   #16 for loops                       |   #36 inheritance                 |
+                |   #17 nested loops                    |   #37 abstract classes            |
+                |   #18 number guessing game            |   #38 array of objects            |
+                |   #19 rock-paper-scissors game        |   #39 objects as arguments        |
+                |   #20 calculator program              |   #40 method overriding           |
                 */
 
                 static void Method_1()
