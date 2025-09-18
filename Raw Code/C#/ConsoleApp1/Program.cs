@@ -151,6 +151,7 @@ namespace MyApp
                     Console.WriteLine($"Hello {name}! Your {age} years old.\n");
 
                 }
+
                 static void Method_7()
                 {
                     /*
@@ -211,17 +212,33 @@ namespace MyApp
 
                     Random random = new Random();   // Initializes a new instance of the Random class
 
-                    int numa = random.Next(0, 100);     // Returns a random integer that is within a specified range.
-                    double numb = random.NextDouble();  // Returns a random floating-point number that is greater than or equal to 0.0, and less than 1.0.
+                    int num_a = random.Next(0, 100);     // Returns a random integer that is within a specified range.
+                    double num_b = random.NextDouble();  // Returns a random floating-point number that is greater than or equal to 0.0, and less than 1.0.
 
                     Console.WriteLine(
                         "\nRandom random = new Random();   // Initializes a new instance of the Random class\n\n" +
 
-                        $"random.Next(0, 100):   {numa}\n" +
-                        $"random.NextDouble():     {numb}\n\n"
+                        $"random.Next(0, 100):   {num_a}\n" +
+                        $"random.NextDouble():     {num_b}\n\n"
                     );
                 }
 
+                static void Method_10()
+                {
+                    /*
+                        --- 10 - Hypotenuse Calculator Program! ---
+                    */
+
+                    Console.Write("\nEnter side A: ");
+                    double a = Convert.ToDouble(Console.ReadLine());
+
+                    Console.Write("Enter side B: ");
+                    double b = Convert.ToDouble(Console.ReadLine());
+
+                    double c = Math.Sqrt((a * a) + (b * b));
+
+                    Console.WriteLine($"\nThe hypotenuse is: {c}");
+                }
                 // Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -232,10 +249,45 @@ namespace MyApp
                 //Method_6();
                 //Method_7();
                 //Method_8();
-                Method_9();
+                //Method_9();
+                Method_10();
             }
 
+            static void TinyProjects()
+            {
+                static void Method_1()
+                {
+                    /*
+                        --- Pseudo-random number hypotenuse calculator! ---
+                    */
+
+                    Random random = new Random(); // Init random
+
+                    System.Console.WriteLine("\nPseudo-random number hypotenuse calculator!");
+                    System.Console.Write("Select a decimal in the 32-bit range: ");
+                    int range = Convert.ToInt32(Console.ReadLine());
+
+                    double a = random.Next(0, range);
+                    double b = random.Next(0, range);
+
+                    System.Console.WriteLine(
+                        $"\nGenerated random numbers:\n" +
+                        $"A = {a}\n" +
+                        $"B = {b}\n"
+                        );
+
+                    double result = Math.Sqrt((a * a) + (b * b));
+
+                    Console.WriteLine($"\nThe hypotenuse is: {result}");
+                }
+                // Remove/Add comment to enable/disable a function.
+
+                Method_1();
+            }
+            // Remove/Add comment to enable/disable an area.
+
             Practice();
+            //TinyProjects();
         }
     }
 }
