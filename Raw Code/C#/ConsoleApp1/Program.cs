@@ -1,7 +1,8 @@
 ﻿using System;
 
 // Disabeling warnings for practice
-#pragma warning disable CA5394, CS8321, CS8600, CA1305
+//#pragma warning disable CA5394, CS8321, CS8600, CA1305
+#pragma warning disable
 
 namespace MyApp
 {
@@ -239,6 +240,46 @@ namespace MyApp
 
                     Console.WriteLine($"\nThe hypotenuse is: {c}");
                 }
+
+                static void Method_11()
+                {
+                    /*
+                        --- 11 - String Methods! ---
+                    */
+
+                    string fullName = "Ame Janin";
+                    System.Console.WriteLine(fullName);
+
+                    fullName = fullName.ToUpper();
+                    System.Console.WriteLine(fullName);
+
+                    fullName = fullName.ToLower();
+                    System.Console.WriteLine(fullName);
+
+                    int nameLength = fullName.Length;
+                    System.Console.WriteLine(nameLength);
+
+                    string firstName = fullName.Substring(0, 3);
+                    System.Console.WriteLine(firstName);
+
+                    string lastName = fullName.Substring(0, 3);
+                    System.Console.WriteLine(lastName);
+
+                    string userName = firstName.Insert(0, "@");
+                    System.Console.WriteLine(userName);
+
+                    // --------------------------------------------------
+
+                    string phoneNumber = "123-456-6677";
+                    System.Console.WriteLine(phoneNumber);
+
+                    System.Console.WriteLine(phoneNumber.Replace("-", "/"));
+                    System.Console.WriteLine(phoneNumber.Replace("-", "@"));
+                    System.Console.WriteLine(phoneNumber.Replace("-", " "));
+
+                    string numbers = phoneNumber.Replace("-", "");
+                    System.Console.WriteLine(numbers);
+                }
                 // Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -250,8 +291,13 @@ namespace MyApp
                 //Method_7();
                 //Method_8();
                 //Method_9();
-                Method_10();
+                //Method_10();
+                Method_11();
             }
+
+            //  =============================================================================================
+            //  =-----------------------------------------Seperator-----------------------------------------=
+            //  =============================================================================================
 
             static void TinyProjects()
             {
