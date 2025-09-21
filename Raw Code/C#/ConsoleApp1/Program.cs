@@ -248,37 +248,75 @@ namespace MyApp
                     */
 
                     string fullName = "Ame Janin";
-                    System.Console.WriteLine(fullName);
+                    Console.WriteLine(fullName);
 
                     fullName = fullName.ToUpper();
-                    System.Console.WriteLine(fullName);
+                    Console.WriteLine(fullName);
 
                     fullName = fullName.ToLower();
-                    System.Console.WriteLine(fullName);
+                    Console.WriteLine(fullName);
 
                     int nameLength = fullName.Length;
-                    System.Console.WriteLine(nameLength);
+                    Console.WriteLine(nameLength);
 
                     string firstName = fullName.Substring(0, 3);
-                    System.Console.WriteLine(firstName);
+                    Console.WriteLine(firstName);
 
                     string lastName = fullName.Substring(0, 3);
-                    System.Console.WriteLine(lastName);
+                    Console.WriteLine(lastName);
 
                     string userName = firstName.Insert(0, "@");
-                    System.Console.WriteLine(userName);
+                    Console.WriteLine(userName);
 
-                    // --------------------------------------------------
 
                     string phoneNumber = "123-456-6677";
-                    System.Console.WriteLine(phoneNumber);
+                    Console.WriteLine(phoneNumber);
 
-                    System.Console.WriteLine(phoneNumber.Replace("-", "/"));
-                    System.Console.WriteLine(phoneNumber.Replace("-", "@"));
-                    System.Console.WriteLine(phoneNumber.Replace("-", " "));
+                    Console.WriteLine(phoneNumber.Replace("-", "/"));
+                    Console.WriteLine(phoneNumber.Replace("-", "@"));
+                    Console.WriteLine(phoneNumber.Replace("-", " "));
 
                     string numbers = phoneNumber.Replace("-", "");
-                    System.Console.WriteLine(numbers);
+                    Console.WriteLine(numbers);
+                }
+
+                static void Method_12()
+                {
+                    /*
+                        --- 12 - If Statements! ---
+                    */
+
+                    Console.Write("\nHow old are you?: ");
+                    int age = Convert.ToInt32(Console.ReadLine());
+
+                    if (age > 100)
+                    {
+                        Console.WriteLine("How are you so old unc 💀");
+                    }
+                    else if (age < 0)
+                    {
+                        Console.WriteLine("You dont even exist yet ;-;");
+                    }
+                    else if (age >= 18)
+                    {
+                        Console.WriteLine("Your old enought to visit adult websites!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your NOT old enought to visit adult websites!");
+                    }
+
+                    Console.Write("Whats you name?: ");
+                    string name = Console.ReadLine();
+
+                    if (name != "")
+                    {
+                        Console.WriteLine($"Hello {name}!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You did not enter a name!");
+                    }
                 }
                 // Remove/Add comment to enable/disable a function.
 
@@ -292,7 +330,8 @@ namespace MyApp
                 //Method_8();
                 //Method_9();
                 //Method_10();
-                Method_11();
+                //Method_11();
+                Method_12();
             }
 
             //  =============================================================================================
@@ -309,14 +348,14 @@ namespace MyApp
 
                     Random random = new Random(); // Init random
 
-                    System.Console.WriteLine("\nPseudo-random number hypotenuse calculator!");
-                    System.Console.Write("Select a decimal in the 32-bit range: ");
+                    Console.WriteLine("\nPseudo-random number hypotenuse calculator!");
+                    Console.Write("Select a decimal in the 32-bit range: ");
                     int range = Convert.ToInt32(Console.ReadLine());
 
                     double a = random.Next(0, range);
                     double b = random.Next(0, range);
 
-                    System.Console.WriteLine(
+                    Console.WriteLine(
                         $"\nGenerated random numbers:\n" +
                         $"A = {a}\n" +
                         $"B = {b}\n"
