@@ -158,6 +158,7 @@ namespace MyApp
                     /*
                         --- 7 - Arithmetic Operations! ---
                     */
+
                     int friends = 65;
 
                     friends = friends + 1;
@@ -318,6 +319,44 @@ namespace MyApp
                         Console.WriteLine("You did not enter a name!");
                     }
                 }
+
+                static void Method_13()
+                {
+                    /*
+                        --- 13 - Switches! ---
+                    */
+                    // switch = an efficient alternative to many else if statements
+                    Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
+                    string day = Console.ReadLine();
+
+                    switch (day)
+                    {
+                        case "Mo":
+                            Console.WriteLine("It's Monday!");
+                            break;
+                        case "Tu":
+                            Console.WriteLine("It's Tuesday!");
+                            break;
+                        case "We":
+                            Console.WriteLine("It's Wednesday!");
+                            break;
+                        case "Th":
+                            Console.WriteLine("It's Thursday!");
+                            break;
+                        case "Fr":
+                            Console.WriteLine("It's Friday!");
+                            break;
+                        case "Sa":
+                            Console.WriteLine("It's Monday!");
+                            break;
+                        case "Su":
+                            Console.WriteLine("It's Saturday!");
+                            break;
+                        default:
+                            Console.WriteLine($"I dont know what {day} is...");
+                            break;
+                    }
+                }
                 // Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -331,7 +370,8 @@ namespace MyApp
                 //Method_9();
                 //Method_10();
                 //Method_11();
-                Method_12();
+                //Method_12();
+                Method_13();
             }
 
             //  =============================================================================================
