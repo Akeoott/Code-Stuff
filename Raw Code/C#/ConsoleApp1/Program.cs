@@ -130,9 +130,9 @@ namespace MyApp
                     //                  Different data types can do different things.
 
                     double a = 3.14;            // double aka decimal
-                    Console.WriteLine($"\ndouble a = {a} = {a.GetType()}");
+                    Console.WriteLine($"\ndouble a = {a} = {a.GetType()}"); // GetType displays what data type it is (in this case a double)
 
-                    int b = Convert.ToInt32(a); // double gets converted to int aka whole number
+                    int b = Convert.ToInt32(a); // double gets converted to an int aka whole number in the 32-bit range
                     Console.WriteLine($"double a as int b = {b} = {b.GetType()}");
 
                     string c = Convert.ToString(b);
@@ -144,11 +144,12 @@ namespace MyApp
                     /*
                         --- 6 - User Input! ---
                     */
-                    Console.WriteLine("\nWhats your name?");
-                    string name = Console.ReadLine();
+                    Console.Write("\nWhats your name?: ");
+                    string name = Console.ReadLine(); // Reads input and asigns it to a var
 
-                    Console.WriteLine("Whats your age?");
+                    Console.Write("Whats your age?: ");
                     int age = Convert.ToInt32(Console.ReadLine());
+
                     Console.WriteLine($"Hello {name}! Your {age} years old.\n");
 
                 }
@@ -171,12 +172,12 @@ namespace MyApp
                     friends *= 2;
                     friends /= 2;
 
-                    friends++;
-                    friends--;
+                    friends++; // adds 1
+                    friends--; // removes 1
 
                     Console.WriteLine($"\nFriends: {friends}");
 
-                    int remainder = friends % 3;
+                    int remainder = friends % 3; // gets the remainder of 3
 
                     Console.WriteLine($"Remainder of Friends: {remainder}\n");
 
@@ -221,7 +222,7 @@ namespace MyApp
                         "\nRandom random = new Random();   // Initializes a new instance of the Random class\n\n" +
 
                         $"random.Next(0, 100):   {num_a}\n" +
-                        $"random.NextDouble():     {num_b}\n\n"
+                        $"random.NextDouble():   {num_b}\n\n"
                     );
                 }
 
@@ -251,29 +252,29 @@ namespace MyApp
                     string fullName = "Ame Janin";
                     Console.WriteLine(fullName);
 
-                    fullName = fullName.ToUpper();
+                    fullName = fullName.ToUpper(); // All upper case
                     Console.WriteLine(fullName);
 
-                    fullName = fullName.ToLower();
+                    fullName = fullName.ToLower(); // All lower case
                     Console.WriteLine(fullName);
 
-                    int nameLength = fullName.Length;
+                    int nameLength = fullName.Length; // Get the amount of characters as an int
                     Console.WriteLine(nameLength);
 
-                    string firstName = fullName.Substring(0, 3);
+                    string firstName = fullName.Substring(0, 3); // Takes a part of a string in a set range
                     Console.WriteLine(firstName);
 
                     string lastName = fullName.Substring(0, 3);
                     Console.WriteLine(lastName);
 
-                    string userName = firstName.Insert(0, "@");
+                    string userName = firstName.Insert(0, "@"); // Adds a character at a specified place in a string
                     Console.WriteLine(userName);
 
 
                     string phoneNumber = "123-456-6677";
                     Console.WriteLine(phoneNumber);
 
-                    Console.WriteLine(phoneNumber.Replace("-", "/"));
+                    Console.WriteLine(phoneNumber.Replace("-", "/")); // Replaces a specific character with something else
                     Console.WriteLine(phoneNumber.Replace("-", "@"));
                     Console.WriteLine(phoneNumber.Replace("-", " "));
 
@@ -294,7 +295,7 @@ namespace MyApp
                     {
                         Console.WriteLine("How are you so old unc 💀");
                     }
-                    else if (age < 0)
+                    else if (age < 0) // If the one above isnt right, this will be next
                     {
                         Console.WriteLine("You dont even exist yet ;-;");
                     }
@@ -302,7 +303,7 @@ namespace MyApp
                     {
                         Console.WriteLine("Your old enought to visit adult websites!");
                     }
-                    else
+                    else // If nothing is right, this will always execute
                     {
                         Console.WriteLine("Your NOT old enought to visit adult websites!");
                     }
@@ -329,9 +330,9 @@ namespace MyApp
                     Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
                     string day = Console.ReadLine();
 
-                    switch (day)
+                    switch (day)    // init cases in a switch
                     {
-                        case "Mo":
+                        case "Mo":  // each case is like an if statement. if (day == "Mo") { Doing something }
                             Console.WriteLine("It's Monday!");
                             break;
                         case "Tu":
@@ -357,6 +358,29 @@ namespace MyApp
                             break;
                     }
                 }
+
+                static void Method_14()
+                {
+                    /*
+                        --- 13 - Logical Operators! ---
+                    */
+                    // logical operators = Can be used to check if more than 1 condition is true/false
+
+                    // && (AND)
+                    // || (OR)
+
+                    Console.Write("What's the fucking temperature outside? (°C): ");
+                    double temp = Convert.ToDouble(Console.ReadLine());
+
+                    if (temp >= 15 && temp <= 25) // Above 10 AND below 30 check
+                    {
+                        System.Console.WriteLine("The temp outside is perfect!");
+                    }
+                    else if (temp <= -50 || temp >= 50)
+                    {
+                        System.Console.WriteLine("Hey, how about you go for a walk!");
+                    }
+                }
                 // Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -371,7 +395,8 @@ namespace MyApp
                 //Method_10();
                 //Method_11();
                 //Method_12();
-                Method_13();
+                //Method_13();
+                Method_14();
             }
 
             //  =============================================================================================
