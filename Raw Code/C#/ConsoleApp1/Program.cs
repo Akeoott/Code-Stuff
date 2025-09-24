@@ -53,7 +53,7 @@ namespace MyApp
                     Console.WriteLine("Hello World!"); // Literally a new line with this text
                     Console.Beep();                    // Makes a BEEP sound on some devices. Depends
 
-                    // NIGER im a comment
+                    // ? NIGER im a comment
 
                     /*
                     NIGGI DI DIGGI
@@ -362,7 +362,7 @@ namespace MyApp
                 static void Method_14()
                 {
                     /*
-                        --- 13 - Logical Operators! ---
+                        --- 14 - Logical Operators! ---
                     */
                     // logical operators = Can be used to check if more than 1 condition is true/false
 
@@ -381,7 +381,24 @@ namespace MyApp
                         System.Console.WriteLine("Hey, how about you go for a walk!");
                     }
                 }
-                // Remove/Add comment to enable/disable a function.
+
+                static void Method_15()
+                {
+                    /*
+                        --- 15 - While Loops! ---
+                    */
+                    Console.Write("Enter your name: ");
+                    string name = Console.ReadLine();
+
+                    while (name.Length <= 2) // If name is 3 characters min long, the loop ends.
+                    {
+                        Console.Write("Enter your name: ");
+                        name = Console.ReadLine();
+                    }
+                    Console.WriteLine($"YO WASSUP {name.ToUpper()} MA NIGGA!");
+                }
+
+                //* Remove/Add comment to enable/disable a function.
 
                 //Method_1();
                 //Method_2();
@@ -396,7 +413,8 @@ namespace MyApp
                 //Method_11();
                 //Method_12();
                 //Method_13();
-                Method_14();
+                //Method_14();
+                Method_15();
             }
 
             //  =============================================================================================
@@ -430,11 +448,13 @@ namespace MyApp
 
                     Console.WriteLine($"\nThe hypotenuse is: {result}");
                 }
-                // Remove/Add comment to enable/disable a function.
+
+                //* Remove/Add comment to enable/disable a function.
 
                 Method_1();
             }
-            // Remove/Add comment to enable/disable an area.
+
+            //* Remove/Add comment to enable/disable an area.
 
             Practice();
             //TinyProjects();
