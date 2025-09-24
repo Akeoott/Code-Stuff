@@ -327,6 +327,7 @@ namespace MyApp
                         --- 13 - Switches! ---
                     */
                     // switch = an efficient alternative to many else if statements
+
                     Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
                     string day = Console.ReadLine();
 
@@ -387,6 +388,7 @@ namespace MyApp
                     /*
                         --- 15 - While Loops! ---
                     */
+
                     Console.Write("Enter your name: ");
                     string name = Console.ReadLine();
 
@@ -396,6 +398,28 @@ namespace MyApp
                         name = Console.ReadLine();
                     }
                     Console.WriteLine($"YO WASSUP {name.ToUpper()} MA NIGGA!");
+                }
+
+                static void Method_16()
+                {
+                    /*
+                        --- 16 - For Loops! ---
+                    */
+                    // for loop = repeats some code a finite amount of time.
+
+                    // First one  (int i = 1)   is a way to keep track of which iteration this loop is on!
+                    // Second one (i < 10)      tells us when to stop the loop (If index hits a certain value).
+                    // Third one  (i += 1)      says how much should be added/removed to "i" after every loop.
+
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        Console.WriteLine($"Index: {i}"); // Displays 1 to 10
+                    }
+
+                    for (int i = 10; i >= 1; i--)
+                    {
+                        Console.WriteLine($"Index: {i}"); // Displays 10 to 1
+                    }
                 }
 
                 //* Remove/Add comment to enable/disable a function.
@@ -414,7 +438,8 @@ namespace MyApp
                 //Method_12();
                 //Method_13();
                 //Method_14();
-                Method_15();
+                //Method_15();
+                Method_16();
             }
 
             //  =============================================================================================
