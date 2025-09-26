@@ -15,7 +15,7 @@ namespace MyApp
         {
             static void Practice()
             {
-                /*  List of themes covered here:
+                /*  List of themes covered here (aka things that are gonna get covered in the future):
                 |
                 | ⇓ #1  the beginning                   | ⇓ #21 arrays                      | ⇓ #41 ToString method
                 |   #2  output                          |   #22 foreach loop                |   #42 polymorphism
