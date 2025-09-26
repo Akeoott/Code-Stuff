@@ -425,6 +425,40 @@ namespace MyApp
                     }
                 }
 
+                static void Method_17()
+                {
+                    /*
+                        --- 17 - Nested Loops! ---
+                    */
+                    // nested loops = loops inside of other loops.
+                    //                Uses vary. Used a lot in sorting algorithms.
+
+                    Console.Write("How many rows?: ");
+                    int rows = Convert.ToInt32(Console.ReadLine());
+
+                    Console.Write("How many columns?: ");
+                    int columns = Convert.ToInt32(Console.ReadLine());
+
+                    Console.Write("What symbol?: ");
+                    string str = Console.ReadLine();
+                    char symbol = Convert.ToChar(str.Substring(0, 1));  // Restrict to one character for char.
+
+                    /*
+                    For loop 1 will immediately go in for loop 2
+                    For loop 2 will write the entire column,
+                    then loop 1 will add a new row.
+                    This will repeat till the box is finished!
+                    */
+                    for (int i = 0; i < rows; i++)          // loop 1
+                    {
+                        for (int j = 0; j < columns; j++)   // loop 2
+                        {
+                            Console.Write(symbol);      // symbol
+                        }
+                        System.Console.WriteLine();     // newline
+                    }
+                }
+
                 //* Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -442,7 +476,8 @@ namespace MyApp
                 //Method_13();
                 //Method_14();
                 //Method_15();
-                Method_16();
+                //Method_16();
+                Method_17();
             }
 
             //  =============================================================================================
