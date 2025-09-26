@@ -52,7 +52,7 @@ namespace MyApp
                     /*
                         --- 2 - Output! ---
                     */
-                    Console.Write("\nOh, ");             // Just writing this into anything that exists! No new line.
+                    Console.Write("\nOh, ");           // Just writing this into anything that exists! No new line.
                     Console.WriteLine("Hello World!"); // Literally a new line with this text
                     Console.Beep();                    // Makes a BEEP sound on some devices. Depends
 
@@ -489,12 +489,12 @@ namespace MyApp
                 static void Method_1()
                 {
                     /*
-                        --- Pseudo-random number hypotenuse calculator! ---
+                        --- Pseudo-random hypotenuse calculator! ---
                     */
 
                     Random random = new Random(); // Init random
 
-                    Console.WriteLine("\nPseudo-random number hypotenuse calculator!");
+                    Console.WriteLine("\nPseudo-random hypotenuse calculator!");
                     Console.Write("Select a decimal in the 32-bit range: ");
                     int range = Convert.ToInt32(Console.ReadLine());
 
