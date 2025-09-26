@@ -52,13 +52,13 @@ def main():
         script_dir = sys._MEIPASS
     else:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-    
+
     gif_path = os.path.join(script_dir, "idio.gif")
-    
+
     if not os.path.exists(gif_path):
         messagebox.showerror("Error, this OS is not supported.")
         sys.exit()
-    
+
     gif = tk.PhotoImage(file=gif_path)
 
 

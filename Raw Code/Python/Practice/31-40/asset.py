@@ -1,5 +1,5 @@
 class Car:  # this declares what this is supposed to be, a import-able code block wich can be used from other files
-    
+
     def __init__(self,make,model,year,color):
         # The init method  will construct objects for us. In other languages, this is called the constructer.
         # We need this method to create objects.

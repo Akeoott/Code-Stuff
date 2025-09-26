@@ -49,9 +49,9 @@ if decision1 == 1:
     if name == "777":
         slow_print("Jetzt ist deine zeit zu scheinen...")
     time.sleep(1)
-    
+
     decision2 = get_choice(f"SCHNELL! KÄMPFT {name.upper()} (1) ODER FLÜCHTET {name.upper()} (2)!: ", {1,2,777})
-    
+
     if decision2 == 1:
         slow_print("......", 0.8)
         slow_print(f"Die Manjeks haben {name}s Nudelarme gebrochen, ihn gefickt, sein Zuhause gefunden und seine Mutter vergewaltigt....")

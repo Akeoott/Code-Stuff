@@ -30,7 +30,7 @@ destination_dir = 'C:\\Program Files\\Temp'
 try:
     os.makedirs(destination_dir, exist_ok=True)
     destination_file = os.path.join(destination_dir, os.path.basename(source_file))
-    
+
     # Check if the source file is already in the destination directory
     if os.path.abspath(source_file) != os.path.abspath(destination_file):
         if not os.path.exists(destination_file):
@@ -49,7 +49,7 @@ messagebox.showwarning(title='WARNING!', message='This virus will break your com
 messagebox.showwarning(title='WARNING!', message='This program contains flashing lights!')
 if messagebox.askyesno(title='DANGER!', message='Are you sure you want to run this virus?', icon='error'):
     if messagebox.askokcancel(title='Your last chance!', message='This is your last chance!\nAre you sure you want to run this virus?', icon='error'):
-        
+
         def show_loading_popup(title: str ="System", message: str ="Preparing to compromise OS:"):
             popup = tk.Toplevel()
             popup.title(title)
@@ -90,7 +90,7 @@ if messagebox.askyesno(title='DANGER!', message='Are you sure you want to run th
                 messagebox.showinfo(title='SORRY!', message='As a way to make it up to you.')
                 while True:
                     messagebox.showinfo(title='Blehhh', message='You are an idiot!')
-    
+
             threading.Thread(target=run_loop, daemon=True).start()
 
         # Main GUI

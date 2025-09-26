@@ -10,7 +10,7 @@ while True:
         print("Invalid input!")
     else:
         break
-    
+
 for i in range(rows):
     for j in range(columns):
         print(symbol, end="") # Dont forget to use (, end="") otherwise it wont work as intended.

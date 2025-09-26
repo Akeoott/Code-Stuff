@@ -345,4 +345,4 @@ def start():    # fist main part
                                 say(".....",1)
                                 sys.exit()
                         again() # start second part
-start() # start first part          
+start() # start first part

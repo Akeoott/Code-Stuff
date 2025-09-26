@@ -7,7 +7,7 @@ def slow_print(text, delay=0.1):
         sys.stdout.flush()
         time.sleep(delay)
     print()
-    
+
 while len(name) <= 2:
     print("You cant escape till you enter your name!")
     name = input("Enter your name: ").strip()
@@ -15,7 +15,7 @@ while gay == 0:
     try:
         gay = int(input("Are you gay? 1 = Yes, 2 = No: "))
     except ValueError:
-        slow_print("You dont seem to be the brightest on this planet. (Enter a number)")   
+        slow_print("You dont seem to be the brightest on this planet. (Enter a number)")
 if gay == 1:
     slow_print("I know...")
 elif gay == 2:

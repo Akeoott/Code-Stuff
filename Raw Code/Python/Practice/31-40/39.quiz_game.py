@@ -1,7 +1,7 @@
 # ------------------------------
 
 def n_game():   # Function to start a new game
-    
+
     guesses = []
     c_guesses = 0
     question_num = 1
@@ -17,7 +17,7 @@ def n_game():   # Function to start a new game
 
         c_guesses += c_answer(questions.get(key),guess)
         question_num += 1
-    
+
     d_score(c_guesses, guesses)
 
 # ------------------------------
@@ -32,7 +32,7 @@ def c_answer(answer, guess):    # Function to compare if your guess was correct
         print()
         print("Wrong!")
         return 0
-    
+
 # ------------------------------
 
 def d_score(c_guesses, guesses):    # Function that displays your score aka accuracy after finishing the game
@@ -56,9 +56,9 @@ def d_score(c_guesses, guesses):    # Function that displays your score aka accu
 # ------------------------------
 
 def p_again():  # Function that asks if you want to play again
-    
+
     resp = input("Wanna play again? (y/n): ").lower()
-    
+
     if resp == "y":
         return True
     else:

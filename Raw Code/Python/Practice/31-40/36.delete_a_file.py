@@ -9,7 +9,7 @@ try:    # Error handling
     else:
         shutil.rmtree(path) # Deletes the entire path with anything inside it.
                             # This can be dangerous as it deletes the file and anything that is contained within it.
-    
+
     if False:
         os.rmdir(path)  # The thing that deletes empty directories
 

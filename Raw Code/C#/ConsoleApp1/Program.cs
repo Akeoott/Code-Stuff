@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT Licence.
+// See the LICENCE file in the repository root for full licence text.
+
+using System;
 
 // Disabeling warnings for practice
 //#pragma warning disable CA5394, CS8321, CS8600, CA1305
