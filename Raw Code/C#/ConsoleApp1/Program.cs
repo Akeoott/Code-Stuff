@@ -445,7 +445,6 @@ namespace MyApp
 
                     Console.Write("What symbol?: ");
                     string str = Console.ReadLine();
-                    char symbol = Convert.ToChar(str.Substring(0, 1));  // Restrict to one character for char.
 
                     /*
                     For loop 1 will immediately go in for loop 2
@@ -457,7 +456,7 @@ namespace MyApp
                     {
                         for (int j = 0; j < columns; j++)   // loop 2
                         {
-                            Console.Write(symbol);      // symbol
+                            Console.Write(str);         // string/symbol
                         }
                         System.Console.WriteLine();     // newline
                     }
