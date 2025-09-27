@@ -2,6 +2,7 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using System;
+using System.Diagnostics.Tracing;
 
 // Disabeling warnings for practice
 //#pragma warning disable CA5394, CS8321, CS8600, CA1305
@@ -13,6 +14,9 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
+            //  =============================================================================================
+            //  =-----------------------------------------Practice -----------------------------------------=
+            //  =============================================================================================
             static void Practice()
             {
                 /*  List of themes covered here (aka things that are gonna get covered in the future):
@@ -459,6 +463,65 @@ namespace MyApp
                     }
                 }
 
+                static void Method_18()
+                {
+                    /*
+                        --- 18 - Number Guessing Game! ---
+                    */
+
+                    Random random = new Random();   // Init random
+
+                    Console.WriteLine("Number Guessing Game!");
+                    Console.Write("What range should the random number have? (from 1 to x): x = ");
+                    int range = Convert.ToInt32(Console.ReadLine());
+
+                    int rand = random.Next(1, range + 1);   // generate a num from range 1 to whatever is selected ("range")
+
+                    Console.WriteLine("\nGood luck ;)");
+                    int input = 0;
+                    int attempt = 1;
+                    bool playAgain = true;
+
+                    while (true) // Always true. Will exit if explicitly told.
+                    {
+                        Console.Write($"\nAttempt {attempt}: ");
+                        input = Convert.ToInt32(Console.ReadLine());
+
+                        if (input != rand)  // If not correct, execute.
+                        {
+                            attempt++;  // Add attempt
+                            if (input > rand)
+                            {
+                                Console.WriteLine("Try a smaller number!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Try a bigger number!");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"YOU WON!\nAI: {rand}\nYou: {input}\nAttempts {attempt}");
+                            Console.Write("Wanna play again? (true/false): ");
+                            playAgain = Convert.ToBoolean(Console.ReadLine());
+
+                            if (!playAgain) // (playAgain)  checks if its true.
+                            {               // (!playAgain) checks if its NOT true.
+                                Console.WriteLine("\nSee you next time :3");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nTime for another round!");
+                                rand = random.Next(1, range + 1);
+                                attempt = 1;
+                            }
+                        }
+                    }
+
+                    // Thank you python knowledge for making this easy. I wrote this really fast on my own without help!
+                }
+
                 //* Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -477,13 +540,14 @@ namespace MyApp
                 //Method_14();
                 //Method_15();
                 //Method_16();
-                Method_17();
+                //Method_17();
+                Method_18();
             }
 
-            //  =============================================================================================
-            //  =-----------------------------------------Seperator-----------------------------------------=
-            //  =============================================================================================
 
+            //  =============================================================================================
+            //  =---------------------------------------TinyProjects ---------------------------------------=
+            //  =============================================================================================
             static void TinyProjects()
             {
                 static void Method_1()
