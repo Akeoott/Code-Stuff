@@ -8,6 +8,22 @@ using System.Diagnostics.Tracing;
 //#pragma warning disable CA5394, CS8321, CS8600, CA1305
 #pragma warning disable
 
+/*
+    C# compilation
+*/
+//? --- Basic Development and Testing ---
+// `dotnet run`                 //? Run directly (no executable created)
+// `dotnet build`               //? Build without publishing (creates DLLs in bin/)
+// `dotnet build -c Release`    //? Build optimized but still development-friendly
+
+//? --- Single File Executables ---
+// `dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/linux/`  //? linux bin
+// `dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/windows/`  //? windows exe
+// `dotnet publish -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/macos/`    //? mac app
+
+//? Dont forget to make the program executable!
+// `chmod +x ./program`
+
 namespace MyApp
 {
     class Program
@@ -474,7 +490,8 @@ namespace MyApp
                     int rand;               // Generated random number
                     int input;          // User input
                     int attempt;        // Amount of guesses
-                    bool playAgain = true;  // Repeat the game
+                    string response = "y";  // Should repeat game
+                    bool playAgain = true;  // Repeat/don't repeat the game
 
                     Console.WriteLine("Number Guessing Game!");
                     Console.Write("What range should the random number have? (from 1 to x): x = ");
@@ -495,6 +512,7 @@ namespace MyApp
                             attempt++;  // Add attempt
                             Console.Write($"\nAttempt {attempt}: ");
                             input = Convert.ToInt32(Console.ReadLine());
+
                             if (input == rand)
                             {
                                 Console.WriteLine($"YOU WON!\n\nAI: {rand}\nYou: {input}\nAttempts {attempt}");
@@ -508,10 +526,13 @@ namespace MyApp
                                 Console.WriteLine("Try a bigger number!");
                             }
                         }
-                        Console.Write("Wanna play again? (true/false): ");
-                        playAgain = Convert.ToBoolean(Console.ReadLine());
 
-                        if (!playAgain) // (playAgain)  checks if its true.
+                        Console.Write("Wanna play again? (Y/n): ");
+                        response = Console.ReadLine();
+                        response = response.ToLower();
+                        playAgain = (response == "y");  // Automatically becomes true/false depending if the statement is true or false.
+
+                        if (!playAgain)  // (playAgain)  checks if its true.
                         {               // (!playAgain) checks if its NOT true.
                             Console.WriteLine("\nSee you next time :3");
                         }
@@ -520,7 +541,6 @@ namespace MyApp
                             Console.WriteLine("\nTime for another round!");
                         }
                     }
-
                     // Thank you python knowledge for making this easy. I wrote this really fast on my own without help!
                 }
 
