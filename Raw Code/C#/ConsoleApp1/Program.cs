@@ -680,6 +680,55 @@ namespace MyApp
                         // Its 6:36 AM at the time of writing this comment. IM DEAD! Havent sleept lol...
                     }
                 }
+                static void Method_20()
+                {
+                    /*
+                        --- 20 - Calculator Program! ---
+                    */
+
+                    Console.WriteLine($"------------------\nCalculator Program\n------------------");
+                    do
+                    {
+                        double num1 = 0;
+                        double num2 = 0;
+                        string operType = "";
+                        double result = 0;
+
+                        Console.Write("\nEnter your first number: ");
+                        num1 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.Write("Enter your second number: ");
+                        num2 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Options:");
+                        Console.WriteLine("\t+ : Add\n\t- : Subtract\n\t* : Multiply\n\t/ : Divide");
+                        Console.Write("Enter: ");
+                        operType = Console.ReadLine();
+
+                        switch (operType)
+                        {
+                            case "+":
+                                result = num1 + num2;
+                                break;
+                            case "-":
+                                result = num1 - num2;
+                                break;
+                            case "*":
+                                result = num1 * num2;
+                                break;
+                            case "/":
+                                result = num1 / num2;
+                                break;
+                            default:
+                                Console.WriteLine("An error occured. Did you enter the right operation?");
+                                break;
+                        }
+                        Console.WriteLine($"Result: {num1} {operType} {num2} = {result}");
+
+                        Console.Write("\nWanna make another calculation? (Y/n): ");
+                    } while (Console.ReadLine().ToLower() == "y");
+                    Console.WriteLine("See you next time :3");
+                }
 
                 //* Remove/Add comment to enable/disable a function.
 
@@ -701,7 +750,8 @@ namespace MyApp
                 //Method_16();
                 //Method_17();
                 //Method_18();
-                Method_19();
+                //Method_19();
+                Method_20();
             }
 
 
