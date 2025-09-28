@@ -470,26 +470,36 @@ namespace MyApp
 
                     Random random = new Random();   // Init random
 
+                    int range;              // Set range for random
+                    int rand;               // Generated random number
+                    int input;          // User input
+                    int attempt;        // Amount of guesses
+                    bool playAgain = true;  // Repeat the game
+
                     Console.WriteLine("Number Guessing Game!");
                     Console.Write("What range should the random number have? (from 1 to x): x = ");
-                    int range = Convert.ToInt32(Console.ReadLine());
-
-                    int rand = random.Next(1, range + 1);   // generate a num from range 1 to whatever is selected ("range")
+                    range = Convert.ToInt32(Console.ReadLine());
 
                     Console.WriteLine("\nGood luck ;)");
-                    int input = 0;
-                    int attempt = 1;
-                    bool playAgain = true;
 
-                    while (true) // Always true. Will exit if explicitly told.
+                    while (playAgain)
                     {
-                        Console.Write($"\nAttempt {attempt}: ");
-                        input = Convert.ToInt32(Console.ReadLine());
+                        // Reset game
+                        rand = random.Next(1, range + 1);   // generate a num from range 1 to whatever is selected ("range")
+                        input = 0;
+                        attempt = 0;
 
-                        if (input != rand)  // If not correct, execute.
+                        // Start game
+                        while (input != rand)
                         {
                             attempt++;  // Add attempt
-                            if (input > rand)
+                            Console.Write($"\nAttempt {attempt}: ");
+                            input = Convert.ToInt32(Console.ReadLine());
+                            if (input == rand)
+                            {
+                                Console.WriteLine($"YOU WON!\n\nAI: {rand}\nYou: {input}\nAttempts {attempt}");
+                            }
+                            else if (input > rand)
                             {
                                 Console.WriteLine("Try a smaller number!");
                             }
@@ -498,23 +508,16 @@ namespace MyApp
                                 Console.WriteLine("Try a bigger number!");
                             }
                         }
+                        Console.Write("Wanna play again? (true/false): ");
+                        playAgain = Convert.ToBoolean(Console.ReadLine());
+
+                        if (!playAgain) // (playAgain)  checks if its true.
+                        {               // (!playAgain) checks if its NOT true.
+                            Console.WriteLine("\nSee you next time :3");
+                        }
                         else
                         {
-                            Console.WriteLine($"YOU WON!\nAI: {rand}\nYou: {input}\nAttempts {attempt}");
-                            Console.Write("Wanna play again? (true/false): ");
-                            playAgain = Convert.ToBoolean(Console.ReadLine());
-
-                            if (!playAgain) // (playAgain)  checks if its true.
-                            {               // (!playAgain) checks if its NOT true.
-                                Console.WriteLine("\nSee you next time :3");
-                                break;
-                            }
-                            else
-                            {
-                                Console.WriteLine("\nTime for another round!");
-                                rand = random.Next(1, range + 1);
-                                attempt = 1;
-                            }
+                            Console.WriteLine("\nTime for another round!");
                         }
                     }
 
