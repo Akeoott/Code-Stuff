@@ -3,6 +3,8 @@
 
 using System;
 using System.Diagnostics.Tracing;
+using System.Net.Sockets;
+using System.Reflection.Metadata;
 
 // Disabeling warnings for practice
 //#pragma warning disable CA5394, CS8321, CS8600, CA1305
@@ -544,6 +546,141 @@ namespace MyApp
                     // Thank you python knowledge for making this easy. I wrote this really fast on my own without help!
                 }
 
+                static void Method_19()
+                {
+                    /*
+                        --- 19 - Rock-Paper-Scissors Game! ---
+                    */
+
+                    // Init variables or some shit
+                    Random random = new Random(); // Init random
+                    string userName = "";
+                    string userInput;
+                    string computerInput;
+                    int userTies = 0;
+                    int userWins = 0;
+                    int userLosses = 0;
+                    string playAgainAsk = "";
+                    bool playAgain = true;
+
+                    // Get name cuz why not
+                    while (userName.Length <= 2)
+                    {
+                        Console.Write("Enter your name!: ");
+                        userName = Console.ReadLine();
+
+                        if (userName.Length <= 2)
+                        {
+                            Console.WriteLine("Your name is too short.");
+                        }
+                    }
+                    Console.WriteLine($"\nHello {userName}!\nWelcome to this Rock-Paper-Scissors Game!");
+
+                    while (playAgain)
+                    {
+                        // Reste inputs
+                        userInput = "";
+                        computerInput = "";
+
+                        // Get inputs
+                        while (userInput != "rock" && userInput != "paper" && userInput != "scissors")
+                        {
+                            Console.Write("Enter Rock, Paper or Scissors: ");
+                            userInput = Console.ReadLine();
+                            userInput = userInput.ToLower();
+                        }
+
+                        // Get random choice
+                        switch (random.Next(1, 4))
+                        {
+                            case 1:
+                                computerInput = "rock";
+                                break;
+                            case 2:
+                                computerInput = "paper";
+                                break;
+                            case 3:
+                                computerInput = "scissors";
+                                break;
+                        }
+                        Console.WriteLine($"\nAI: {computerInput}\nYou: {userInput}");
+
+                        // Game logic (decide who wins)
+                        switch (userInput)
+                        {
+                            case "rock":
+                                if (computerInput == "rock")
+                                {
+                                    Console.WriteLine("Its a tie!");
+                                    userTies++;
+                                }
+                                else if (computerInput == "scissors")
+                                {
+                                    Console.WriteLine($"{userName}, you won!");
+                                    userWins++;
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"{userName}, you lost...");
+                                    userLosses++;
+                                }
+                                break;
+                            case "paper":
+                                if (computerInput == "paper")
+                                {
+                                    Console.WriteLine("Its a tie!");
+                                    userTies++;
+                                }
+                                else if (computerInput == "rock")
+                                {
+                                    Console.WriteLine($"{userName}, you won!");
+                                    userWins++;
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"{userName}, you lost...");
+                                    userLosses++;
+                                }
+                                break;
+                            case "scissors":
+                                if (computerInput == "scissors")
+                                {
+                                    Console.WriteLine("Its a tie!");
+                                    userTies++;
+                                }
+                                else if (computerInput == "paper")
+                                {
+                                    Console.WriteLine($"{userName}, you won!");
+                                    userWins++;
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"{userName}, you lost...");
+                                    userLosses++;
+                                }
+                                break;
+                        }
+
+                        // Check if player wants to retry
+                        Console.WriteLine($"\nTies: {userTies}\nWins: {userWins}\nLosses: {userLosses}");
+                        Console.Write("\nWanna play again? (Y/n): ");
+                        playAgainAsk = Console.ReadLine();
+                        playAgainAsk = playAgainAsk.ToLower();
+
+                        if (playAgainAsk == "n")
+                        {
+                            Console.WriteLine("See you next time :3");
+                            playAgain = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Time for another round!\n");
+                            playAgain = true;
+                        }
+                        // Its 6:36 AM at the time of writing this comment. IM DEAD! Havent sleept lol...
+                    }
+                }
+
                 //* Remove/Add comment to enable/disable a function.
 
                 //Method_1();
@@ -563,7 +700,8 @@ namespace MyApp
                 //Method_15();
                 //Method_16();
                 //Method_17();
-                Method_18();
+                //Method_18();
+                Method_19();
             }
 
 
