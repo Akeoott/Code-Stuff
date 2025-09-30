@@ -32,769 +32,793 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            //  =============================================================================================
-            //  =-----------------------------------------Practice -----------------------------------------=
-            //  =============================================================================================
-            static void Practice()
+            /*  List of themes covered here (aka things that are gonna get covered in the future):
+            |
+            | ⇓ #1  the beginning                   | ⇓ #21 arrays                      | ⇓ #41 ToString method
+            |   #2  output                          |   #22 foreach loop                |   #42 polymorphism
+            |   #3  variables                       |   #23 methods                     |   #43 interfaces
+            |   #4  constants                       |   #24 return keyword              |   #44 Lists
+            |   #5  type casting                    |   #25 method overloading          |   #45 List of objects
+            |   #6  user input                      |   #26 params keyword              |   #46 getters & setters
+            |   #7  arithmetic operators            |   #27 exception handling          |   #47 auto implemented properties
+            |   #8  Math class                      |   #28 conditional operator        |   #48 enums
+            |   #9  random numbers                  |   #29 string interpolation        |   #49 generics
+            |   #10 hypotenuse calculator program   |   #30 multidimensional arrays     |   #50 multithreading
+            |   #11 string methods                  |   #31 classes                     |
+            |   #12 if statements                   |   #32 objects                     |
+            |   #13 switches                        |   #33 constructors                |
+            |   #14 logical operators && ||         |   #34 static                      |
+            |   #15 while loops                     |   #35 overloaded constructors     |
+            |   #16 for loops                       |   #36 inheritance                 |
+            |   #17 nested loops                    |   #37 abstract classes            |
+            |   #18 number guessing game            |   #38 array of objects            |
+            |   #19 rock-paper-scissors game        |   #39 objects as arguments        |
+            |   #20 calculator program              |   #40 method overriding           |
+            */
+
+            static void Method_1()
             {
-                /*  List of themes covered here (aka things that are gonna get covered in the future):
-                |
-                | ⇓ #1  the beginning                   | ⇓ #21 arrays                      | ⇓ #41 ToString method
-                |   #2  output                          |   #22 foreach loop                |   #42 polymorphism
-                |   #3  variables                       |   #23 methods                     |   #43 interfaces
-                |   #4  constants                       |   #24 return keyword              |   #44 Lists
-                |   #5  type casting                    |   #25 method overloading          |   #45 List of objects
-                |   #6  user input                      |   #26 params keyword              |   #46 getters & setters
-                |   #7  arithmetic operators            |   #27 exception handling          |   #47 auto implemented properties
-                |   #8  Math class                      |   #28 conditional operator        |   #48 enums
-                |   #9  random numbers                  |   #29 string interpolation        |   #49 generics
-                |   #10 hypotenuse calculator program   |   #30 multidimensional arrays     |   #50 multithreading
-                |   #11 string methods                  |   #31 classes                     |
-                |   #12 if statements                   |   #32 objects                     |
-                |   #13 switches                        |   #33 constructors                |
-                |   #14 logical operators && ||         |   #34 static                      |
-                |   #15 while loops                     |   #35 overloaded constructors     |
-                |   #16 for loops                       |   #36 inheritance                 |
-                |   #17 nested loops                    |   #37 abstract classes            |
-                |   #18 number guessing game            |   #38 array of objects            |
-                |   #19 rock-paper-scissors game        |   #39 objects as arguments        |
-                |   #20 calculator program              |   #40 method overriding           |
+                /*
+                    --- 1 - The Beginning! ---
+                */
+                Console.WriteLine("\nIM TEXT GETTING PRINTED!\n");
+            }
+
+            static void Method_2()
+            {
+                /*
+                    --- 2 - Output! ---
+                */
+                Console.Write("\nOh, ");           // Just writing this into anything that exists! No new line.
+                Console.WriteLine("Hello World!"); // Literally a new line with this text
+                Console.Beep();                    // Makes a BEEP sound on some devices. Depends
+
+                // ? NIGER im a comment
+
+                /*
+                NIGGI DI DIGGI
+                asd FUCK
+                im a multi line comment
                 */
 
-                static void Method_1()
-                {
-                    /*
-                        --- 1 - The Beginning! ---
-                    */
-                    Console.WriteLine("\nIM TEXT GETTING PRINTED!\n");
-                }
+                Console.WriteLine("AKEOOT!\n");
 
-                static void Method_2()
-                {
-                    /*
-                        --- 2 - Output! ---
-                    */
-                    Console.Write("\nOh, ");           // Just writing this into anything that exists! No new line.
-                    Console.WriteLine("Hello World!"); // Literally a new line with this text
-                    Console.Beep();                    // Makes a BEEP sound on some devices. Depends
+                /*
+                Console.ReadKey(); // Requires input to exit/finish operation! Kinda like input() from python.
+                */
+            }
 
-                    // ? NIGER im a comment
+            static void Method_3()
+            {
+                /*
+                    --- 3 - Variables! ---
+                */
+                // int = intiger = a whole number.
+                int x;       // decleration
+                x = 123;     // initialization
+                int y = 321; // decleration + initialization
 
-                    /*
-                    NIGGI DI DIGGI
-                    asd FUCK
-                    im a multi line comment
-                    */
+                int z = x + y; // Adding two intigers
 
-                    Console.WriteLine("AKEOOT!\n");
+                int age = 16;
 
-                    /*
-                    Console.ReadKey(); // Requires input to exit/finish operation! Kinda like input() from python.
-                    */
-                }
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                Console.WriteLine(z);
 
-                static void Method_3()
-                {
-                    /*
-                        --- 3 - Variables! ---
-                    */
-                    // int = intiger = a whole number.
-                    int x;       // decleration
-                    x = 123;     // initialization
-                    int y = 321; // decleration + initialization
+                // The $ sign lets us use variables easier in strings. Like: $"TEXT AHH {variable} MORE TEXT!"
+                Console.WriteLine($"\nYour age is {age}\n");
 
-                    int z = x + y; // Adding two intigers
+                // Basically, container for values:
+                int whole_num = 1;        // int is for whole numbers like 1
+                double decimal_num = 1.1; // double is for decimal numbers like 1.0
+                bool boolean = true;      // bool is for true/false aka yes/no
+                char symbol = '@';        // char is for a single character like '@' or 'A'
+                string name = "Akeoot";   // string is for a series of characters like "hello"
 
-                    int age = 16;
+                Console.WriteLine($"[Type]     [Data]  |  [Description]");
+                Console.WriteLine($"int      = {whole_num}       |  int aka a whole number");
+                Console.WriteLine($"double   = {decimal_num}     |  double aka a decimal number");
+                Console.WriteLine($"bool     = {boolean}    |  bool aka ture or false");
+                Console.WriteLine($"char     = {symbol}       |  char aka a single character");
+                Console.WriteLine($"string   = {name}  |  string aka a series of characters");
+                Console.WriteLine($"int      = {whole_num}       |  int aka a whole number\n");
+            }
 
-                    Console.WriteLine(x);
-                    Console.WriteLine(y);
-                    Console.WriteLine(z);
+            static void Method_4()
+            {
+                /*
+                    --- 4 - Constants! ---
+                */
+                // constants  = immutable values which are known at compile time,
+                //              and do not change for the life of the program.
 
-                    // The $ sign lets us use variables easier in strings. Like: $"TEXT AHH {variable} MORE TEXT!"
-                    Console.WriteLine($"\nYour age is {age}\n");
+                // The value pi cannot be changed cause its a constant!
+                // If it wherent a constant, then i would be able to change the value.
+                const double pi = 3.14159;
 
-                    // Basically, container for values:
-                    int whole_num = 1;        // int is for whole numbers like 1
-                    double decimal_num = 1.1; // double is for decimal numbers like 1.0
-                    bool boolean = true;      // bool is for true/false aka yes/no
-                    char symbol = '@';        // char is for a single character like '@' or 'A'
-                    string name = "Akeoot";   // string is for a series of characters like "hello"
+                Console.WriteLine($"\npi is a constant so it cant get changed!: {pi}\n");
+            }
 
-                    Console.WriteLine($"[Type]     [Data]  |  [Description]");
-                    Console.WriteLine($"int      = {whole_num}       |  int aka a whole number");
-                    Console.WriteLine($"double   = {decimal_num}     |  double aka a decimal number");
-                    Console.WriteLine($"bool     = {boolean}    |  bool aka ture or false");
-                    Console.WriteLine($"char     = {symbol}       |  char aka a single character");
-                    Console.WriteLine($"string   = {name}  |  string aka a series of characters");
-                    Console.WriteLine($"int      = {whole_num}       |  int aka a whole number\n");
-                }
+            static void Method_5()
+            {
+                /*
+                    --- 5 - Type Casting! ---
+                */
+                // type casting   = Converting a value to a different data type.
+                //                  Useful when we accept user input (string).
+                //                  Different data types can do different things.
 
-                static void Method_4()
-                {
-                    /*
-                        --- 4 - Constants! ---
-                    */
-                    // constants  = immutable values which are known at compile time,
-                    //              and do not change for the life of the program.
+                double a = 3.14;            // double aka decimal
+                Console.WriteLine($"\ndouble a = {a} = {a.GetType()}"); // GetType displays what data type it is (in this case a double)
 
-                    // The value pi cannot be changed cause its a constant!
-                    // If it wherent a constant, then i would be able to change the value.
-                    const double pi = 3.14159;
+                int b = Convert.ToInt32(a); // double gets converted to an int aka whole number in the 32-bit range
+                Console.WriteLine($"double a as int b = {b} = {b.GetType()}");
 
-                    Console.WriteLine($"\npi is a constant so it cant get changed!: {pi}\n");
-                }
+                string c = Convert.ToString(b);
+                Console.WriteLine($"int b as string c = {c} = {c.GetType()}\n");
+            }
 
-                static void Method_5()
-                {
-                    /*
-                        --- 5 - Type Casting! ---
-                    */
-                    // type casting   = Converting a value to a different data type.
-                    //                  Useful when we accept user input (string).
-                    //                  Different data types can do different things.
+            static void Method_6()
+            {
+                /*
+                    --- 6 - User Input! ---
+                */
+                Console.Write("\nWhats your name?: ");
+                string name = Console.ReadLine(); // Reads input and asigns it to a var
 
-                    double a = 3.14;            // double aka decimal
-                    Console.WriteLine($"\ndouble a = {a} = {a.GetType()}"); // GetType displays what data type it is (in this case a double)
+                Console.Write("Whats your age?: ");
+                int age = Convert.ToInt32(Console.ReadLine());
 
-                    int b = Convert.ToInt32(a); // double gets converted to an int aka whole number in the 32-bit range
-                    Console.WriteLine($"double a as int b = {b} = {b.GetType()}");
+                Console.WriteLine($"Hello {name}! Your {age} years old.\n");
 
-                    string c = Convert.ToString(b);
-                    Console.WriteLine($"int b as string c = {c} = {c.GetType()}\n");
-                }
+            }
 
-                static void Method_6()
-                {
-                    /*
-                        --- 6 - User Input! ---
-                    */
-                    Console.Write("\nWhats your name?: ");
-                    string name = Console.ReadLine(); // Reads input and asigns it to a var
+            static void Method_7()
+            {
+                /*
+                    --- 7 - Arithmetic Operations! ---
+                */
 
-                    Console.Write("Whats your age?: ");
-                    int age = Convert.ToInt32(Console.ReadLine());
+                int friends = 65;
 
-                    Console.WriteLine($"Hello {name}! Your {age} years old.\n");
+                friends = friends + 1;
+                friends = friends - 1;
+                friends = friends * 1;
+                friends = friends / 1;
 
-                }
+                friends += 2;
+                friends -= 2;
+                friends *= 2;
+                friends /= 2;
 
-                static void Method_7()
-                {
-                    /*
-                        --- 7 - Arithmetic Operations! ---
-                    */
+                friends++; // adds 1
+                friends--; // removes 1
 
-                    int friends = 65;
+                Console.WriteLine($"\nFriends: {friends}");
 
-                    friends = friends + 1;
-                    friends = friends - 1;
-                    friends = friends * 1;
-                    friends = friends / 1;
+                int remainder = friends % 3; // gets the remainder of 3
 
-                    friends += 2;
-                    friends -= 2;
-                    friends *= 2;
-                    friends /= 2;
+                Console.WriteLine($"Remainder of Friends: {remainder}\n");
 
-                    friends++; // adds 1
-                    friends--; // removes 1
+            }
 
-                    Console.WriteLine($"\nFriends: {friends}");
+            static void Method_8()
+            {
+                /*
+                    --- 8 - Math Class! ---
+                */
 
-                    int remainder = friends % 3; // gets the remainder of 3
+                double x = 3.99;
+                double y = Math.Pow(x, 2);
 
-                    Console.WriteLine($"Remainder of Friends: {remainder}\n");
+                Console.WriteLine(  // Print out results
+                    "\nValues\n" +
+                    "double x = 3.99;               // val: 3.99\n" +
+                    "double y = Math.Pow(x, 2);     // val: 9.00\n\n" +
 
-                }
-
-                static void Method_8()
-                {
-                    /*
-                        --- 8 - Math Class! ---
-                    */
-
-                    double x = 3.99;
-                    double y = Math.Pow(x, 2);
-
-                    Console.WriteLine(  // Print out results
-                        "\nValues\n" +
-                        "double x = 3.99;               // val: 3.99\n" +
-                        "double y = Math.Pow(x, 2);     // val: 9.00\n\n" +
-
-                        $"Math.Pow(x, y):   {Math.Pow(x, y)}\n" +  // Raise the value to the power of someting else.
-                        $"Math.Sqrt(x):     {Math.Sqrt(x)}\n" +    // Get the Square root of a value.
-                        $"Math.Abs(x):      {Math.Abs(x)}\n" +     // Get the absolute number of a value.
-                        $"Math.Round(x):    {Math.Round(x)}\n" +   // Round a value.
-                        $"Math.Ceiling(x):  {Math.Ceiling(x)}\n" + // Round up.
-                        $"Math.Floor(x):    {Math.Floor(x)}\n" +   // Round down.
-                        $"Math.Max(x, y):   {Math.Max(x, y)}\n"    // Get the max between two values.
-                        );
-                }
-
-                static void Method_9()
-                {
-                    /*
-                        --- 9 - Random Numbers! ---
-                    */
-
-                    Random random = new Random();   // Initializes a new instance of the Random class
-
-                    int num_a = random.Next(0, 100);     // Returns a random integer that is within a specified range.
-                    double num_b = random.NextDouble();  // Returns a random floating-point number that is greater than or equal to 0.0, and less than 1.0.
-
-                    Console.WriteLine(
-                        "\nRandom random = new Random();   // Initializes a new instance of the Random class\n\n" +
-
-                        $"random.Next(0, 100):   {num_a}\n" +
-                        $"random.NextDouble():   {num_b}\n\n"
+                    $"Math.Pow(x, y):   {Math.Pow(x, y)}\n" +  // Raise the value to the power of someting else.
+                    $"Math.Sqrt(x):     {Math.Sqrt(x)}\n" +    // Get the Square root of a value.
+                    $"Math.Abs(x):      {Math.Abs(x)}\n" +     // Get the absolute number of a value.
+                    $"Math.Round(x):    {Math.Round(x)}\n" +   // Round a value.
+                    $"Math.Ceiling(x):  {Math.Ceiling(x)}\n" + // Round up.
+                    $"Math.Floor(x):    {Math.Floor(x)}\n" +   // Round down.
+                    $"Math.Max(x, y):   {Math.Max(x, y)}\n"    // Get the max between two values.
                     );
+            }
+
+            static void Method_9()
+            {
+                /*
+                    --- 9 - Random Numbers! ---
+                */
+
+                Random random = new Random();   // Initializes a new instance of the Random class
+
+                int num_a = random.Next(0, 100);     // Returns a random integer that is within a specified range.
+                double num_b = random.NextDouble();  // Returns a random floating-point number that is greater than or equal to 0.0, and less than 1.0.
+
+                Console.WriteLine(
+                    "\nRandom random = new Random();   // Initializes a new instance of the Random class\n\n" +
+
+                    $"random.Next(0, 100):   {num_a}\n" +
+                    $"random.NextDouble():   {num_b}\n\n"
+                );
+            }
+
+            static void Method_10()
+            {
+                /*
+                    --- 10 - Hypotenuse Calculator Program! ---
+                */
+
+                Console.Write("\nEnter side A: ");
+                double a = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter side B: ");
+                double b = Convert.ToDouble(Console.ReadLine());
+
+                double c = Math.Sqrt((a * a) + (b * b));
+
+                Console.WriteLine($"\nThe hypotenuse is: {c}");
+            }
+
+            static void Method_11()
+            {
+                /*
+                    --- 11 - String Methods! ---
+                */
+
+                string fullName = "Ame Janin";
+                Console.WriteLine(fullName);
+
+                fullName = fullName.ToUpper(); // All upper case
+                Console.WriteLine(fullName);
+
+                fullName = fullName.ToLower(); // All lower case
+                Console.WriteLine(fullName);
+
+                int nameLength = fullName.Length; // Get the amount of characters as an int
+                Console.WriteLine(nameLength);
+
+                string firstName = fullName.Substring(0, 3); // Takes a part of a string in a set range
+                Console.WriteLine(firstName);
+
+                string lastName = fullName.Substring(0, 3);
+                Console.WriteLine(lastName);
+
+                string userName = firstName.Insert(0, "@"); // Adds a character at a specified place in a string
+                Console.WriteLine(userName);
+
+
+                string phoneNumber = "123-456-6677";
+                Console.WriteLine(phoneNumber);
+
+                Console.WriteLine(phoneNumber.Replace("-", "/")); // Replaces a specific character with something else
+                Console.WriteLine(phoneNumber.Replace("-", "@"));
+                Console.WriteLine(phoneNumber.Replace("-", " "));
+
+                string numbers = phoneNumber.Replace("-", "");
+                Console.WriteLine(numbers);
+            }
+
+            static void Method_12()
+            {
+                /*
+                    --- 12 - If Statements! ---
+                */
+
+                Console.Write("\nHow old are you?: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+
+                if (age > 100)
+                {
+                    Console.WriteLine("How are you so old unc 💀");
+                }
+                else if (age < 0) // If the one above isnt right, this will be next
+                {
+                    Console.WriteLine("You dont even exist yet ;-;");
+                }
+                else if (age >= 18)
+                {
+                    Console.WriteLine("Your old enought to visit adult websites!");
+                }
+                else // If nothing is right, this will always execute
+                {
+                    Console.WriteLine("Your NOT old enought to visit adult websites!");
                 }
 
-                static void Method_10()
+                Console.Write("Whats you name?: ");
+                string name = Console.ReadLine();
+
+                if (name != "")
                 {
-                    /*
-                        --- 10 - Hypotenuse Calculator Program! ---
-                    */
+                    Console.WriteLine($"Hello {name}!");
+                }
+                else
+                {
+                    Console.WriteLine("You did not enter a name!");
+                }
+            }
 
-                    Console.Write("\nEnter side A: ");
-                    double a = Convert.ToDouble(Console.ReadLine());
+            static void Method_13()
+            {
+                /*
+                    --- 13 - Switches! ---
+                */
+                // switch = an efficient alternative to many else if statements
 
-                    Console.Write("Enter side B: ");
-                    double b = Convert.ToDouble(Console.ReadLine());
+                Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
+                string day = Console.ReadLine();
 
-                    double c = Math.Sqrt((a * a) + (b * b));
+                switch (day)    // init cases in a switch
+                {
+                    case "Mo":  // each case is like an if statement. if (day == "Mo") { Doing something }
+                        Console.WriteLine("It's Monday!");
+                        break;
+                    case "Tu":
+                        Console.WriteLine("It's Tuesday!");
+                        break;
+                    case "We":
+                        Console.WriteLine("It's Wednesday!");
+                        break;
+                    case "Th":
+                        Console.WriteLine("It's Thursday!");
+                        break;
+                    case "Fr":
+                        Console.WriteLine("It's Friday!");
+                        break;
+                    case "Sa":
+                        Console.WriteLine("It's Monday!");
+                        break;
+                    case "Su":
+                        Console.WriteLine("It's Saturday!");
+                        break;
+                    default:
+                        Console.WriteLine($"I dont know what {day} is...");
+                        break;
+                }
+            }
 
-                    Console.WriteLine($"\nThe hypotenuse is: {c}");
+            static void Method_14()
+            {
+                /*
+                    --- 14 - Logical Operators! ---
+                */
+                // logical operators = Can be used to check if more than 1 condition is true/false
+
+                // && (AND)
+                // || (OR)
+
+                Console.Write("What's the fucking temperature outside? (°C): ");
+                double temp = Convert.ToDouble(Console.ReadLine());
+
+                if (temp >= 15 && temp <= 25) // Above 10 AND below 30 check
+                {
+                    System.Console.WriteLine("The temp outside is perfect!");
+                }
+                else if (temp <= -50 || temp >= 50)
+                {
+                    System.Console.WriteLine("Hey, how about you go for a walk!");
+                }
+            }
+
+            static void Method_15()
+            {
+                /*
+                    --- 15 - While Loops! ---
+                */
+
+                Console.Write("Enter your name: ");
+                string name = Console.ReadLine();
+
+                while (name.Length <= 2) // If name is 3 characters min long, the loop ends.
+                {
+                    Console.Write("Enter your name: ");
+                    name = Console.ReadLine();
+                }
+                Console.WriteLine($"YO WASSUP {name.ToUpper()} MA NIGGA!");
+            }
+
+            static void Method_16()
+            {
+                /*
+                    --- 16 - For Loops! ---
+                */
+                // for loop = repeats some code a finite amount of time.
+
+                // First one  (int i = 1)   is a way to keep track of which iteration this loop is on!
+                // Second one (i < 10)      tells us when to stop the loop (If index hits a certain value).
+                // Third one  (i += 1)      says how much should be added/removed to "i" after every loop.
+
+                for (int i = 1; i <= 10; i++)
+                {
+                    Console.WriteLine($"Index: {i}"); // Displays 1 to 10
                 }
 
-                static void Method_11()
+                for (int i = 10; i >= 1; i--)
                 {
-                    /*
-                        --- 11 - String Methods! ---
-                    */
-
-                    string fullName = "Ame Janin";
-                    Console.WriteLine(fullName);
-
-                    fullName = fullName.ToUpper(); // All upper case
-                    Console.WriteLine(fullName);
-
-                    fullName = fullName.ToLower(); // All lower case
-                    Console.WriteLine(fullName);
-
-                    int nameLength = fullName.Length; // Get the amount of characters as an int
-                    Console.WriteLine(nameLength);
-
-                    string firstName = fullName.Substring(0, 3); // Takes a part of a string in a set range
-                    Console.WriteLine(firstName);
-
-                    string lastName = fullName.Substring(0, 3);
-                    Console.WriteLine(lastName);
-
-                    string userName = firstName.Insert(0, "@"); // Adds a character at a specified place in a string
-                    Console.WriteLine(userName);
-
-
-                    string phoneNumber = "123-456-6677";
-                    Console.WriteLine(phoneNumber);
-
-                    Console.WriteLine(phoneNumber.Replace("-", "/")); // Replaces a specific character with something else
-                    Console.WriteLine(phoneNumber.Replace("-", "@"));
-                    Console.WriteLine(phoneNumber.Replace("-", " "));
-
-                    string numbers = phoneNumber.Replace("-", "");
-                    Console.WriteLine(numbers);
+                    Console.WriteLine($"Index: {i}"); // Displays 10 to 1
                 }
+            }
 
-                static void Method_12()
+            static void Method_17()
+            {
+                /*
+                    --- 17 - Nested Loops! ---
+                */
+                // nested loops = loops inside of other loops.
+                //                Uses vary. Used a lot in sorting algorithms.
+
+                Console.Write("How many rows?: ");
+                int rows = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("How many columns?: ");
+                int columns = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("What symbol?: ");
+                string str = Console.ReadLine();
+
+                /*
+                For loop 1 will immediately go in for loop 2
+                For loop 2 will write the entire column,
+                then loop 1 will add a new row.
+                This will repeat till the box is finished!
+                */
+                for (int i = 0; i < rows; i++)          // loop 1
                 {
-                    /*
-                        --- 12 - If Statements! ---
-                    */
-
-                    Console.Write("\nHow old are you?: ");
-                    int age = Convert.ToInt32(Console.ReadLine());
-
-                    if (age > 100)
+                    for (int j = 0; j < columns; j++)   // loop 2
                     {
-                        Console.WriteLine("How are you so old unc 💀");
+                        Console.Write(str);         // string/symbol
                     }
-                    else if (age < 0) // If the one above isnt right, this will be next
+                    System.Console.WriteLine();     // newline
+                }
+            }
+
+            static void Method_18()
+            {
+                /*
+                    --- 18 - Number Guessing Game! ---
+                */
+
+                Random random = new Random();   // Init random
+
+                int range;              // Set range for random
+                int rand;               // Generated random number
+                int input;          // User input
+                int attempt;        // Amount of guesses
+                string response = "y";  // Should repeat game
+                bool playAgain = true;  // Repeat/don't repeat the game
+
+                Console.WriteLine("Number Guessing Game!");
+                Console.Write("What range should the random number have? (from 1 to x): x = ");
+                range = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("\nGood luck ;)");
+
+                while (playAgain)
+                {
+                    // Reset game
+                    rand = random.Next(1, range + 1);   // generate a num from range 1 to whatever is selected ("range")
+                    input = 0;
+                    attempt = 0;
+
+                    // Start game
+                    while (input != rand)
                     {
-                        Console.WriteLine("You dont even exist yet ;-;");
-                    }
-                    else if (age >= 18)
-                    {
-                        Console.WriteLine("Your old enought to visit adult websites!");
-                    }
-                    else // If nothing is right, this will always execute
-                    {
-                        Console.WriteLine("Your NOT old enought to visit adult websites!");
+                        attempt++;  // Add attempt
+                        Console.Write($"\nAttempt {attempt}: ");
+                        input = Convert.ToInt32(Console.ReadLine());
+
+                        if (input == rand)
+                        {
+                            Console.WriteLine($"YOU WON!\n\nAI: {rand}\nYou: {input}\nAttempts {attempt}");
+                        }
+                        else if (input > rand)
+                        {
+                            Console.WriteLine("Try a smaller number!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Try a bigger number!");
+                        }
                     }
 
-                    Console.Write("Whats you name?: ");
-                    string name = Console.ReadLine();
+                    Console.Write("Wanna play again? (Y/n): ");
+                    response = Console.ReadLine();
+                    response = response.ToLower();
+                    playAgain = (response == "y");  // Automatically becomes true/false depending if the statement is true or false.
 
-                    if (name != "")
-                    {
-                        Console.WriteLine($"Hello {name}!");
+                    if (!playAgain)  // (playAgain)  checks if its true.
+                    {               // (!playAgain) checks if its NOT true.
+                        Console.WriteLine("\nSee you next time :3");
                     }
                     else
                     {
-                        Console.WriteLine("You did not enter a name!");
+                        Console.WriteLine("\nTime for another round!");
                     }
                 }
+                // Thank you python knowledge for making this easy. I wrote this really fast on my own without help!
+            }
 
-                static void Method_13()
+            static void Method_19()
+            {
+                /*
+                    --- 19 - Rock-Paper-Scissors Game! ---
+                */
+
+                // Init variables or some shit
+                Random random = new Random(); // Init random
+                string userName = "";
+                string userInput;
+                string computerInput;
+                int userTies = 0;
+                int userWins = 0;
+                int userLosses = 0;
+                string playAgainAsk = "";
+                bool playAgain = true;
+
+                // Get name cuz why not
+                while (userName.Length <= 2)
                 {
-                    /*
-                        --- 13 - Switches! ---
-                    */
-                    // switch = an efficient alternative to many else if statements
+                    Console.Write("Enter your name!: ");
+                    userName = Console.ReadLine();
 
-                    Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
-                    string day = Console.ReadLine();
-
-                    switch (day)    // init cases in a switch
+                    if (userName.Length <= 2)
                     {
-                        case "Mo":  // each case is like an if statement. if (day == "Mo") { Doing something }
-                            Console.WriteLine("It's Monday!");
-                            break;
-                        case "Tu":
-                            Console.WriteLine("It's Tuesday!");
-                            break;
-                        case "We":
-                            Console.WriteLine("It's Wednesday!");
-                            break;
-                        case "Th":
-                            Console.WriteLine("It's Thursday!");
-                            break;
-                        case "Fr":
-                            Console.WriteLine("It's Friday!");
-                            break;
-                        case "Sa":
-                            Console.WriteLine("It's Monday!");
-                            break;
-                        case "Su":
-                            Console.WriteLine("It's Saturday!");
-                            break;
-                        default:
-                            Console.WriteLine($"I dont know what {day} is...");
-                            break;
+                        Console.WriteLine("Your name is too short.");
                     }
                 }
+                Console.WriteLine($"\nHello {userName}!\nWelcome to this Rock-Paper-Scissors Game!");
 
-                static void Method_14()
+                while (playAgain)
                 {
-                    /*
-                        --- 14 - Logical Operators! ---
-                    */
-                    // logical operators = Can be used to check if more than 1 condition is true/false
+                    // Reste inputs
+                    userInput = "";
+                    computerInput = "";
 
-                    // && (AND)
-                    // || (OR)
-
-                    Console.Write("What's the fucking temperature outside? (°C): ");
-                    double temp = Convert.ToDouble(Console.ReadLine());
-
-                    if (temp >= 15 && temp <= 25) // Above 10 AND below 30 check
+                    // Get inputs
+                    while (userInput != "rock" && userInput != "paper" && userInput != "scissors")
                     {
-                        System.Console.WriteLine("The temp outside is perfect!");
-                    }
-                    else if (temp <= -50 || temp >= 50)
-                    {
-                        System.Console.WriteLine("Hey, how about you go for a walk!");
-                    }
-                }
-
-                static void Method_15()
-                {
-                    /*
-                        --- 15 - While Loops! ---
-                    */
-
-                    Console.Write("Enter your name: ");
-                    string name = Console.ReadLine();
-
-                    while (name.Length <= 2) // If name is 3 characters min long, the loop ends.
-                    {
-                        Console.Write("Enter your name: ");
-                        name = Console.ReadLine();
-                    }
-                    Console.WriteLine($"YO WASSUP {name.ToUpper()} MA NIGGA!");
-                }
-
-                static void Method_16()
-                {
-                    /*
-                        --- 16 - For Loops! ---
-                    */
-                    // for loop = repeats some code a finite amount of time.
-
-                    // First one  (int i = 1)   is a way to keep track of which iteration this loop is on!
-                    // Second one (i < 10)      tells us when to stop the loop (If index hits a certain value).
-                    // Third one  (i += 1)      says how much should be added/removed to "i" after every loop.
-
-                    for (int i = 1; i <= 10; i++)
-                    {
-                        Console.WriteLine($"Index: {i}"); // Displays 1 to 10
+                        Console.Write("Enter Rock, Paper or Scissors: ");
+                        userInput = Console.ReadLine();
+                        userInput = userInput.ToLower();
                     }
 
-                    for (int i = 10; i >= 1; i--)
+                    // Get random choice
+                    switch (random.Next(1, 4))
                     {
-                        Console.WriteLine($"Index: {i}"); // Displays 10 to 1
+                        case 1:
+                            computerInput = "rock";
+                            break;
+                        case 2:
+                            computerInput = "paper";
+                            break;
+                        case 3:
+                            computerInput = "scissors";
+                            break;
                     }
-                }
+                    Console.WriteLine($"\nAI: {computerInput}\nYou: {userInput}");
 
-                static void Method_17()
-                {
-                    /*
-                        --- 17 - Nested Loops! ---
-                    */
-                    // nested loops = loops inside of other loops.
-                    //                Uses vary. Used a lot in sorting algorithms.
-
-                    Console.Write("How many rows?: ");
-                    int rows = Convert.ToInt32(Console.ReadLine());
-
-                    Console.Write("How many columns?: ");
-                    int columns = Convert.ToInt32(Console.ReadLine());
-
-                    Console.Write("What symbol?: ");
-                    string str = Console.ReadLine();
-
-                    /*
-                    For loop 1 will immediately go in for loop 2
-                    For loop 2 will write the entire column,
-                    then loop 1 will add a new row.
-                    This will repeat till the box is finished!
-                    */
-                    for (int i = 0; i < rows; i++)          // loop 1
+                    // Game logic (decide who wins)
+                    switch (userInput)
                     {
-                        for (int j = 0; j < columns; j++)   // loop 2
-                        {
-                            Console.Write(str);         // string/symbol
-                        }
-                        System.Console.WriteLine();     // newline
-                    }
-                }
-
-                static void Method_18()
-                {
-                    /*
-                        --- 18 - Number Guessing Game! ---
-                    */
-
-                    Random random = new Random();   // Init random
-
-                    int range;              // Set range for random
-                    int rand;               // Generated random number
-                    int input;          // User input
-                    int attempt;        // Amount of guesses
-                    string response = "y";  // Should repeat game
-                    bool playAgain = true;  // Repeat/don't repeat the game
-
-                    Console.WriteLine("Number Guessing Game!");
-                    Console.Write("What range should the random number have? (from 1 to x): x = ");
-                    range = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("\nGood luck ;)");
-
-                    while (playAgain)
-                    {
-                        // Reset game
-                        rand = random.Next(1, range + 1);   // generate a num from range 1 to whatever is selected ("range")
-                        input = 0;
-                        attempt = 0;
-
-                        // Start game
-                        while (input != rand)
-                        {
-                            attempt++;  // Add attempt
-                            Console.Write($"\nAttempt {attempt}: ");
-                            input = Convert.ToInt32(Console.ReadLine());
-
-                            if (input == rand)
+                        case "rock":
+                            if (computerInput == "rock")
                             {
-                                Console.WriteLine($"YOU WON!\n\nAI: {rand}\nYou: {input}\nAttempts {attempt}");
+                                Console.WriteLine("Its a tie!");
+                                userTies++;
                             }
-                            else if (input > rand)
+                            else if (computerInput == "scissors")
                             {
-                                Console.WriteLine("Try a smaller number!");
+                                Console.WriteLine($"{userName}, you won!");
+                                userWins++;
                             }
                             else
                             {
-                                Console.WriteLine("Try a bigger number!");
+                                Console.WriteLine($"{userName}, you lost...");
+                                userLosses++;
                             }
-                        }
-
-                        Console.Write("Wanna play again? (Y/n): ");
-                        response = Console.ReadLine();
-                        response = response.ToLower();
-                        playAgain = (response == "y");  // Automatically becomes true/false depending if the statement is true or false.
-
-                        if (!playAgain)  // (playAgain)  checks if its true.
-                        {               // (!playAgain) checks if its NOT true.
-                            Console.WriteLine("\nSee you next time :3");
-                        }
-                        else
-                        {
-                            Console.WriteLine("\nTime for another round!");
-                        }
+                            break;
+                        case "paper":
+                            if (computerInput == "paper")
+                            {
+                                Console.WriteLine("Its a tie!");
+                                userTies++;
+                            }
+                            else if (computerInput == "rock")
+                            {
+                                Console.WriteLine($"{userName}, you won!");
+                                userWins++;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"{userName}, you lost...");
+                                userLosses++;
+                            }
+                            break;
+                        case "scissors":
+                            if (computerInput == "scissors")
+                            {
+                                Console.WriteLine("Its a tie!");
+                                userTies++;
+                            }
+                            else if (computerInput == "paper")
+                            {
+                                Console.WriteLine($"{userName}, you won!");
+                                userWins++;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"{userName}, you lost...");
+                                userLosses++;
+                            }
+                            break;
                     }
-                    // Thank you python knowledge for making this easy. I wrote this really fast on my own without help!
-                }
 
-                static void Method_19()
-                {
-                    /*
-                        --- 19 - Rock-Paper-Scissors Game! ---
-                    */
+                    // Check if player wants to retry
+                    Console.WriteLine($"\nTies: {userTies}\nWins: {userWins}\nLosses: {userLosses}");
+                    Console.Write("\nWanna play again? (Y/n): ");
+                    playAgainAsk = Console.ReadLine();
+                    playAgainAsk = playAgainAsk.ToLower();
 
-                    // Init variables or some shit
-                    Random random = new Random(); // Init random
-                    string userName = "";
-                    string userInput;
-                    string computerInput;
-                    int userTies = 0;
-                    int userWins = 0;
-                    int userLosses = 0;
-                    string playAgainAsk = "";
-                    bool playAgain = true;
-
-                    // Get name cuz why not
-                    while (userName.Length <= 2)
+                    if (playAgainAsk == "n")
                     {
-                        Console.Write("Enter your name!: ");
-                        userName = Console.ReadLine();
-
-                        if (userName.Length <= 2)
-                        {
-                            Console.WriteLine("Your name is too short.");
-                        }
+                        Console.WriteLine("See you next time :3");
+                        playAgain = false;
                     }
-                    Console.WriteLine($"\nHello {userName}!\nWelcome to this Rock-Paper-Scissors Game!");
-
-                    while (playAgain)
+                    else
                     {
-                        // Reste inputs
-                        userInput = "";
-                        computerInput = "";
-
-                        // Get inputs
-                        while (userInput != "rock" && userInput != "paper" && userInput != "scissors")
-                        {
-                            Console.Write("Enter Rock, Paper or Scissors: ");
-                            userInput = Console.ReadLine();
-                            userInput = userInput.ToLower();
-                        }
-
-                        // Get random choice
-                        switch (random.Next(1, 4))
-                        {
-                            case 1:
-                                computerInput = "rock";
-                                break;
-                            case 2:
-                                computerInput = "paper";
-                                break;
-                            case 3:
-                                computerInput = "scissors";
-                                break;
-                        }
-                        Console.WriteLine($"\nAI: {computerInput}\nYou: {userInput}");
-
-                        // Game logic (decide who wins)
-                        switch (userInput)
-                        {
-                            case "rock":
-                                if (computerInput == "rock")
-                                {
-                                    Console.WriteLine("Its a tie!");
-                                    userTies++;
-                                }
-                                else if (computerInput == "scissors")
-                                {
-                                    Console.WriteLine($"{userName}, you won!");
-                                    userWins++;
-                                }
-                                else
-                                {
-                                    Console.WriteLine($"{userName}, you lost...");
-                                    userLosses++;
-                                }
-                                break;
-                            case "paper":
-                                if (computerInput == "paper")
-                                {
-                                    Console.WriteLine("Its a tie!");
-                                    userTies++;
-                                }
-                                else if (computerInput == "rock")
-                                {
-                                    Console.WriteLine($"{userName}, you won!");
-                                    userWins++;
-                                }
-                                else
-                                {
-                                    Console.WriteLine($"{userName}, you lost...");
-                                    userLosses++;
-                                }
-                                break;
-                            case "scissors":
-                                if (computerInput == "scissors")
-                                {
-                                    Console.WriteLine("Its a tie!");
-                                    userTies++;
-                                }
-                                else if (computerInput == "paper")
-                                {
-                                    Console.WriteLine($"{userName}, you won!");
-                                    userWins++;
-                                }
-                                else
-                                {
-                                    Console.WriteLine($"{userName}, you lost...");
-                                    userLosses++;
-                                }
-                                break;
-                        }
-
-                        // Check if player wants to retry
-                        Console.WriteLine($"\nTies: {userTies}\nWins: {userWins}\nLosses: {userLosses}");
-                        Console.Write("\nWanna play again? (Y/n): ");
-                        playAgainAsk = Console.ReadLine();
-                        playAgainAsk = playAgainAsk.ToLower();
-
-                        if (playAgainAsk == "n")
-                        {
-                            Console.WriteLine("See you next time :3");
-                            playAgain = false;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Time for another round!\n");
-                            playAgain = true;
-                        }
-                        // Its 6:36 AM at the time of writing this comment. IM DEAD! Havent sleept lol...
+                        Console.WriteLine("Time for another round!\n");
+                        playAgain = true;
                     }
+                    // Its 6:36 AM at the time of writing this comment. IM DEAD! Havent sleept lol...
                 }
-                static void Method_20()
-                {
-                    /*
-                        --- 20 - Calculator Program! ---
-                    */
-
-                    Console.WriteLine($"------------------\nCalculator Program\n------------------");
-                    do
-                    {
-                        double num1 = 0;
-                        double num2 = 0;
-                        string operType = "";
-                        double result = 0;
-
-                        Console.Write("\nEnter your first number: ");
-                        num1 = Convert.ToDouble(Console.ReadLine());
-
-                        Console.Write("Enter your second number: ");
-                        num2 = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("Options:");
-                        Console.WriteLine("\t+ : Add\n\t- : Subtract\n\t* : Multiply\n\t/ : Divide");
-                        Console.Write("Enter: ");
-                        operType = Console.ReadLine();
-
-                        switch (operType)
-                        {
-                            case "+":
-                                result = num1 + num2;
-                                break;
-                            case "-":
-                                result = num1 - num2;
-                                break;
-                            case "*":
-                                result = num1 * num2;
-                                break;
-                            case "/":
-                                result = num1 / num2;
-                                break;
-                            default:
-                                Console.WriteLine("An error occured. Did you enter the right operation?");
-                                break;
-                        }
-                        Console.WriteLine($"Result: {num1} {operType} {num2} = {result}");
-
-                        Console.Write("\nWanna make another calculation? (Y/n): ");
-                    } while (Console.ReadLine().ToLower() == "y");
-                    Console.WriteLine("See you next time :3");
-                }
-
-                //* Remove/Add comment to enable/disable a function.
-
-                //Method_1();
-                //Method_2();
-                //Method_3();
-                //Method_4();
-                //Method_5();
-                //Method_6();
-                //Method_7();
-                //Method_8();
-                //Method_9();
-                //Method_10();
-                //Method_11();
-                //Method_12();
-                //Method_13();
-                //Method_14();
-                //Method_15();
-                //Method_16();
-                //Method_17();
-                //Method_18();
-                //Method_19();
-                Method_20();
             }
 
-
-            //  =============================================================================================
-            //  =---------------------------------------TinyProjects ---------------------------------------=
-            //  =============================================================================================
-            static void TinyProjects()
+            static void Method_20()
             {
-                static void Method_1()
+                /*
+                    --- 20 - Calculator Program! ---
+                */
+
+                Console.WriteLine($"------------------\nCalculator Program\n------------------");
+                do
                 {
-                    /*
-                        --- Pseudo-random hypotenuse calculator! ---
-                    */
+                    double num1 = 0;
+                    double num2 = 0;
+                    string operType = "";
+                    double result = 0;
 
-                    Random random = new Random(); // Init random
+                    Console.Write("\nEnter your first number: ");
+                    num1 = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("\nPseudo-random hypotenuse calculator!");
-                    Console.Write("Select a decimal in the 32-bit range: ");
-                    int range = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter your second number: ");
+                    num2 = Convert.ToDouble(Console.ReadLine());
 
-                    double a = random.Next(0, range);
-                    double b = random.Next(0, range);
+                    Console.WriteLine("Options:");
+                    Console.WriteLine("\t+ : Add\n\t- : Subtract\n\t* : Multiply\n\t/ : Divide");
+                    Console.Write("Enter: ");
+                    operType = Console.ReadLine();
 
-                    Console.WriteLine(
-                        $"\nGenerated random numbers:\n" +
-                        $"A = {a}\n" +
-                        $"B = {b}\n"
-                        );
+                    switch (operType)
+                    {
+                        case "+":
+                            result = num1 + num2;
+                            break;
+                        case "-":
+                            result = num1 - num2;
+                            break;
+                        case "*":
+                            result = num1 * num2;
+                            break;
+                        case "/":
+                            result = num1 / num2;
+                            break;
+                        default:
+                            Console.WriteLine("An error occured. Did you enter the right operation?");
+                            break;
+                    }
+                    Console.WriteLine($"Result: {num1} {operType} {num2} = {result}");
 
-                    double result = Math.Sqrt((a * a) + (b * b));
-
-                    Console.WriteLine($"\nThe hypotenuse is: {result}");
-                }
-
-                //* Remove/Add comment to enable/disable a function.
-
-                Method_1();
+                    Console.Write("\nWanna make another calculation? (Y/n): ");
+                } while (Console.ReadLine().ToLower() == "y");
+                Console.WriteLine("See you next time :3");
             }
 
-            //* Remove/Add comment to enable/disable an area.
+            static void Method_21()
+            {
+                /*
+                    --- 21 - Arrays! ---
+                */
+                // array = a variable that can store multiple values. fixed size.
 
-            Practice();
-            //TinyProjects();
+                // Index starts from zero. So here are values under index 0, 1 and 2
+                string[] justCars = { "BMW", "Porsche", "Corvette" };   // Completely fixed size and already asigned values!
+
+                string[] cars = new string[4];  // Declared first to allow empty values while keeping size!
+                cars[0] = "BMW";        // Assigning value to array
+                cars[1] = "Porsche";
+                cars[2] = "Corvette";
+
+                cars[0] = "Tesla";      // Modifying value in array
+
+                for (int i = 0; i < cars.Length; i++)   // i in first itteration is 0
+                {
+                    Console.WriteLine(cars[i]);
+                }
+            }
+
+            static void Method_22()
+            {
+                /*
+                    --- 22 - Foreach Loop! ---
+                */
+                // foreach loop = a simpler way to iterate over an array, but it's less flexible.
+
+                string[] cars = { "BMW", "Porsche", "Corvette" };
+
+                foreach (string car in cars)
+                {            // car is like a nickname for cars.
+                    Console.WriteLine(car);
+                }
+            }
+
+            static void Method_23()
+            {
+                /*
+                    --- 23 - Methods! ---
+                */
+                // method    = performs a section of code, whenever it's called (aka invoked).
+                //             benefit: Let's us reuse code w/o writting it multiple times.
+                // arguments = what is sent to methods
+
+                string name = "Akeoott";
+                int age = 16;
+
+                Method_23_Helper(name, age); // Sings happybirthday once with the passed in argument.
+                Method_23_Helper(name, age); // In method, one can rename them.
+                Method_23_Helper(name, age); // Arguemtns must match in caller and method.
+            }
+
+            //* Remove/Add comment to enable/disable a function.
+
+            //Method_1();
+            //Method_2();
+            //Method_3();
+            //Method_4();
+            //Method_5();
+            //Method_6();
+            //Method_7();
+            //Method_8();
+            //Method_9();
+            //Method_10();
+            //Method_11();
+            //Method_12();
+            //Method_13();
+            //Method_14();
+            //Method_15();
+            //Method_16();
+            //Method_17();
+            //Method_18();
+            //Method_19();
+            //Method_20();
+            //Method_21();
+            //Method_22();
+            Method_23();
+        }
+
+        static void Method_23_Helper(string birthdayGirl, int age)
+        {
+            Console.WriteLine($"Happy birthday to {birthdayGirl}!");
+            Console.WriteLine($"Happy birthday to {birthdayGirl}!");
+            Console.WriteLine($"Happy birthday dear {birthdayGirl.ToUpper()}!");
+            Console.WriteLine($"You're {age} years old!");
+            Console.WriteLine($"Happy birthday to {birthdayGirl}!");
+            Console.WriteLine($"This kinda feels dry...\n");
         }
     }
 }
+
+
+
