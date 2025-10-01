@@ -32,6 +32,8 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Warning! It's highly recomended to use the source code as reference.\nIt's necessary to enable and dissable methods from within the source code.\n");
+
             /*  List of themes covered here (aka things that are gonna get covered in the future):
             |
             | ⇓ #1  the beginning                   | ⇓ #21 arrays                      | ⇓ #41 ToString method
@@ -61,6 +63,7 @@ namespace MyApp
                 /*
                     --- 1 - The Beginning! ---
                 */
+
                 Console.WriteLine("\nIM TEXT GETTING PRINTED!\n");
             }
 
@@ -69,11 +72,12 @@ namespace MyApp
                 /*
                     --- 2 - Output! ---
                 */
+
                 Console.Write("\nOh, ");           // Just writing this into anything that exists! No new line.
                 Console.WriteLine("Hello World!"); // Literally a new line with this text
                 Console.Beep();                    // Makes a BEEP sound on some devices. Depends
 
-                // ? NIGER im a comment
+                //? NIGER im a comment
 
                 /*
                 NIGGI DI DIGGI
@@ -93,7 +97,8 @@ namespace MyApp
                 /*
                     --- 3 - Variables! ---
                 */
-                // int = intiger = a whole number.
+                // int  = intiger = a whole number.
+
                 int x;       // decleration
                 x = 123;     // initialization
                 int y = 321; // decleration + initialization
@@ -130,8 +135,8 @@ namespace MyApp
                 /*
                     --- 4 - Constants! ---
                 */
-                // constants  = immutable values which are known at compile time,
-                //              and do not change for the life of the program.
+                // constants    = immutable values which are known at compile time,
+                //                and do not change for the life of the program.
 
                 // The value pi cannot be changed cause its a constant!
                 // If it wherent a constant, then i would be able to change the value.
@@ -145,7 +150,7 @@ namespace MyApp
                 /*
                     --- 5 - Type Casting! ---
                 */
-                // type casting   = Converting a value to a different data type.
+                // type casting = Converting a value to a different data type.
                 //                  Useful when we accept user input (string).
                 //                  Different data types can do different things.
 
@@ -157,6 +162,8 @@ namespace MyApp
 
                 string c = Convert.ToString(b);
                 Console.WriteLine($"int b as string c = {c} = {c.GetType()}\n");
+
+                //! NOTE: There are a lot of data types and a lot of ways to convert data into a different type. Not everything is here!
             }
 
             static void Method_6()
@@ -164,6 +171,7 @@ namespace MyApp
                 /*
                     --- 6 - User Input! ---
                 */
+
                 Console.Write("\nWhats your name?: ");
                 string name = Console.ReadLine(); // Reads input and asigns it to a var
 
@@ -315,7 +323,7 @@ namespace MyApp
                 {
                     Console.WriteLine("How are you so old unc 💀");
                 }
-                else if (age < 0) // If the one above isnt right, this will be next
+                else if (age < 0) // If the if statement above isnt right, this will be next
                 {
                     Console.WriteLine("You dont even exist yet ;-;");
                 }
@@ -346,7 +354,7 @@ namespace MyApp
                 /*
                     --- 13 - Switches! ---
                 */
-                // switch = an efficient alternative to many else if statements
+                // switch   = an efficient alternative to many else if statements
 
                 Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
                 string day = Console.ReadLine();
@@ -369,10 +377,10 @@ namespace MyApp
                         Console.WriteLine("It's Friday!");
                         break;
                     case "Sa":
-                        Console.WriteLine("It's Monday!");
+                        Console.WriteLine("It's Saturday!");
                         break;
                     case "Su":
-                        Console.WriteLine("It's Saturday!");
+                        Console.WriteLine("It's Sunday!");
                         break;
                     default:
                         Console.WriteLine($"I dont know what {day} is...");
@@ -529,7 +537,7 @@ namespace MyApp
                     response = response.ToLower();
                     playAgain = (response == "y");  // Automatically becomes true/false depending if the statement is true or false.
 
-                    if (!playAgain)  // (playAgain)  checks if its true.
+                    if (!playAgain)  // (playAgain) checks if its true.
                     {               // (!playAgain) checks if its NOT true.
                         Console.WriteLine("\nSee you next time :3");
                     }
@@ -731,7 +739,7 @@ namespace MyApp
                 /*
                     --- 21 - Arrays! ---
                 */
-                // array = a variable that can store multiple values. fixed size.
+                // array    = a variable that can store multiple values. fixed size.
 
                 // Index starts from zero. So here are values under index 0, 1 and 2
                 string[] justCars = { "BMW", "Porsche", "Corvette" };   // Completely fixed size and already asigned values!
@@ -743,7 +751,7 @@ namespace MyApp
 
                 cars[0] = "Tesla";      // Modifying value in array
 
-                for (int i = 0; i < cars.Length; i++)   // i in first itteration is 0
+                for (int i = 0; i < cars.Length; i++)   // i in its first itteration is 0
                 {
                     Console.WriteLine(cars[i]);
                 }
@@ -754,7 +762,7 @@ namespace MyApp
                 /*
                     --- 22 - Foreach Loop! ---
                 */
-                // foreach loop = a simpler way to iterate over an array, but it's less flexible.
+                // foreach loop = a simpler way to iterate over an array, it's less flexible.
 
                 string[] cars = { "BMW", "Porsche", "Corvette" };
 
@@ -769,16 +777,84 @@ namespace MyApp
                 /*
                     --- 23 - Methods! ---
                 */
-                // method    = performs a section of code, whenever it's called (aka invoked).
-                //             benefit: Let's us reuse code w/o writting it multiple times.
-                // arguments = what is sent to methods
+                // method       = performs a section of code, whenever it's called (aka invoked).
+                //                benefit: Let's us reuse code w/o writting it multiple times.
+                // arguments    = what is sent to methods
 
                 string name = "Akeoott";
                 int age = 16;
 
+                //? void in the example method below means that its gonna return nothing
+                // static void Method_23_Helper(...)
                 Method_23_Helper(name, age); // Sings happybirthday once with the passed in argument.
                 Method_23_Helper(name, age); // In method, one can rename them.
                 Method_23_Helper(name, age); // Arguemtns must match in caller and method.
+            }
+
+            static void Method_24()
+            {
+                /*
+                    --- 24 - Return Keyword! ---
+                */
+                // return   = returns data back to the place where a method was invoked
+
+                //? void in the example method below means that its gonna return a double
+                // static double Method_23_Helper(...)
+
+                double x;
+                double y;
+                double result;
+
+                Console.WriteLine("Calculating x * y while using a method aka function to do all the work!");
+
+                Console.Write("Enter a decimal number for x: ");
+                x = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter a decimal number for y: ");
+                y = Convert.ToDouble(Console.ReadLine());
+
+                result = Method_24_Helper(x, y);
+                Console.Write($"Result: {result}");
+            }
+
+            static void Method_25()
+            {
+                /*
+                    --- 25 - Method Overloading! ---
+                */
+                // method overloading   = methods share same name, but different parameters
+                //                        name + parameters = signature
+                //                        methods must have a unique signature
+
+                double x = 43;
+                double y = 234;
+                double z = 2;
+                double result1;
+                double result2;
+
+                result1 = Method_25_Helper(x, y);
+                Console.Write($"Result: {result1}");
+
+                result2 = Method_25_Helper(x, y, z); // Same name, different method, different parameters.
+                Console.Write($"Result: {result2}");
+
+                //! NOTE: The next method (26) will cover a BETTER alternative to method overloading. The params keyword.
+            }
+
+            static void Method_26()
+            {
+                /*
+                    --- 26 - Params Keyword! ---
+                */
+                // params keyword  = a method parameter that takes a variable number of arguments.
+                //                    the parameter type must be a singe - dimentional array
+
+                //? params allows a variable amount of arguments! (But only one parameter)
+                // ... Method_26_Helper(params double[] prices)
+
+                double total = Method_26_Helper(3.99, 5.75, 15);
+                Console.Write($"Result: {total}");
+
             }
 
             //* Remove/Add comment to enable/disable a function.
@@ -805,7 +881,10 @@ namespace MyApp
             //Method_20();
             //Method_21();
             //Method_22();
-            Method_23();
+            //Method_23();
+            //Method_24();
+            //Method_25();
+            Method_26();
         }
 
         static void Method_23_Helper(string birthdayGirl, int age)
@@ -817,8 +896,33 @@ namespace MyApp
             Console.WriteLine($"Happy birthday to {birthdayGirl}!");
             Console.WriteLine($"This kinda feels dry...\n");
         }
+        static double Method_24_Helper(double x, double y)
+        {
+            double z = x * y;
+            return z;
+            /*
+            One could also shorten it:
+            return x * y;
+            */
+        }
+        static double Method_25_Helper(double x, double y)
+        {
+            return x * y;
+        }
+        static double Method_25_Helper(double x, double y, double z)
+        {   // Same name, different method, different parameters.
+            return x * y * z;
+        }
+        static double Method_26_Helper(params double[] prices)
+        {
+            double total = 0;
+
+            foreach (double price in prices)
+            {
+                total += price;
+            }
+
+            return total;
+        }
     }
 }
-
-
-
