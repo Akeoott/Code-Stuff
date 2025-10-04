@@ -102,10 +102,10 @@ def testResultPrint(testResult):
     print("\nPassword Analysis:")
     # If its true that its missing in the password, it says it here. I tested this shit. Dont question it.
     print(f"\t{no_has if has_length else yes_has} Length: 8 characters")
-    print(f"\t{no_has if has_uppercase else yes_has} uppercase letters")
-    print(f"\t{no_has if has_numbers else yes_has} numbers")
-    print(f"\t{no_has if has_special else yes_has} special characters")
-    print(f"\t{no_has if has_nonLetters else yes_has} non letters")
+    print(f"\t{no_has if has_uppercase else yes_has} min 2 uppercase letters")
+    print(f"\t{no_has if has_numbers else yes_has} min 2 numbers")
+    print(f"\t{no_has if has_special else yes_has} min 2 special characters")
+    print(f"\t{no_has if has_nonLetters else yes_has} min 2 non letters")
 
     print(f"Complexity score: {round(testResult[1], 2)}")
     print(f"Strength: {get_strength_label(round(testResult[1], 2))}")

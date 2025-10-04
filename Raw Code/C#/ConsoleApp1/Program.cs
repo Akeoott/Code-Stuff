@@ -32,7 +32,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Warning! It's highly recomended to use the source code as reference.\nIt's necessary to enable and dissable methods from within the source code.\n");
+            Console.WriteLine("Warning! It's highly recomended to use the source code as reference.\nIt's necessary to remove comments from within the source code to enable and dissable methods.\n");
 
             /*  List of themes covered here (aka things that are gonna get covered in the future):
             |
@@ -857,6 +857,86 @@ namespace MyApp
 
             }
 
+            static void Method_27()
+            {
+                /*
+                    --- 27 - Exception Handling! ---
+                */
+                // try      = try some code that is considered "dangerous"
+                // catch    = catches and handles exceptions when they occur
+                // finally  = always executes regardless if exception is cought or not
+
+                double x;
+                double y;
+                double result;
+
+                try
+                {
+                    Console.WriteLine("Divide first number with second number!");
+
+                    Console.WriteLine("Enter first number: ");
+                    x = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter second number: ");
+                    y = Convert.ToDouble(Console.ReadLine());
+
+                    result = x / y;
+
+                    Console.WriteLine($"Result: {result}");
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Enter ONLY numbers you DUMM DUMM!");
+                }
+                catch (DivideByZeroException e)
+                {
+                    Console.WriteLine("You cant divide by zero you DUMM DUMM!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Something unexpected went wrong!\n{e}");
+                }
+                finally
+                {
+                    Console.WriteLine("Bye bye!");
+                }
+            }
+
+            static void Method_28()
+            {
+                /*
+                    --- 28 - Conditional Operator! ---
+                */
+                // conditional operator = used in conditional assignment if a condition is true/false
+
+                // (condition) ? x : y
+                // (a == b) ? variable1 : variable2
+                // variable1 is used if the condition is true.
+
+                double temp = 20;
+                string message;
+
+                /*
+                    / //! Either use if else statements
+
+                    if (temp >= 15)
+                    {
+                        message = "It's warm outside";
+                    }
+                    else
+                    {
+                        message = "It's cold outside";
+                    }
+
+                    / //! OR use conditional operators!
+
+                    message = (temp >= 15) ? "It's warm outside" : "It's cold outside";
+                */
+
+                // One liner for conditional operation and writing to console!
+                Console.WriteLine(message = (temp >= 15) ? "It's warm outside" : "It's cold outside");
+            }
+
             //* Remove/Add comment to enable/disable a function.
 
             //Method_1();
@@ -884,7 +964,9 @@ namespace MyApp
             //Method_23();
             //Method_24();
             //Method_25();
-            Method_26();
+            //Method_26();
+            //Method_27();
+            Method_28();
         }
 
         static void Method_23_Helper(string birthdayGirl, int age)
@@ -921,7 +1003,6 @@ namespace MyApp
             {
                 total += price;
             }
-
             return total;
         }
     }
