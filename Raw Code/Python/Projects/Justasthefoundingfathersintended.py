@@ -18,7 +18,7 @@ def sprint(text, delay=.05, break_after=None, break_time=.3, end='\n', flush=Tru
 
 def play_sound(sound):
     """Plays a sound without blocking execution."""
-    winsound.PlaySound(sound, winsound.SND_FILENAME | winsound.SND_ASYNC)
+    winsound.PlaySound(sound, winsound.SND_FILENAME | winsound.SND_ASYNC) # type: ignore
 
 sprint("Now, I can only speak python... ", end='', flush=True)
 time.sleep(1)

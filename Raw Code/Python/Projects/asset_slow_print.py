@@ -1,7 +1,7 @@
 import sys,time
 
 class slow_print:
-    def slow_print(text, delay=.05, break_after=None, break_time=.3, end='\n', flush=True):
+    def slow_print(self, text, delay=.05, break_after=None, break_time=.3, end='\n', flush=True):
         for i, char in enumerate(text):
             sys.stdout.write(char)
             if flush:

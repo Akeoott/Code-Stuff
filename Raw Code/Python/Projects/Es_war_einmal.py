@@ -98,5 +98,3 @@ else:
     print("-" * 33)
     slow_print("Gratulation! Du hast das gute Ende erreicht!")
     print("-" * 33)
-
-    decision2 = get_choice("")
