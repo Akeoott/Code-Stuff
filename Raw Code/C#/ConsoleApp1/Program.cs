@@ -900,6 +900,7 @@ namespace MyApp
                 {
                     Console.WriteLine("Bye bye!");
                 }
+                // Pretty self explanitory so not many comments i guess.
             }
 
             static void Method_28()
@@ -937,6 +938,90 @@ namespace MyApp
                 Console.WriteLine(message = (temp >= 15) ? "It's warm outside" : "It's cold outside");
             }
 
+            static void Method_29()
+            {
+                /*
+                    --- 29 - String Interpolation! ---
+                */
+                // string interpolation = allows us to insert variables into a string literal
+                //                        precede a string literal with $
+                //                        { } are placeholders
+                //?                       This has been used around the entire file already!
+                //?                       Now its simply getting its own method for explenation.
+
+                string firstName = "Ame";
+                string lastName = "Janin";
+                int age = 16;
+
+                // Bad slow way:
+                Console.WriteLine("Hello " + firstName + " " + lastName + ".");
+                Console.WriteLine("You are " + age + " years old.");
+
+                // GOOD fast way:
+                Console.WriteLine($"Hello {firstName} {lastName}.");
+                Console.WriteLine($"You are {age} years old.");
+            }
+
+            static void Method_30()
+            {
+                /*
+                    --- 30 - Multidimensional Arrays! ---
+                */
+                // This may be a difficult to understand topic,
+                // so its okay if you skip this and tackle it later!
+
+                string[] ford = { "Mustang", "F-150", "Explorer" };
+                string[] chevy = { "Corvette", "Camaro", "Silverado" };
+                string[] toyota = { "Corolla", "Camry", "Rav4" };
+                // The arrays above are basically the multidimensional array below
+                string[,] parkingLot = {
+                    { "Mustang", "F-150", "Explorer" },
+                    { "Corvette", "Camaro", "Silverado" },
+                    { "Corolla", "Camry", "Rav4" }
+                };
+
+                // Basically [row 0, column 2] which targets the "Explorer"
+                // Remember, arrays start at 0!
+                parkingLot[0, 2] = "Fusion";
+
+                foreach (string cars in parkingLot)
+                {
+                    Console.WriteLine(cars);
+                }
+
+                Console.WriteLine();
+
+                for (int i = 0; i < parkingLot.GetLength(0); i++)
+                {
+                    for (int j = 0; j < parkingLot.GetLength(1); j++)
+                    {
+                        Console.Write($"{parkingLot[i, j]} ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+            static void Method_31()
+            {
+                /*
+                    --- 31 - Classes! ---
+                */
+                // class    = a bundle of related code.
+                //            can be used as a blueprint to create objects (OOP)
+
+                // For example, the math class contains a bunch of code relating to math!
+                Math.Round(3.14);
+                Math.Abs(-3.14);
+                Math.Pow(2, 3);
+
+                //? An example class is below the practice function aka everything here!
+
+                Method_31_Helper.Hello();
+                Method_31_Helper.Waiting();
+                Method_31_Helper.Bye();
+                // Method_31_Helper is in a seperate file
+            }
+
             //* Remove/Add comment to enable/disable a function.
 
             //Method_1();
@@ -966,9 +1051,13 @@ namespace MyApp
             //Method_25();
             //Method_26();
             //Method_27();
-            Method_28();
+            //Method_28();
+            //Method_29();
+            //Method_30();
+            Method_31();
         }
 
+        // Helper methods:
         static void Method_23_Helper(string birthdayGirl, int age)
         {
             Console.WriteLine($"Happy birthday to {birthdayGirl}!");
