@@ -1022,6 +1022,34 @@ namespace MyApp
                 // Method_31_Helper is in a seperate file
             }
 
+            static void Method_32()
+            {
+                /*
+                    --- 32 - Objects! ---
+                */
+                // object   = An instance of a class
+                //            A class can be used as a blueprint to create objects (OOP)
+                //            objects can have fields & methods (characteristics & actions)
+
+                // We now created a "Method_32_Helper" object called "human1"
+                Method_32_Helper human1 = new Method_32_Helper(); // Would call the class "Human" if it wasnt for practice.
+                // We now created another "Method_32_Helper" object called "human2" so we can reuse this class!
+                Method_32_Helper human2 = new Method_32_Helper();
+
+                human1.name = "Ame";
+                human1.age = 16;
+
+                human2.name = "The DARK Banana";
+                human2.age = 666666;
+
+                human1.Eat();
+                human1.Sleep();
+
+                human2.Eat();
+                human2.Sleep();
+
+            }
+
             //* Remove/Add comment to enable/disable a function.
 
             //Method_1();
@@ -1054,10 +1082,11 @@ namespace MyApp
             //Method_28();
             //Method_29();
             //Method_30();
-            Method_31();
+            //Method_31();
+            Method_32();
         }
 
-        // Helper methods:
+        // Helper methods (Use these as reference!):
         static void Method_23_Helper(string birthdayGirl, int age)
         {
             Console.WriteLine($"Happy birthday to {birthdayGirl}!");
@@ -1067,6 +1096,7 @@ namespace MyApp
             Console.WriteLine($"Happy birthday to {birthdayGirl}!");
             Console.WriteLine($"This kinda feels dry...\n");
         }
+
         static double Method_24_Helper(double x, double y)
         {
             double z = x * y;
@@ -1076,14 +1106,17 @@ namespace MyApp
             return x * y;
             */
         }
+
         static double Method_25_Helper(double x, double y)
         {
             return x * y;
         }
+
         static double Method_25_Helper(double x, double y, double z)
         {   // Same name, different method, different parameters.
             return x * y * z;
         }
+
         static double Method_26_Helper(params double[] prices)
         {
             double total = 0;
@@ -1093,6 +1126,26 @@ namespace MyApp
                 total += price;
             }
             return total;
+        }
+    }
+
+    // Helper classes (Use these as reference!):
+    class Method_32_Helper // Would call this class "Human" if it wasnt for practice.
+    {
+        // Dont recommend "public" for security purpouses but its needed as an example here to access these methods.
+
+        // These are fields, defining characteristics of an object.
+        public string name;
+        public int age;
+
+        // These are objects, the actions of an object.
+        public void Eat()
+        {
+            Console.WriteLine($"{name} is eating.");
+        }
+        public void Sleep()
+        {
+            Console.WriteLine($"{name} is sleeping.");
         }
     }
 }
