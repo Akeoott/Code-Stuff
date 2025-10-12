@@ -1,4 +1,4 @@
-﻿// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT Licence.
+// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
 using System;
@@ -1036,6 +1036,7 @@ namespace MyApp
                 // We now created another "Method_32_Helper" object called "human2" so we can reuse this class!
                 Method_32_Helper human2 = new Method_32_Helper();
 
+                // Manually assigning variables
                 human1.name = "Ame";
                 human1.age = 16;
 
@@ -1047,7 +1048,24 @@ namespace MyApp
 
                 human2.Eat();
                 human2.Sleep();
+            }
 
+            static void Method_33()
+            {
+                /*
+                    --- 33 - Constructors! ---
+                */
+                // constructor  = A special method in a class
+                //                Same name as the class name
+                //                Can be used to assign arguments to fields when creating an object
+
+                // Pre constructed assignment of variables allows us to just pass them thru as arguments,
+                // Without having to do it manually (As displayed in the pervious method.)
+                Method_33_Helper car1 = new Method_33_Helper("Ford", "Mustang", "red", 2022);
+                Method_33_Helper car2 = new Method_33_Helper("Chevy", "Corvette", "blue", 2021);
+
+                car1.Drive();
+                car2.Drive();
             }
 
             //* Remove/Add comment to enable/disable a function.
@@ -1083,10 +1101,12 @@ namespace MyApp
             //Method_29();
             //Method_30();
             //Method_31();
-            Method_32();
+            //Method_32();
+            Method_33();
         }
 
         // Helper methods (Use these as reference!):
+
         static void Method_23_Helper(string birthdayGirl, int age)
         {
             Console.WriteLine($"Happy birthday to {birthdayGirl}!");
@@ -1130,6 +1150,7 @@ namespace MyApp
     }
 
     // Helper classes (Use these as reference!):
+
     class Method_32_Helper // Would call this class "Human" if it wasnt for practice.
     {
         // Dont recommend "public" for security purpouses but its needed as an example here to access these methods.
@@ -1146,6 +1167,27 @@ namespace MyApp
         public void Sleep()
         {
             Console.WriteLine($"{name} is sleeping.");
+        }
+    }
+
+    class Method_33_Helper // Would call this class "Car" if it wasnt for practice.
+    {
+        string make;
+        string model;
+        string color;
+        int year;
+
+        public Method_33_Helper(string make, string model, string color, int year) // This is a constructor
+        {
+            this.make = make;
+            this.model = model;
+            this.color = color;
+            this.year = year;
+        }
+
+        public void Drive()
+        {
+            Console.WriteLine($"You drive the {make} {model}");
         }
     }
 }
