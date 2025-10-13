@@ -1068,6 +1068,34 @@ namespace MyApp
                 car2.Drive();
             }
 
+            static void Method_34()
+            {
+                /*
+                    --- 34 - Static! ---
+                */
+                // Static   = modifier to declare a static member, which belongs to the class itself
+                //            rather than to any specific object
+
+                // Note: if the class is static, one cant make objects out of it. Like the Math class.
+                //       the class we are using tho isnt static.
+                Method_34_Helper car1 = new Method_34_Helper("Mustang");
+                Method_34_Helper car2 = new Method_34_Helper("Corvette");
+                Method_34_Helper car3 = new Method_34_Helper("Lambo");
+
+                // Both will print out the number 1 because they are copies of the class aka they are objects and therefore independent.
+                Console.WriteLine(car1.numberOfCars);
+                Console.WriteLine(car2.numberOfCars);
+                Console.WriteLine(car3.numberOfCars);
+
+                // We have to do that in a static way. We do this by making the varible in the class static,
+                // and by calling the class itself rather than the object of it.
+                Console.WriteLine(Method_34_Helper.staticNumberOfCars);
+                Console.WriteLine(Method_34_Helper.staticNumberOfCars);
+
+                // A static method. All the objects share it instead of each one having its own method.
+                Method_34_Helper.StartRace();
+            }
+
             //* Remove/Add comment to enable/disable a function.
 
             //Method_1();
@@ -1102,7 +1130,8 @@ namespace MyApp
             //Method_30();
             //Method_31();
             //Method_32();
-            Method_33();
+            //Method_33();
+            Method_34();
         }
 
         // Helper methods (Use these as reference!):
@@ -1188,6 +1217,25 @@ namespace MyApp
         public void Drive()
         {
             Console.WriteLine($"You drive the {make} {model}");
+        }
+    }
+
+    class Method_34_Helper // Would call this class "Car" if it wasnt for practice.
+    {
+        string model;
+        public int numberOfCars;              // Not static and object bound
+        public static int staticNumberOfCars; // Static and class bound
+
+        public Method_34_Helper(string model)
+        {
+            this.model = model;
+            numberOfCars++;
+            staticNumberOfCars++;
+        }
+
+        public static void StartRace()
+        {
+            Console.WriteLine("The race has begun!");
         }
     }
 }
