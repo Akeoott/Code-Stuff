@@ -1229,8 +1229,8 @@ namespace MyApp
         public Method_34_Helper(string model)
         {
             this.model = model;
-            numberOfCars++;
-            staticNumberOfCars++;
+            numberOfCars++;       // Adds 1 to any specific object making it not possible to count the amount of cars.
+            staticNumberOfCars++; // Adds 1 to the class itself making it possible to actually count the amount of cars.
         }
 
         public static void StartRace()
