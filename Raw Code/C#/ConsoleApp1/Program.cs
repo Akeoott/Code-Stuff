@@ -1,12 +1,12 @@
-// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT Licence.
-// See the LICENCE file in the repository root for full licence text.
+// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT License.
+// See the LICENSE file in the repository root for full license text.
 
 using System;
 using System.Diagnostics.Tracing;
 using System.Net.Sockets;
 using System.Reflection.Metadata;
 
-// Disabeling warnings for practice
+// Disabling warnings for practice
 //#pragma warning disable CA5394, CS8321, CS8600, CA1305
 #pragma warning disable
 
@@ -19,11 +19,11 @@ using System.Reflection.Metadata;
 // `dotnet build -c Release`    //? Build optimized but still development-friendly
 
 //? --- Single File Executables ---
-// `dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/linux/`  //? linux bin
-// `dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/windows/`  //? windows exe
-// `dotnet publish -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/macos/`    //? mac app
+// `dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/linux/`  //? Linux bin
+// `dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/windows/`  //? Windows exe
+// `dotnet publish -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -o ./builds/macos/`    //? Mac app
 
-//? Dont forget to make the program executable!
+//? Don't forget to make the program executable!
 // `chmod +x ./program`
 
 namespace MyApp
@@ -32,7 +32,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Warning! It's highly recomended to use the source code as reference.\nIt's necessary to remove comments from within the source code to enable and dissable methods.\n");
+            Console.WriteLine("Warning! It's highly recommended to use the source code as reference.\nIt's necessary to remove comments from within the source code to enable and disable methods.\n");
 
             /*  List of themes covered here (aka things that are gonna get covered in the future):
             |
@@ -97,13 +97,13 @@ namespace MyApp
                 /*
                     --- 3 - Variables! ---
                 */
-                // int  = intiger = a whole number.
+                // int  = integer = a whole number.
 
-                int x;       // decleration
+                int x;       // declaration
                 x = 123;     // initialization
-                int y = 321; // decleration + initialization
+                int y = 321; // declaration + initialization
 
-                int z = x + y; // Adding two intigers
+                int z = x + y; // Adding two integer
 
                 int age = 16;
 
@@ -124,7 +124,7 @@ namespace MyApp
                 Console.WriteLine($"[Type]     [Data]  |  [Description]");
                 Console.WriteLine($"int      = {whole_num}       |  int aka a whole number");
                 Console.WriteLine($"double   = {decimal_num}     |  double aka a decimal number");
-                Console.WriteLine($"bool     = {boolean}    |  bool aka ture or false");
+                Console.WriteLine($"bool     = {boolean}    |  bool aka true or false");
                 Console.WriteLine($"char     = {symbol}       |  char aka a single character");
                 Console.WriteLine($"string   = {name}  |  string aka a series of characters");
                 Console.WriteLine($"int      = {whole_num}       |  int aka a whole number\n");
@@ -139,7 +139,7 @@ namespace MyApp
                 //                and do not change for the life of the program.
 
                 // The value pi cannot be changed cause its a constant!
-                // If it wherent a constant, then i would be able to change the value.
+                // If it wasn't a constant, then i would be able to change the value.
                 const double pi = 3.14159;
 
                 Console.WriteLine($"\npi is a constant so it cant get changed!: {pi}\n");
@@ -173,7 +173,7 @@ namespace MyApp
                 */
 
                 Console.Write("\nWhats your name?: ");
-                string name = Console.ReadLine(); // Reads input and asigns it to a var
+                string name = Console.ReadLine(); // Reads input and assigns it to a var
 
                 Console.Write("Whats your age?: ");
                 int age = Convert.ToInt32(Console.ReadLine());
@@ -225,7 +225,7 @@ namespace MyApp
                     "double x = 3.99;               // val: 3.99\n" +
                     "double y = Math.Pow(x, 2);     // val: 9.00\n\n" +
 
-                    $"Math.Pow(x, y):   {Math.Pow(x, y)}\n" +  // Raise the value to the power of someting else.
+                    $"Math.Pow(x, y):   {Math.Pow(x, y)}\n" +  // Raise the value to the power of something else.
                     $"Math.Sqrt(x):     {Math.Sqrt(x)}\n" +    // Get the Square root of a value.
                     $"Math.Abs(x):      {Math.Abs(x)}\n" +     // Get the absolute number of a value.
                     $"Math.Round(x):    {Math.Round(x)}\n" +   // Round a value.
@@ -323,17 +323,17 @@ namespace MyApp
                 {
                     Console.WriteLine("How are you so old unc 💀");
                 }
-                else if (age < 0) // If the if statement above isnt right, this will be next
+                else if (age < 0) // If the if statement above isn't right, this will be next
                 {
-                    Console.WriteLine("You dont even exist yet ;-;");
+                    Console.WriteLine("You don't even exist yet ;-;");
                 }
                 else if (age >= 18)
                 {
-                    Console.WriteLine("Your old enought to visit adult websites!");
+                    Console.WriteLine("Your old enough to visit adult websites!");
                 }
                 else // If nothing is right, this will always execute
                 {
-                    Console.WriteLine("Your NOT old enought to visit adult websites!");
+                    Console.WriteLine("Your NOT old enough to visit adult websites!");
                 }
 
                 Console.Write("Whats you name?: ");
@@ -383,7 +383,7 @@ namespace MyApp
                         Console.WriteLine("It's Sunday!");
                         break;
                     default:
-                        Console.WriteLine($"I dont know what {day} is...");
+                        Console.WriteLine($"I don't know what {day} is...");
                         break;
                 }
             }
@@ -425,7 +425,7 @@ namespace MyApp
                     Console.Write("Enter your name: ");
                     name = Console.ReadLine();
                 }
-                Console.WriteLine($"YO WASSUP {name.ToUpper()} MA NIGGA!");
+                Console.WriteLine($"YO WHATS UP {name.ToUpper()} MA NIGGA!");
             }
 
             static void Method_16()
@@ -581,7 +581,7 @@ namespace MyApp
 
                 while (playAgain)
                 {
-                    // Reste inputs
+                    // Reset inputs
                     userInput = "";
                     computerInput = "";
 
@@ -680,7 +680,7 @@ namespace MyApp
                         Console.WriteLine("Time for another round!\n");
                         playAgain = true;
                     }
-                    // Its 6:36 AM at the time of writing this comment. IM DEAD! Havent sleept lol...
+                    // Its 6:36 AM at the time of writing this comment. IM DEAD! haven't slept lol...
                 }
             }
 
@@ -695,7 +695,7 @@ namespace MyApp
                 {
                     double num1 = 0;
                     double num2 = 0;
-                    string operType = "";
+                    string oprType = "";
                     double result = 0;
 
                     Console.Write("\nEnter your first number: ");
@@ -707,9 +707,9 @@ namespace MyApp
                     Console.WriteLine("Options:");
                     Console.WriteLine("\t+ : Add\n\t- : Subtract\n\t* : Multiply\n\t/ : Divide");
                     Console.Write("Enter: ");
-                    operType = Console.ReadLine();
+                    oprType = Console.ReadLine();
 
-                    switch (operType)
+                    switch (oprType)
                     {
                         case "+":
                             result = num1 + num2;
@@ -724,10 +724,10 @@ namespace MyApp
                             result = num1 / num2;
                             break;
                         default:
-                            Console.WriteLine("An error occured. Did you enter the right operation?");
+                            Console.WriteLine("An error occurred. Did you enter the right operation?");
                             break;
                     }
-                    Console.WriteLine($"Result: {num1} {operType} {num2} = {result}");
+                    Console.WriteLine($"Result: {num1} {oprType} {num2} = {result}");
 
                     Console.Write("\nWanna make another calculation? (Y/n): ");
                 } while (Console.ReadLine().ToLower() == "y");
@@ -742,7 +742,7 @@ namespace MyApp
                 // array    = a variable that can store multiple values. fixed size.
 
                 // Index starts from zero. So here are values under index 0, 1 and 2
-                string[] justCars = { "BMW", "Porsche", "Corvette" };   // Completely fixed size and already asigned values!
+                string[] justCars = { "BMW", "Porsche", "Corvette" };   // Completely fixed size and already assigned values!
 
                 string[] cars = new string[4];  // Declared first to allow empty values while keeping size!
                 cars[0] = "BMW";        // Assigning value to array
@@ -751,7 +751,7 @@ namespace MyApp
 
                 cars[0] = "Tesla";      // Modifying value in array
 
-                for (int i = 0; i < cars.Length; i++)   // i in its first itteration is 0
+                for (int i = 0; i < cars.Length; i++)   // i in its first iteration is 0
                 {
                     Console.WriteLine(cars[i]);
                 }
@@ -778,7 +778,7 @@ namespace MyApp
                     --- 23 - Methods! ---
                 */
                 // method       = performs a section of code, whenever it's called (aka invoked).
-                //                benefit: Let's us reuse code w/o writting it multiple times.
+                //                benefit: Let's us reuse code w/o writing it multiple times.
                 // arguments    = what is sent to methods
 
                 string name = "Akeoott";
@@ -786,9 +786,9 @@ namespace MyApp
 
                 //? void in the example method below means that its gonna return nothing
                 // static void Method_23_Helper(...)
-                Method_23_Helper(name, age); // Sings happybirthday once with the passed in argument.
+                Method_23_Helper(name, age); // Sings happy birthday once with the passed in argument.
                 Method_23_Helper(name, age); // In method, one can rename them.
-                Method_23_Helper(name, age); // Arguemtns must match in caller and method.
+                Method_23_Helper(name, age); // Arguments must match in caller and method.
             }
 
             static void Method_24()
@@ -847,7 +847,7 @@ namespace MyApp
                     --- 26 - Params Keyword! ---
                 */
                 // params keyword  = a method parameter that takes a variable number of arguments.
-                //                    the parameter type must be a singe - dimentional array
+                //                    the parameter type must be a singe - dimensional array
 
                 //? params allows a variable amount of arguments! (But only one parameter)
                 // ... Method_26_Helper(params double[] prices)
@@ -864,7 +864,7 @@ namespace MyApp
                 */
                 // try      = try some code that is considered "dangerous"
                 // catch    = catches and handles exceptions when they occur
-                // finally  = always executes regardless if exception is cought or not
+                // finally  = always executes regardless if exception is caught or not
 
                 double x;
                 double y;
@@ -900,7 +900,7 @@ namespace MyApp
                 {
                     Console.WriteLine("Bye bye!");
                 }
-                // Pretty self explanitory so not many comments i guess.
+                // Pretty self explanatory so not many comments i guess.
             }
 
             static void Method_28()
@@ -947,7 +947,7 @@ namespace MyApp
                 //                        precede a string literal with $
                 //                        { } are placeholders
                 //?                       This has been used around the entire file already!
-                //?                       Now its simply getting its own method for explenation.
+                //?                       Now its simply getting its own method for explanation.
 
                 string firstName = "Ame";
                 string lastName = "Janin";
@@ -1019,7 +1019,7 @@ namespace MyApp
                 Method_31_Helper.Hello();
                 Method_31_Helper.Waiting();
                 Method_31_Helper.Bye();
-                // Method_31_Helper is in a seperate file
+                // Method_31_Helper is in a separate file
             }
 
             static void Method_32()
@@ -1032,7 +1032,7 @@ namespace MyApp
                 //            objects can have fields & methods (characteristics & actions)
 
                 // We now created a "Method_32_Helper" object called "human1"
-                Method_32_Helper human1 = new Method_32_Helper(); // Would call the class "Human" if it wasnt for practice.
+                Method_32_Helper human1 = new Method_32_Helper(); // Would call the class "Human" if it wasn't for practice.
                 // We now created another "Method_32_Helper" object called "human2" so we can reuse this class!
                 Method_32_Helper human2 = new Method_32_Helper();
 
@@ -1077,7 +1077,7 @@ namespace MyApp
                 //            rather than to any specific object
 
                 // Note: if the class is static, one cant make objects out of it. Like the Math class.
-                //       the class we are using tho isnt static.
+                //       the class we are using tho isn't static.
                 Method_34_Helper car1 = new Method_34_Helper("Mustang");
                 Method_34_Helper car2 = new Method_34_Helper("Corvette");
                 Method_34_Helper car3 = new Method_34_Helper("Lambo");
@@ -1087,7 +1087,7 @@ namespace MyApp
                 Console.WriteLine(car2.numberOfCars);
                 Console.WriteLine(car3.numberOfCars);
 
-                // We have to do that in a static way. We do this by making the varible in the class static,
+                // We have to do that in a static way. We do this by making the variable in the class static,
                 // and by calling the class itself rather than the object of it.
                 Console.WriteLine(Method_34_Helper.staticNumberOfCars);
                 Console.WriteLine(Method_34_Helper.staticNumberOfCars);
@@ -1180,9 +1180,9 @@ namespace MyApp
 
     // Helper classes (Use these as reference!):
 
-    class Method_32_Helper // Would call this class "Human" if it wasnt for practice.
+    class Method_32_Helper // Would call this class "Human" if it wasn't for practice.
     {
-        // Dont recommend "public" for security purpouses but its needed as an example here to access these methods.
+        // Don't recommend "public" for security purposes but its needed as an example here to access these methods.
 
         // These are fields, defining characteristics of an object.
         public string name;
@@ -1199,7 +1199,7 @@ namespace MyApp
         }
     }
 
-    class Method_33_Helper // Would call this class "Car" if it wasnt for practice.
+    class Method_33_Helper // Would call this class "Car" if it wasn't for practice.
     {
         string make;
         string model;
@@ -1220,7 +1220,7 @@ namespace MyApp
         }
     }
 
-    class Method_34_Helper // Would call this class "Car" if it wasnt for practice.
+    class Method_34_Helper // Would call this class "Car" if it wasn't for practice.
     {
         string model;
         public int numberOfCars;              // Not static and object bound
