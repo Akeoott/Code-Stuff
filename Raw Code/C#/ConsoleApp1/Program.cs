@@ -2,6 +2,7 @@
 // See the LICENSE file in the repository root for full license text.
 
 using System;
+using System.ComponentModel;
 using System.Diagnostics.Tracing;
 using System.Net.Sockets;
 using System.Reflection.Metadata;
@@ -1016,10 +1017,10 @@ namespace MyApp
 
                 //? An example class is below the practice function aka everything here!
 
-                Method_31_Helper.Hello();
-                Method_31_Helper.Waiting();
-                Method_31_Helper.Bye();
-                // Method_31_Helper is in a separate file
+                Class_31.Hello();
+                Class_31.Waiting();
+                Class_31.Bye();
+                // Class_31 is in a separate file
             }
 
             static void Method_32()
@@ -1031,10 +1032,10 @@ namespace MyApp
                 //            A class can be used as a blueprint to create objects (OOP)
                 //            objects can have fields & methods (characteristics & actions)
 
-                // We now created a "Method_32_Helper" object called "human1"
-                Method_32_Helper human1 = new Method_32_Helper(); // Would call the class "Human" if it wasn't for practice.
-                // We now created another "Method_32_Helper" object called "human2" so we can reuse this class!
-                Method_32_Helper human2 = new Method_32_Helper();
+                // We now created a "Class_32" object called "human1"
+                Class_32 human1 = new Class_32(); // Would call the class "Human" if it wasn't for practice.
+                // We now created another "Class_32" object called "human2" so we can reuse this class!
+                Class_32 human2 = new Class_32();
 
                 // Manually assigning variables
                 human1.name = "Ame";
@@ -1061,8 +1062,8 @@ namespace MyApp
 
                 // Pre constructed assignment of variables allows us to just pass them thru as arguments,
                 // Without having to do it manually (As displayed in the pervious method.)
-                Method_33_Helper car1 = new Method_33_Helper("Ford", "Mustang", "red", 2022);
-                Method_33_Helper car2 = new Method_33_Helper("Chevy", "Corvette", "blue", 2021);
+                Class_33 car1 = new Class_33("Ford", "Mustang", "red", 2022);
+                Class_33 car2 = new Class_33("Chevy", "Corvette", "blue", 2021);
 
                 car1.Drive();
                 car2.Drive();
@@ -1078,9 +1079,9 @@ namespace MyApp
 
                 // Note: if the class is static, one cant make objects out of it. Like the Math class.
                 //       the class we are using tho isn't static.
-                Method_34_Helper car1 = new Method_34_Helper("Mustang");
-                Method_34_Helper car2 = new Method_34_Helper("Corvette");
-                Method_34_Helper car3 = new Method_34_Helper("Lambo");
+                Class_34 car1 = new Class_34("Mustang");
+                Class_34 car2 = new Class_34("Corvette");
+                Class_34 car3 = new Class_34("Lambo");
 
                 // Both will print out the number 1 because they are copies of the class aka they are objects and therefore independent.
                 Console.WriteLine(car1.numberOfCars);
@@ -1089,11 +1090,48 @@ namespace MyApp
 
                 // We have to do that in a static way. We do this by making the variable in the class static,
                 // and by calling the class itself rather than the object of it.
-                Console.WriteLine(Method_34_Helper.staticNumberOfCars);
-                Console.WriteLine(Method_34_Helper.staticNumberOfCars);
+                Console.WriteLine(Class_34.staticNumberOfCars);
+                Console.WriteLine(Class_34.staticNumberOfCars);
 
                 // A static method. All the objects share it instead of each one having its own method.
-                Method_34_Helper.StartRace();
+                Class_34.StartRace();
+            }
+
+            static void Method_35()
+            {
+                /*
+                    --- 35 - Overloaded Constructors! ---
+                */
+                // overloaded constructors   = technique to create multiple constructors,
+                //                            with a different set of parameters.
+                //                            name + parameters = signature
+
+                Class_35 pizza = new Class_35("stuffed crust", "red sauce", "mozzarella", "pepperoni"); // 4 arguments
+                Class_35 pizzaMozzarella = new Class_35("stuffed crust", "red sauce", "mozzarella"); // 3 arguments
+            }
+
+            static void Method_36()
+            {
+                /*
+                    --- 36 - Inheritance! ---
+                */
+                // inheritance  = 1 or more child classes receiving fields, methods, etc, from a common parent!
+
+                Class_36_helper1 car = new Class_36_helper1();
+                Class_36_helper2 bike = new Class_36_helper2();
+                Class_36_helper3 boat = new Class_36_helper3();
+
+                Console.WriteLine(car.speed); // Speed is 0 cause we stated that in the class Class_36
+                Console.WriteLine(car.wheels); // Wheels is 4 cause we stated that in the class Class_36_helper1
+                car.go();
+
+                Console.WriteLine(bike.speed);
+                Console.WriteLine(bike.wheels);
+                bike.go();
+
+                Console.WriteLine(boat.speed);
+                Console.WriteLine(boat.wheels);
+                boat.go();
             }
 
             //* Remove/Add comment to enable/disable a function.
@@ -1131,7 +1169,9 @@ namespace MyApp
             //Method_31();
             //Method_32();
             //Method_33();
-            Method_34();
+            //Method_34();
+            //Method_35();
+            Method_36();
         }
 
         // Helper methods (Use these as reference!):
@@ -1180,7 +1220,7 @@ namespace MyApp
 
     // Helper classes (Use these as reference!):
 
-    class Method_32_Helper // Would call this class "Human" if it wasn't for practice.
+    class Class_32 // Would call this class "Human" if it wasn't for practice.
     {
         // Don't recommend "public" for security purposes but its needed as an example here to access these methods.
 
@@ -1199,14 +1239,14 @@ namespace MyApp
         }
     }
 
-    class Method_33_Helper // Would call this class "Car" if it wasn't for practice.
+    class Class_33 // Would call this class "Car" if it wasn't for practice.
     {
         string make;
         string model;
         string color;
         int year;
 
-        public Method_33_Helper(string make, string model, string color, int year) // This is a constructor
+        public Class_33(string make, string model, string color, int year) // This is a constructor
         {
             this.make = make;
             this.model = model;
@@ -1220,13 +1260,13 @@ namespace MyApp
         }
     }
 
-    class Method_34_Helper // Would call this class "Car" if it wasn't for practice.
+    class Class_34 // Would call this class "Car" if it wasn't for practice.
     {
         string model;
         public int numberOfCars;              // Not static and object bound
         public static int staticNumberOfCars; // Static and class bound
 
-        public Method_34_Helper(string model)
+        public Class_34(string model)
         {
             this.model = model;
             numberOfCars++;       // Adds 1 to any specific object making it not possible to count the amount of cars.
@@ -1238,4 +1278,51 @@ namespace MyApp
             Console.WriteLine("The race has begun!");
         }
     }
+
+    class Class_35 // Would call this class "Pizza" if it wasn't for practice.
+    {
+        string bread;
+        string sauce;
+        string cheese;
+        string topping;
+
+        public Class_35(string bread, string sauce, string cheese)
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+        }
+
+        public Class_35(string bread, string sauce, string cheese, string topping) // Same constructor but with more arguments
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+            this.topping = topping;
+        }
+    }
+
+    class Class_36 // Would call this class "Vehicle" if it wasn't for practice.
+    {
+        public int speed = 0;
+
+        public void go()
+        {
+            Console.WriteLine($"This vehicle is moving {speed}km/h");
+        }
+    }
+    // These are children classes. They inherit everything from the parent class (Class_36).
+    class Class_36_helper1 /* aka "car" */ : Class_36
+    {
+        public int wheels = 4;
+    }
+    class Class_36_helper2 /* aka "bike" */ : Class_36
+    {
+        public int wheels = 2;
+    }
+    class Class_36_helper3 /* aka "boat" */ : Class_36
+    {
+        public int wheels = 0;
+    }
 }
+

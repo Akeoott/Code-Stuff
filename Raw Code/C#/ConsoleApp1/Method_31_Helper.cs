@@ -1,12 +1,12 @@
-// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT Licence.
-// See the LICENCE file in the repository root for full licence text.
+// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT License.
+// See the LICENSE file in the repository root for full license text.
 
 using System;
 #pragma warning disable CA1303 // Do not pass literals as localized parameters
 
 namespace MyApp
 {
-    static class Method_31_Helper
+    static class Class_31
     {
         public static void Hello()
         {
