@@ -122,13 +122,13 @@ namespace MyApp
                 char symbol = '@';        // char is for a single character like '@' or 'A'
                 string name = "Akeoot";   // string is for a series of characters like "hello"
 
-                Console.WriteLine($"[Type]     [Data]  |  [Description]");
-                Console.WriteLine($"int      = {whole_num}       |  int aka a whole number");
-                Console.WriteLine($"double   = {decimal_num}     |  double aka a decimal number");
-                Console.WriteLine($"bool     = {boolean}    |  bool aka true or false");
-                Console.WriteLine($"char     = {symbol}       |  char aka a single character");
-                Console.WriteLine($"string   = {name}  |  string aka a series of characters");
-                Console.WriteLine($"int      = {whole_num}       |  int aka a whole number\n");
+                Console.WriteLine($"[Type]\t  [Data]\t|  [Description]");
+                Console.WriteLine($"int\t= {whole_num}\t\t|  int aka a whole number");
+                Console.WriteLine($"double\t= {decimal_num}\t\t|  double aka a decimal number");
+                Console.WriteLine($"bool\t= {boolean}\t\t|  bool aka true or false");
+                Console.WriteLine($"char\t= {symbol}\t\t|  char aka a single character");
+                Console.WriteLine($"string\t= {name}\t|  string aka a series of characters");
+                Console.WriteLine($"int\t= {whole_num}\t\t|  int aka a whole number\n");
             }
 
             static void Method_4()
@@ -1134,6 +1134,27 @@ namespace MyApp
                 boat.go();
             }
 
+            static void Method_37()
+            {
+                /*
+                    --- 37 - Abstract Classes! ---
+                */
+                // abstract classes  = modifier that indicates missing components or incomplete implementation
+
+                Class_37_helper1 car = new Class_37_helper1();
+                Class_37_helper2 bike = new Class_37_helper2();
+                Class_37_helper3 boat = new Class_37_helper3();
+
+                // Lets say someone picks a method aka car to play in a race.
+                // We wouldn't want a player picking a method that doesn't provide everything needed.
+                // The abstract modifier prevents one from even making an object out of the abstract class.
+                // This below doesn't work cause its trying to access an abstract class,
+                // that isn't complete or missing components to perform the expected task.
+                // This can be on purpose or simply cause it hasn't been completed yet.
+
+                //? "Class_37 vehicle = new Class_37();" doesn't work on abstract classes.
+            }
+
             //* Remove/Add comment to enable/disable a function.
 
             //Method_1();
@@ -1171,7 +1192,8 @@ namespace MyApp
             //Method_33();
             //Method_34();
             //Method_35();
-            Method_36();
+            //Method_36();
+            Method_37();
         }
 
         // Helper methods (Use these as reference!):
@@ -1321,6 +1343,29 @@ namespace MyApp
         public int wheels = 2;
     }
     class Class_36_helper3 /* aka "boat" */ : Class_36
+    {
+        public int wheels = 0;
+    }
+
+    // Since "Class_37" has abstract in it, one can't make an object with it, adding security.
+    abstract class Class_37 // Would call this class "Vehicle" if it wasn't for practice.
+    {
+        public int speed = 0;
+
+        public void go()
+        {
+            Console.WriteLine($"This vehicle is moving {speed}km/h");
+        }
+    }
+    class Class_37_helper1 : Class_37
+    {
+        public int wheels = 4;
+    }
+    class Class_37_helper2 : Class_37
+    {
+        public int wheels = 2;
+    }
+    class Class_37_helper3 : Class_37
     {
         public int wheels = 0;
     }
