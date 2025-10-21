@@ -1020,7 +1020,8 @@ namespace MyApp
                 Class_31.Hello();
                 Class_31.Waiting();
                 Class_31.Bye();
-                // Class_31 is in a separate file
+                // NOTE: Class_31 is in a separate file.
+                //       More to it below in the class section of this file.
             }
 
             static void Method_32()
@@ -1155,6 +1156,49 @@ namespace MyApp
                 //? "Class_37 vehicle = new Class_37();" doesn't work on abstract classes.
             }
 
+            static void Method_38()
+            {
+                /*
+                    --- 38 - Array Of Objects! ---
+                */
+
+                Class_38[] garage = new Class_38[3]; // The array containing the objects.
+
+                Class_38 car1 = new Class_38("Mustang"); // An object
+                Class_38 car2 = new Class_38("Corvette");
+                Class_38 car3 = new Class_38("Lambo");
+
+                garage[0] = car1; // Assigning the objects to the array
+                garage[1] = car2;
+                garage[2] = car3;
+
+                Console.WriteLine(garage[0]); // Displaying what this object represents.
+                Console.WriteLine(garage[1]);
+                Console.WriteLine(garage[2]);
+
+                Console.WriteLine();
+
+                Console.WriteLine(garage[0].model); // Displaying what "model" represents in this object.
+                Console.WriteLine(garage[1].model);
+                Console.WriteLine(garage[2].model);
+
+                Console.WriteLine();
+
+                foreach (Class_38 car in garage)
+                {
+                    Console.WriteLine(car.model); // Now iterating thru the array to display all models.
+                }
+
+                //  Optionally, we can make this a one liner as we learned before.
+                //! NOTE: These are anonymous objects.
+                //?       I wont cover them, but you gotta remember that there is some
+                //?       difference between normal objects.
+
+                Class_38[] anotherGarage = { new Class_38("Mustang"), new Class_38("Corvette"), new Class_38("Lambo") };
+
+
+            }
+
             //* Remove/Add comment to enable/disable a function.
 
             //Method_1();
@@ -1193,10 +1237,11 @@ namespace MyApp
             //Method_34();
             //Method_35();
             //Method_36();
-            Method_37();
+            //Method_37();
+            Method_38();
         }
 
-        // Helper methods (Use these as reference!):
+        //! --- Helper methods (Use these as reference!) --- :
 
         static void Method_23_Helper(string birthdayGirl, int age)
         {
@@ -1222,7 +1267,6 @@ namespace MyApp
         {
             return x * y;
         }
-
         static double Method_25_Helper(double x, double y, double z)
         {   // Same name, different method, different parameters.
             return x * y * z;
@@ -1240,7 +1284,10 @@ namespace MyApp
         }
     }
 
-    // Helper classes (Use these as reference!):
+    //! --- Helper classes (Use these as reference!) --- :
+
+    //? There is a class that is in a separate file called "Class_31.cs"
+    //? Its not included here! For reference, you gotta open it separately
 
     class Class_32 // Would call this class "Human" if it wasn't for practice.
     {
@@ -1368,6 +1415,16 @@ namespace MyApp
     class Class_37_helper3 : Class_37
     {
         public int wheels = 0;
+    }
+
+    class Class_38 // Would call this class "Car" if it wasn't for practice.
+    {
+        public string model;
+
+        public Class_38(string model)
+        {
+            this.model = model;
+        }
     }
 }
 
