@@ -1,6 +1,13 @@
 // Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT License.
 // See the LICENSE file in the repository root for full license text.
 
+//! NOTE: The code below was intentionally made to be simple and possibly insecure for production code.
+//!       I'm simply learning syntax here and I am not going to make this code secure or stable.
+//!       DON'T take this code and the comments as a reliable source of information about C#.
+//!       As stated in the License, its not my fault if you do something bad with this code
+//!       or the information obtained thru my comments. Anyway, have fun reading!
+//!       (Heh i don't expect anyone to see this file anyway)
+
 using System;
 using System.ComponentModel;
 using System.Diagnostics.Tracing;
