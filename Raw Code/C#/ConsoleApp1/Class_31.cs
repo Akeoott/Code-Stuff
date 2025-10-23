@@ -4,7 +4,7 @@
 using System;
 #pragma warning disable CA1303 // Do not pass literals as localized parameters
 
-namespace MyApp
+namespace Practice
 {
     static class Class_31
     {

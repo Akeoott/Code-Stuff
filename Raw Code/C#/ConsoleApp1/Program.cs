@@ -6,7 +6,7 @@
 //!       DON'T take this code and the comments as a reliable source of information about C#.
 //!       As stated in the License, its not my fault if you do something bad with this code
 //!       or the information obtained thru my comments. Anyway, have fun reading!
-//!       (Heh i don't expect anyone to see this file anyway)
+//!       (Heh I don't expect anyone to see this file anyway)
 
 using System;
 using System.ComponentModel;
@@ -34,13 +34,16 @@ using System.Reflection.Metadata;
 //? Don't forget to make the program executable!
 // `chmod +x ./program`
 
-namespace MyApp
+namespace Practice
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Warning! It's highly recommended to use the source code as reference.\nIt's necessary to remove comments from within the source code to enable and disable methods.\n");
+            string startWarning =
+                "Warning! It's highly recommended to use the source code as reference.\n" +
+                "It's necessary to remove comments from within the source code to enable and disable methods.\n";
+            Console.WriteLine(startWarning);
 
             /*  List of themes covered here (aka things that are gonna get covered in the future):
             |
@@ -83,21 +86,17 @@ namespace MyApp
 
                 Console.Write("\nOh, ");           // Just writing this into anything that exists! No new line.
                 Console.WriteLine("Hello World!"); // Literally a new line with this text
-                Console.Beep();                    // Makes a BEEP sound on some devices. Depends
+                Console.Beep();                    // Makes a BEEP sound on some devices. It depends
 
-                //? NIGER im a comment
+                //? NIGERIA IS COOL, I'm a comment btw.
 
                 /*
-                NIGGI DI DIGGI
-                asd FUCK
-                im a multi line comment
+                I'm a multi fucking line comment
                 */
 
                 Console.WriteLine("AKEOOT!\n");
 
-                /*
-                Console.ReadKey(); // Requires input to exit/finish operation! Kinda like input() from python.
-                */
+                Console.ReadKey(); // Requires input to continue/exit/finish operation! Kinda like input() from python.
             }
 
             static void Method_3()
@@ -789,6 +788,9 @@ namespace MyApp
                 //                benefit: Let's us reuse code w/o writing it multiple times.
                 // arguments    = what is sent to methods
 
+                //  Helper:
+                //      Method_23_Helper
+
                 string name = "Akeoott";
                 int age = 16;
 
@@ -805,6 +807,9 @@ namespace MyApp
                     --- 24 - Return Keyword! ---
                 */
                 // return   = returns data back to the place where a method was invoked
+
+                //  Helper:
+                //      Method_24_Helper
 
                 //? void in the example method below means that its gonna return a double
                 // static double Method_23_Helper(...)
@@ -834,6 +839,9 @@ namespace MyApp
                 //                        name + parameters = signature
                 //                        methods must have a unique signature
 
+                //  Helper:
+                //      Method_25_Helper (two)
+
                 double x = 43;
                 double y = 234;
                 double z = 2;
@@ -856,6 +864,9 @@ namespace MyApp
                 */
                 // params keyword  = a method parameter that takes a variable number of arguments.
                 //                    the parameter type must be a singe - dimensional array
+
+                //  Helper:
+                //      Method_26_Helper
 
                 //? params allows a variable amount of arguments! (But only one parameter)
                 // ... Method_26_Helper(params double[] prices)
@@ -1017,6 +1028,9 @@ namespace MyApp
                 // class    = a bundle of related code.
                 //            can be used as a blueprint to create objects (OOP)
 
+                //  Helper:
+                //      Class_31
+
                 // For example, the math class contains a bunch of code relating to math!
                 Math.Round(3.14);
                 Math.Abs(-3.14);
@@ -1039,6 +1053,9 @@ namespace MyApp
                 // object   = An instance of a class
                 //            A class can be used as a blueprint to create objects (OOP)
                 //            objects can have fields & methods (characteristics & actions)
+
+                //  Helper:
+                //      Class_32
 
                 // We now created a "Class_32" object called "human1"
                 Class_32 human1 = new Class_32(); // Would call the class "Human" if it wasn't for practice.
@@ -1068,6 +1085,9 @@ namespace MyApp
                 //                Same name as the class name
                 //                Can be used to assign arguments to fields when creating an object
 
+                //  Helper:
+                //      Class_33
+
                 // Pre constructed assignment of variables allows us to just pass them thru as arguments,
                 // Without having to do it manually (As displayed in the pervious method.)
                 Class_33 car1 = new Class_33("Ford", "Mustang", "red", 2022);
@@ -1084,6 +1104,9 @@ namespace MyApp
                 */
                 // Static   = modifier to declare a static member, which belongs to the class itself
                 //            rather than to any specific object
+
+                //  Helper:
+                //      Class_34
 
                 // Note: if the class is static, one cant make objects out of it. Like the Math class.
                 //       the class we are using tho isn't static.
@@ -1114,6 +1137,9 @@ namespace MyApp
                 //                            with a different set of parameters.
                 //                            name + parameters = signature
 
+                //  Helper:
+                //      Class_35
+
                 Class_35 pizza = new Class_35("stuffed crust", "red sauce", "mozzarella", "pepperoni"); // 4 arguments
                 Class_35 pizzaMozzarella = new Class_35("stuffed crust", "red sauce", "mozzarella"); // 3 arguments
             }
@@ -1124,6 +1150,12 @@ namespace MyApp
                     --- 36 - Inheritance! ---
                 */
                 // inheritance  = 1 or more child classes receiving fields, methods, etc, from a common parent!
+
+                //  Helper:
+                //      Class_36
+                //      Class_36_helper1
+                //      Class_36_helper2
+                //      Class_36_helper3
 
                 Class_36_helper1 car = new Class_36_helper1();
                 Class_36_helper2 bike = new Class_36_helper2();
@@ -1149,6 +1181,12 @@ namespace MyApp
                 */
                 // abstract classes  = modifier that indicates missing components or incomplete implementation
 
+                //  Helper:
+                //      Class_37
+                //      Class_37_helper1
+                //      Class_37_helper2
+                //      Class_37_helper3
+
                 Class_37_helper1 car = new Class_37_helper1();
                 Class_37_helper2 bike = new Class_37_helper2();
                 Class_37_helper3 boat = new Class_37_helper3();
@@ -1168,6 +1206,9 @@ namespace MyApp
                 /*
                     --- 38 - Array Of Objects! ---
                 */
+
+                //  Helper:
+                //      Class_38
 
                 Class_38[] garage = new Class_38[3]; // The array containing the objects.
 
@@ -1202,8 +1243,31 @@ namespace MyApp
                 //?       difference between normal objects.
 
                 Class_38[] anotherGarage = { new Class_38("Mustang"), new Class_38("Corvette"), new Class_38("Lambo") };
+            }
 
+            static void Method_39()
+            {
+                /*
+                    --- 39 - Objects As Arguments! ---
+                */
 
+                //  Helper:
+                //      Method_39_Helper
+                //      Method_39_Helper1
+                //      Class_39
+
+                // Passing in red mustang
+                Class_39 car1 = new Class_39("Mustang", "red");
+
+                // Changing color of mustang to silver without needing to re-assign it from within the class.
+                // Makes things simpler, separate and reusable!
+                Method_39_Helper(car1, "silver");
+
+                // Here we copy car1 and make car2 with the same properties as car 1
+                Class_39 car2 = Method_39_Helper1(car1);
+
+                Console.WriteLine($"car1 {car1} {car1.color} {car1.model}");
+                Console.WriteLine($"car2 {car2} {car2.color} {car2.model}");
             }
 
             //* Remove/Add comment to enable/disable a function.
@@ -1245,7 +1309,8 @@ namespace MyApp
             //Method_35();
             //Method_36();
             //Method_37();
-            Method_38();
+            //Method_38();
+            Method_39();
         }
 
         //! --- Helper methods (Use these as reference!) --- :
@@ -1288,6 +1353,15 @@ namespace MyApp
                 total += price;
             }
             return total;
+        }
+
+        static void Method_39_Helper(Class_39 car, string color)  // Would call this method "ChangeColor" if it wasn't for practice.
+        {   // Changes color of an existing object
+            car.color = color;
+        }
+        static Class_39 Method_39_Helper1(Class_39 car)  // Would call this method "Copy" if it wasn't for practice.
+        {   // Copies an object and makes a new one.
+            return new Class_39(car.model, car.color);
         }
     }
 
@@ -1431,6 +1505,18 @@ namespace MyApp
         public Class_38(string model)
         {
             this.model = model;
+        }
+    }
+
+    class Class_39 // Would call this class "Car" if it wasn't for practice.
+    {
+        public string model;
+        public string color;
+
+        public Class_39(string model, string color)
+        {
+            this.model = model;
+            this.color = color;
         }
     }
 }
