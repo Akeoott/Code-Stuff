@@ -27,7 +27,7 @@ indent_size = 4
 file_header_template = Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT License.\nSee the LICENSE file in the repository root for full license text.
 
 # IDE0073 Severity: Force this to be a suggestion/warning
-dotnet_diagnostic.IDE0073.severity = warning
+dotnet_diagnostic.IDE0073.severity = error
 
 # C# Specific Naming and Styling Rules
 csharp_style_namespace_declaration = file_scoped:suggestion
