@@ -104,7 +104,7 @@ class Program
             /*
                 --- 3 - Variables! ---
             */
-            // int  = integer = a whole number.
+            //  int = integer = a whole number.
 
             int x;       // declaration
             x = 123;     // initialization
@@ -142,7 +142,7 @@ class Program
             /*
                 --- 4 - Constants! ---
             */
-            // constants    = immutable values which are known at compile time,
+            //  constants   = immutable values which are known at compile time,
             //                and do not change for the life of the program.
 
             // The value pi cannot be changed cause its a constant!
@@ -157,9 +157,9 @@ class Program
             /*
                 --- 5 - Type Casting! ---
             */
-            // type casting = Converting a value to a different data type.
-            //                  Useful when we accept user input (string).
-            //                  Different data types can do different things.
+            //  type casting    = Converting a value to a different data type.
+            //                    Useful when we accept user input (string).
+            //                    Different data types can do different things.
 
             double a = 3.14;            // double aka decimal
             Console.WriteLine($"\ndouble a = {a} = {a.GetType()}"); // GetType displays what data type it is (in this case a double)
@@ -361,7 +361,7 @@ class Program
             /*
                 --- 13 - Switches! ---
             */
-            // switch   = an efficient alternative to many else if statements
+            //  switch  = an efficient alternative to many else if statements
 
             Console.Write("What day of the is it today? (Mo,Tu,We,Th,Fr,Sa,Su): ");
             string day = Console.ReadLine();
@@ -400,10 +400,10 @@ class Program
             /*
                 --- 14 - Logical Operators! ---
             */
-            // logical operators = Can be used to check if more than 1 condition is true/false
+            //  logical operators   = Can be used to check if more than 1 condition is true/false
 
-            // && (AND)
-            // || (OR)
+            //  && (AND)
+            //  || (OR)
 
             Console.Write("What's the fucking temperature outside? (°C): ");
             double temp = Convert.ToDouble(Console.ReadLine());
@@ -440,7 +440,7 @@ class Program
             /*
                 --- 16 - For Loops! ---
             */
-            // for loop = repeats some code a finite amount of time.
+            //  for loop    = repeats some code a finite amount of time.
 
             // First one  (int i = 1)   is a way to keep track of which iteration this loop is on!
             // Second one (i < 10)      tells us when to stop the loop (If index hits a certain value).
@@ -462,8 +462,8 @@ class Program
             /*
                 --- 17 - Nested Loops! ---
             */
-            // nested loops = loops inside of other loops.
-            //                Uses vary. Used a lot in sorting algorithms.
+            //  nested loops    = loops inside of other loops.
+            //                    Uses vary. Used a lot in sorting algorithms.
 
             Console.Write("How many rows?: ");
             int rows = Convert.ToInt32(Console.ReadLine());
@@ -746,7 +746,7 @@ class Program
             /*
                 --- 21 - Arrays! ---
             */
-            // array    = a variable that can store multiple values. fixed size.
+            //  array   = a variable that can store multiple values. fixed size.
 
             // Index starts from zero. So here are values under index 0, 1 and 2
             string[] justCars = { "BMW", "Porsche", "Corvette" };   // Completely fixed size and already assigned values!
@@ -769,7 +769,7 @@ class Program
             /*
                 --- 22 - Foreach Loop! ---
             */
-            // foreach loop = a simpler way to iterate over an array, it's less flexible.
+            //  foreach loop    = a simpler way to iterate over an array, it's less flexible.
 
             string[] cars = { "BMW", "Porsche", "Corvette" };
 
@@ -784,9 +784,9 @@ class Program
             /*
                 --- 23 - Methods! ---
             */
-            // method       = performs a section of code, whenever it's called (aka invoked).
+            //  method      = performs a section of code, whenever it's called (aka invoked).
             //                benefit: Let's us reuse code w/o writing it multiple times.
-            // arguments    = what is sent to methods
+            //  arguments   = what is sent to methods
 
             //  Helper:
             //      Method_23_Helper
@@ -806,7 +806,7 @@ class Program
             /*
                 --- 24 - Return Keyword! ---
             */
-            // return   = returns data back to the place where a method was invoked
+            //  return  = returns data back to the place where a method was invoked
 
             //  Helper:
             //      Method_24_Helper
@@ -835,7 +835,7 @@ class Program
             /*
                 --- 25 - Method Overloading! ---
             */
-            // method overloading   = methods share same name, but different parameters
+            //  method overloading  = methods share same name, but different parameters
             //                        name + parameters = signature
             //                        methods must have a unique signature
 
@@ -862,7 +862,7 @@ class Program
             /*
                 --- 26 - Params Keyword! ---
             */
-            // params keyword  = a method parameter that takes a variable number of arguments.
+            //  params keyword  = a method parameter that takes a variable number of arguments.
             //                    the parameter type must be a singe - dimensional array
 
             //  Helper:
@@ -881,9 +881,9 @@ class Program
             /*
                 --- 27 - Exception Handling! ---
             */
-            // try      = try some code that is considered "dangerous"
-            // catch    = catches and handles exceptions when they occur
-            // finally  = always executes regardless if exception is caught or not
+            //  try     = try some code that is considered "dangerous"
+            //  catch   = catches and handles exceptions when they occur
+            //  finally = always executes regardless if exception is caught or not
 
             double x;
             double y;
@@ -927,7 +927,7 @@ class Program
             /*
                 --- 28 - Conditional Operator! ---
             */
-            // conditional operator = used in conditional assignment if a condition is true/false
+            //  conditional operator    = used in conditional assignment if a condition is true/false
 
             // (condition) ? x : y
             // (a == b) ? variable1 : variable2
@@ -962,11 +962,11 @@ class Program
             /*
                 --- 29 - String Interpolation! ---
             */
-            // string interpolation = allows us to insert variables into a string literal
-            //                        precede a string literal with $
-            //                        { } are placeholders
-            //?                       This has been used around the entire file already!
-            //?                       Now its simply getting its own method for explanation.
+            //  string interpolation    = allows us to insert variables into a string literal
+            //                            precede a string literal with $
+            //                            { } are placeholders
+            //?                           This has been used around the entire file already!
+            //?                           Now its simply getting its own method for explanation.
 
             string firstName = "Ame";
             string lastName = "Janin";
@@ -986,6 +986,7 @@ class Program
             /*
                 --- 30 - Multidimensional Arrays! ---
             */
+
             // This may be a difficult to understand topic,
             // so its okay if you skip this and tackle it later!
 
@@ -1025,7 +1026,7 @@ class Program
             /*
                 --- 31 - Classes! ---
             */
-            // class    = a bundle of related code.
+            //  class   = a bundle of related code.
             //            can be used as a blueprint to create objects (OOP)
 
             //  Helper:
@@ -1050,7 +1051,7 @@ class Program
             /*
                 --- 32 - Objects! ---
             */
-            // object   = An instance of a class
+            //  object  = An instance of a class
             //            A class can be used as a blueprint to create objects (OOP)
             //            objects can have fields & methods (characteristics & actions)
 
@@ -1081,7 +1082,7 @@ class Program
             /*
                 --- 33 - Constructors! ---
             */
-            // constructor  = A special method in a class
+            //  constructor = A special method in a class
             //                Same name as the class name
             //                Can be used to assign arguments to fields when creating an object
 
@@ -1102,7 +1103,7 @@ class Program
             /*
                 --- 34 - Static! ---
             */
-            // Static   = modifier to declare a static member, which belongs to the class itself
+            //  Static  = modifier to declare a static member, which belongs to the class itself
             //            rather than to any specific object
 
             //  Helper:
@@ -1133,7 +1134,7 @@ class Program
             /*
                 --- 35 - Overloaded Constructors! ---
             */
-            // overloaded constructors   = technique to create multiple constructors,
+            //  overloaded constructors = technique to create multiple constructors,
             //                            with a different set of parameters.
             //                            name + parameters = signature
 
@@ -1149,17 +1150,17 @@ class Program
             /*
                 --- 36 - Inheritance! ---
             */
-            // inheritance  = 1 or more child classes receiving fields, methods, etc, from a common parent!
+            //  inheritance = 1 or more child classes receiving fields, methods, etc, from a common parent!
 
             //  Helper:
             //      Class_36
-            //      Class_36_helper1
-            //      Class_36_helper2
-            //      Class_36_helper3
+            //      Class_36_Helper1
+            //      Class_36_Helper2
+            //      Class_36_Helper3
 
-            Class_36_helper1 car = new Class_36_helper1();
-            Class_36_helper2 bike = new Class_36_helper2();
-            Class_36_helper3 boat = new Class_36_helper3();
+            Class_36_Helper1 car = new Class_36_Helper1();
+            Class_36_Helper2 bike = new Class_36_Helper2();
+            Class_36_Helper3 boat = new Class_36_Helper3();
 
             Console.WriteLine(car.speed); // Speed is 0 cause we stated that in the class Class_36
             Console.WriteLine(car.wheels); // Wheels is 4 cause we stated that in the class Class_36_helper1
@@ -1179,17 +1180,17 @@ class Program
             /*
                 --- 37 - Abstract Classes! ---
             */
-            // abstract classes  = modifier that indicates missing components or incomplete implementation
+            //  abstract classes    = modifier that indicates missing components or incomplete implementation
 
             //  Helper:
             //      Class_37
-            //      Class_37_helper1
-            //      Class_37_helper2
-            //      Class_37_helper3
+            //      Class_37_Helper1
+            //      Class_37_Helper2
+            //      Class_37_Helper3
 
-            Class_37_helper1 car = new Class_37_helper1();
-            Class_37_helper2 bike = new Class_37_helper2();
-            Class_37_helper3 boat = new Class_37_helper3();
+            Class_37_Helper1 car = new Class_37_Helper1();
+            Class_37_Helper2 bike = new Class_37_Helper2();
+            Class_37_Helper3 boat = new Class_37_Helper3();
 
             // Lets say someone picks a method aka car to play in a race.
             // We wouldn't want a player picking a method that doesn't provide everything needed.
@@ -1462,15 +1463,15 @@ class Class_36 // Would call this class "Vehicle" if it wasn't for practice.
     }
 }
 // These are children classes. They inherit everything from the parent class (Class_36).
-class Class_36_helper1 /* aka "car" */ : Class_36
+class Class_36_Helper1 /* aka "car" */ : Class_36
 {
     public int wheels = 4;
 }
-class Class_36_helper2 /* aka "bike" */ : Class_36
+class Class_36_Helper2 /* aka "bike" */ : Class_36
 {
     public int wheels = 2;
 }
-class Class_36_helper3 /* aka "boat" */ : Class_36
+class Class_36_Helper3 /* aka "boat" */ : Class_36
 {
     public int wheels = 0;
 }
@@ -1485,15 +1486,15 @@ abstract class Class_37 // Would call this class "Vehicle" if it wasn't for prac
         Console.WriteLine($"This vehicle is moving {speed}km/h");
     }
 }
-class Class_37_helper1 : Class_37
+class Class_37_Helper1 : Class_37
 {
     public int wheels = 4;
 }
-class Class_37_helper2 : Class_37
+class Class_37_Helper2 : Class_37
 {
     public int wheels = 2;
 }
-class Class_37_helper3 : Class_37
+class Class_37_Helper3 : Class_37
 {
     public int wheels = 0;
 }
