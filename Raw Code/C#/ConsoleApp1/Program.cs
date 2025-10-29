@@ -1271,6 +1271,28 @@ class Program
             Console.WriteLine($"car2 {car2} {car2.color} {car2.model}");
         }
 
+        static void Method_40()
+        {
+            /*
+                --- 40 - Method Overriding! ---
+            */
+            //  method overriding   = provides a new version of a method inherited from a parent class
+            //                        inherited method must be: abstract, virtual, or already overridden
+            //                        Used with ToString(), polymorphism
+
+            //  Helper:
+            //      Class_40
+            //      Class_40_Helper1
+            //      Class_40_Helper2
+
+            Class_40_Helper1 dog = new Class_40_Helper1();
+            Class_40_Helper2 cat = new Class_40_Helper2();
+
+            dog.Speak();
+            cat.Speak();
+
+        }
+
         //* Remove/Add comment to enable/disable a function.
 
         //Method_1();
@@ -1311,7 +1333,8 @@ class Program
         //Method_36();
         //Method_37();
         //Method_38();
-        Method_39();
+        //Method_39();
+        Method_40();
     }
 
     //! --- Helper methods (Use these as reference!) --- :
@@ -1521,4 +1544,29 @@ class Class_39 // Would call this class "Car" if it wasn't for practice.
     }
 }
 
+class Class_40 // Would call this class "Animal" if it wasn't for practice.
+{
+    // Must be abstract, virtual, or already overridden.
+    // Used virtual.
+    public virtual void Speak()
+    {
+        Console.WriteLine("The animal makes a sound");
+    }
+}
+class Class_40_Helper1 /* aka "Dog" */ : Class_40
+{
+    // Added override to override the Speak method.
+    public override void Speak()
+    {
+        Console.WriteLine("The dog goes *WOOF*");
+    }
+}
+class Class_40_Helper2 /* aka "Cat" */ : Class_40
+{
+    // Added override to override the Speak method.
+    public override void Speak()
+    {
+        Console.WriteLine("The cat goes *MEOW*");
+    }
+}
 
