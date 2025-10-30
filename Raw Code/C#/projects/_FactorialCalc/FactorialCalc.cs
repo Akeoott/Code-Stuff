@@ -5,7 +5,6 @@ using System.Numerics;
 using System.Diagnostics;
 using System.Globalization;
 
-
 namespace Program;
 
 internal static class FactorialCalc
@@ -56,18 +55,27 @@ internal static class FactorialCalc
         sw.Stop();
         long notationTime = sw.ElapsedMilliseconds;
 
+        Console.WriteLine("Starting display...");
+
+        sw.Restart();
         Console.WriteLine(
             $"""
-            --- Result ---
+            ---- Result ---
             Exponent of Factorial {input}! = {resultNotation}
+            """);
+        sw.Stop();
+        long displayTime = sw.ElapsedMilliseconds;
 
+        Console.WriteLine(
+            $"""
+            ---- Time -----
+            Time for user input   = {inputTime}ms
             Factorial calculation = {factorialTime}ms
             Notation conversion   = {notationTime}ms
-            Time for user input   = {inputTime}ms
-
+            Display time          = {displayTime}ms
+            ---- Total ----
             Total processing time = {factorialTime + notationTime}ms
-            Total runtime         = {factorialTime + notationTime + inputTime}ms
-            --------------
+            Total runtime         = {inputTime + factorialTime + notationTime + displayTime}ms
             """);
     }
 
