@@ -1,4 +1,4 @@
-﻿// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT License.
+﻿// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
 using System.Globalization;
@@ -10,7 +10,7 @@ internal sealed class RunProgram
     private const string Header =
         """
         ====================================
-        = Projects by Ame (Akeoott/Akeoot) =
+        | Projects by Ame (Akeoott/Akeoot) |
         ====================================
 
         """;
@@ -19,15 +19,16 @@ internal sealed class RunProgram
         """
         Options:
             Enter 'exit' to exit application
-        Run my projects:
-            Enter '1' for UnitConverter
-            Enter '2' for PasswordGen   (Not added yet)
-            Enter '3' for TextAnalyzer  (Not added yet)
+            Enter '1'    for UnitConverter
+            Enter '2'    for FactorialCalc
+            Enter '3'    for PasswordGen     (Not added yet)
+            Enter '4'    for TextAnalyzer    (Not added yet)
 
         """;
 
     private const string ByeBye =
         """
+
         Thanks for visiting! Byebye >.<
         """;
 
@@ -58,14 +59,17 @@ internal sealed class RunProgram
 
                 case "2":
                     Console.Clear();
-                    //PasswordGen.RunPasswordGen();
+                    FactorialCalc.RunFactorialCalc();
                     return;
-
+                /*
                 case "3":
                     Console.Clear();
-                    //TextAnalyzer.RunTextAnalyzer();
                     return;
 
+                case "4":
+                    Console.Clear();
+                    return;
+                */
                 default:
                     Console.WriteLine("Invalid option.");
                     break;
@@ -73,4 +77,3 @@ internal sealed class RunProgram
         }
     }
 }
-
