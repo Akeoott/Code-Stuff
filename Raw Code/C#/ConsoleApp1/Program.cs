@@ -1,4 +1,4 @@
-// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the MIT License.
+// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
 //! NOTE: The code below was intentionally made to be simple and possibly insecure for production code.
