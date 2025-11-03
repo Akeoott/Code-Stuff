@@ -22,7 +22,6 @@ internal sealed class RunProgram
             Enter '1'    for UnitConverter
             Enter '2'    for FactorialCalc
             Enter '3'    for PasswordGen     (Not added yet)
-            Enter '4'    for TextAnalyzer    (Not added yet)
 
         """;
 
@@ -63,10 +62,6 @@ internal sealed class RunProgram
                     return;
                 /*
                 case "3":
-                    Console.Clear();
-                    return;
-
-                case "4":
                     Console.Clear();
                     return;
                 */

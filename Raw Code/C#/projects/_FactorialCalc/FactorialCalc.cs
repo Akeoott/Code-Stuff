@@ -9,7 +9,7 @@ namespace Program;
 
 internal static class FactorialCalc
 {
-    const string Header =
+    private const string Header =
         """
         ====================================
         | Projects by Ame (Akeoott/Akeoot) |
@@ -20,7 +20,7 @@ internal static class FactorialCalc
 
         """;
 
-    const string Hello =
+    private const string Hello =
         """
         Hello, World!
         This is a factorial calculator made by Akeoott!

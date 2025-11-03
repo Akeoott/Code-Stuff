@@ -7,7 +7,7 @@ namespace Program;
 
 internal static class UnitConverter
 {
-    const string Header =
+    private const string Header =
         """
         ====================================
         | Projects by Ame (Akeoott/Akeoot) |
@@ -17,7 +17,7 @@ internal static class UnitConverter
 
         """;
 
-    const string Options =
+    private const string Options =
         """
         Options:
             Enter 'exit' to Exit Application.
