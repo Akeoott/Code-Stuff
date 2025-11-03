@@ -5,26 +5,27 @@ using System.Globalization;
 
 namespace Program;
 
-abstract internal class PasswordGen
+abstract internal class CryptRNG
 {
-    const string Header =
+    private const string Header =
         """
         ====================================
         | Projects by Ame (Akeoott/Akeoot) |
         ====================================
-        =======| Password Generator |=======
+        =======| Cryptographically  |=======
+        ====| Random Number Generator  |====
         ====================================
 
         """;
 
-    const string Hello =
+    private const string Hello =
         """
         Hello, World!
-        This is a password generator made by Akeoott!
+        This is a cryptographically random number generator made by Akeoott!
 
         """;
 
-    internal static void RunPasswordGen()
+    internal static void RunCryptRNG()
     {
         Console.WriteLine(Header);
         Console.WriteLine(Hello);

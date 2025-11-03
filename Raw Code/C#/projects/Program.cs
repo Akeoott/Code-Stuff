@@ -21,7 +21,7 @@ internal sealed class RunProgram
             Enter 'exit' to exit application
             Enter '1'    for UnitConverter
             Enter '2'    for FactorialCalc
-            Enter '3'    for PasswordGen     (Not added yet)
+            Enter '3'    for CryptRNG        (Not added yet)
 
         """;
 
