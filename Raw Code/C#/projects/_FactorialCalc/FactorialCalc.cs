@@ -34,26 +34,32 @@ internal static class FactorialCalc
         Console.WriteLine(Hello);
 
         int input;
+        BigInteger result;
         string resultNotation;
-        var sw = Stopwatch.StartNew();
 
-        input = GetInputInt("Enter a number: ");
+        var sw = Stopwatch.StartNew();
+        long inputTime;
+        long factorialTime;
+        long notationTime;
+        long displayTime;
+
+        input = GetInput.GetInt("Enter a number: ");
         sw.Stop();
-        long inputTime = sw.ElapsedMilliseconds;
+        inputTime = sw.ElapsedMilliseconds;
 
         Console.WriteLine("Starting calculation...");
 
         sw.Restart();
-        BigInteger result = CalcFactorial(input);
+        result = CalcFactorial(input);
         sw.Stop();
-        long factorialTime = sw.ElapsedMilliseconds;
+        factorialTime = sw.ElapsedMilliseconds;
 
         Console.WriteLine("Starting conversion...");
 
         sw.Restart();
         resultNotation = GetNotation(result);
         sw.Stop();
-        long notationTime = sw.ElapsedMilliseconds;
+        notationTime = sw.ElapsedMilliseconds;
 
         Console.WriteLine("Starting display...");
 
@@ -64,7 +70,7 @@ internal static class FactorialCalc
             Exponent of Factorial {input}! = {resultNotation}
             """);
         sw.Stop();
-        long displayTime = sw.ElapsedMilliseconds;
+        displayTime = sw.ElapsedMilliseconds;
 
         Console.WriteLine(
             $"""
@@ -138,16 +144,5 @@ internal static class FactorialCalc
 
         string sign = isNegative ? "-" : "";
         return $"{sign}{mantissa}e{exponent}";
-    }
-
-    internal static int GetInputInt(string prompt)
-    {
-        while (true)
-        {
-            Console.Write(prompt);
-            if (int.TryParse(Console.ReadLine(), out int value))
-                return value;
-            Console.WriteLine("Invalid number, try again.");
-        }
     }
 }

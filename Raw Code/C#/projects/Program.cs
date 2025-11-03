@@ -45,7 +45,7 @@ internal sealed class RunProgram
 
         while (true)
         {
-            string input = GetInput.ForceInput("Enter an option: ").ToLower(CultureInfo.CurrentCulture).Trim();
+            string input = GetInput.GetString("Enter an option: ").ToLower(CultureInfo.CurrentCulture).Trim();
 
             switch (input)
             {

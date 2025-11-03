@@ -33,7 +33,7 @@ internal static class UnitConverter
 
         while (true)
         {
-            string input = GetInput.ForceInput("Enter a command: ").ToLower(CultureInfo.CurrentCulture).Trim();
+            string input = GetInput.GetString("Enter a command: ").ToLower(CultureInfo.CurrentCulture).Trim();
 
             switch (input)
             {
@@ -77,8 +77,8 @@ internal static class UnitConverter
         while (true)
         {
             Console.WriteLine(Options);
-            string from = GetInput.ForceInput("Convert from : ").ToLower(CultureInfo.CurrentCulture).Trim();
-            string to = GetInput.ForceInput("Convert to   : ").ToLower(CultureInfo.CurrentCulture).Trim();
+            string from = GetInput.GetString("Convert from : ").ToLower(CultureInfo.CurrentCulture).Trim();
+            string to = GetInput.GetString("Convert to   : ").ToLower(CultureInfo.CurrentCulture).Trim();
             float value = GetInput.GetFloat("Value        : ");
 
             int GetPower(string unit) => unit switch
@@ -137,8 +137,8 @@ internal static class UnitConverter
         while (true)
         {
             Console.WriteLine(Options);
-            string from = GetInput.ForceInput("Convert from : ").ToLower(CultureInfo.CurrentCulture).Trim();
-            string to = GetInput.ForceInput("Convert to   : ").ToLower(CultureInfo.CurrentCulture).Trim();
+            string from = GetInput.GetString("Convert from : ").ToLower(CultureInfo.CurrentCulture).Trim();
+            string to = GetInput.GetString("Convert to   : ").ToLower(CultureInfo.CurrentCulture).Trim();
             float value = GetInput.GetFloat("Value        : ");
 
             int GetPower(string unit) => unit switch
