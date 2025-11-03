@@ -55,7 +55,7 @@ internal static class UnitConverter
         }
     }
 
-    internal static void ConvByte()
+    private static void ConvByte()
     {
         const string Options =
             """
@@ -115,7 +115,7 @@ internal static class UnitConverter
         }
     }
 
-    internal static void ConvBit()
+    private static void ConvBit()
     {
         const string Options =
             """

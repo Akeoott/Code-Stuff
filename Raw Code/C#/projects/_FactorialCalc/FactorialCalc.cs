@@ -85,7 +85,7 @@ internal static class FactorialCalc
             """);
     }
 
-    internal static BigInteger CalcFactorial(int input)
+    private static BigInteger CalcFactorial(int input)
     {
         if (input <= 1) return 1;
 
@@ -115,7 +115,7 @@ internal static class FactorialCalc
         return products[0];
     }
 
-    internal static string GetNotation(BigInteger number)
+    private static string GetNotation(BigInteger number)
     {
         if (number == 0) return "0e0";
 
