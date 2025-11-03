@@ -19,9 +19,9 @@ internal sealed class RunProgram
         """
         Options:
             Enter 'exit' to exit application
-            Enter '1'    for UnitConverter
-            Enter '2'    for FactorialCalc
-            Enter '3'    for CryptRNG        (Not added yet)
+            Enter '1'    for UnitConverter   (Convert units)
+            Enter '2'    for FactorialCalc   (Calculate factorials)
+            Enter '3'    for CryptRNG        (Generates random numbers)
 
         """;
 
@@ -60,11 +60,12 @@ internal sealed class RunProgram
                     Console.Clear();
                     FactorialCalc.RunFactorialCalc();
                     return;
-                /*
+
                 case "3":
                     Console.Clear();
+                    CryptRNG.RunCryptRNG();
                     return;
-                */
+
                 default:
                     Console.WriteLine("Invalid option.");
                     break;
