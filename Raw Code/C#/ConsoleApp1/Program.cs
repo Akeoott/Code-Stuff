@@ -8,19 +8,13 @@
 //!       or the information obtained thru my comments. Anyway, have fun reading!
 //!       (Heh I don't expect anyone to see this file anyway)
 
-using System;
-using System.ComponentModel;
-using System.Diagnostics.Tracing;
-using System.Net.Sockets;
-using System.Reflection.Metadata;
-
 // Disabling warnings for practice
-//#pragma warning disable CA5394, CS8321, CS8600, CA1305
 #pragma warning disable
 
 /*
     C# compilation
 */
+
 //? --- Basic Development and Testing ---
 // `dotnet run`                 //? Run directly (no executable created)
 // `dotnet build`               //? Build without publishing (creates DLLs in bin/)
@@ -36,9 +30,9 @@ using System.Reflection.Metadata;
 
 namespace Practice;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    internal static void Main(string[] args)
     {
         string startWarning =
             "Warning! It's highly recommended to use the source code as reference.\n" +
@@ -69,6 +63,8 @@ class Program
         |   #20 calculator program              |   #40 method overriding           |
         */
 
+        //? NOTE: All method and class helpers are in a dedicated folder called `helper`.
+
         static void Method_1()
         {
             /*
@@ -92,6 +88,7 @@ class Program
 
             /*
             I'm a multi fucking line comment
+            HELL YEAH
             */
 
             Console.WriteLine("AKEOOT!\n");
@@ -442,9 +439,9 @@ class Program
             */
             //  for loop    = repeats some code a finite amount of time.
 
-            // First one  (int i = 1)   is a way to keep track of which iteration this loop is on!
-            // Second one (i < 10)      tells us when to stop the loop (If index hits a certain value).
-            // Third one  (i += 1)      says how much should be added/removed to "i" after every loop.
+            // First one    (int i = 1) is a way to keep track of which iteration this loop is on!
+            // Second one   (i < 10)    tells us when to stop the loop (If index hits a certain value).
+            // Third one    (i += 1)    says how much should be added/removed to "i" after every loop.
 
             for (int i = 1; i <= 10; i++)
             {
@@ -498,10 +495,10 @@ class Program
 
             Random random = new Random();   // Init random
 
-            int range;              // Set range for random
-            int rand;               // Generated random number
-            int input;          // User input
-            int attempt;        // Amount of guesses
+            int range;      // Set range for random
+            int rand;       // Generated random number
+            int input;      // User input
+            int attempt;    // Amount of guesses
             string response = "y";  // Should repeat game
             bool playAgain = true;  // Repeat/don't repeat the game
 
@@ -796,9 +793,9 @@ class Program
 
             //? void in the example method below means that its gonna return nothing
             // static void Method_23_Helper(...)
-            Method_23_Helper(name, age); // Sings happy birthday once with the passed in argument.
-            Method_23_Helper(name, age); // In method, one can rename them.
-            Method_23_Helper(name, age); // Arguments must match in caller and method.
+            Methods.Method_23_Helper(name, age); // Sings happy birthday once with the passed in argument.
+            Methods.Method_23_Helper(name, age); // In method, one can rename them.
+            Methods.Method_23_Helper(name, age); // Arguments must match in caller and method.
         }
 
         static void Method_24()
@@ -826,7 +823,7 @@ class Program
             Console.Write("Enter a decimal number for y: ");
             y = Convert.ToDouble(Console.ReadLine());
 
-            result = Method_24_Helper(x, y);
+            result = Methods.Method_24_Helper(x, y);
             Console.Write($"Result: {result}");
         }
 
@@ -848,10 +845,10 @@ class Program
             double result1;
             double result2;
 
-            result1 = Method_25_Helper(x, y);
+            result1 = Methods.Method_25_Helper(x, y);
             Console.Write($"Result: {result1}");
 
-            result2 = Method_25_Helper(x, y, z); // Same name, different method, different parameters.
+            result2 = Methods.Method_25_Helper(x, y, z); // Same name, different method, different parameters.
             Console.Write($"Result: {result2}");
 
             //! NOTE: The next method (26) will cover a BETTER alternative to method overloading. The params keyword.
@@ -871,7 +868,7 @@ class Program
             //? params allows a variable amount of arguments! (But only one parameter)
             // ... Method_26_Helper(params double[] prices)
 
-            double total = Method_26_Helper(3.99, 5.75, 15);
+            double total = Methods.Method_26_Helper(3.99, 5.75, 15);
             Console.Write($"Result: {total}");
 
         }
@@ -1039,9 +1036,9 @@ class Program
 
             //? An example class is below the practice function aka everything here!
 
-            Class_31.Hello();
-            Class_31.Waiting();
-            Class_31.Bye();
+            Classes.Class_31.Hello();
+            Classes.Class_31.Waiting();
+            Classes.Class_31.Bye();
             // NOTE: Class_31 is in a separate file.
             //       More to it below in the class section of this file.
         }
@@ -1059,9 +1056,9 @@ class Program
             //      Class_32
 
             // We now created a "Class_32" object called "human1"
-            Class_32 human1 = new Class_32(); // Would call the class "Human" if it wasn't for practice.
+            Classes.Class_32 human1 = new Classes.Class_32(); // Would call the class "Human" if it wasn't for practice.
             // We now created another "Class_32" object called "human2" so we can reuse this class!
-            Class_32 human2 = new Class_32();
+            Classes.Class_32 human2 = new Classes.Class_32();
 
             // Manually assigning variables
             human1.name = "Ame";
@@ -1091,8 +1088,8 @@ class Program
 
             // Pre constructed assignment of variables allows us to just pass them thru as arguments,
             // Without having to do it manually (As displayed in the pervious method.)
-            Class_33 car1 = new Class_33("Ford", "Mustang", "red", 2022);
-            Class_33 car2 = new Class_33("Chevy", "Corvette", "blue", 2021);
+            Classes.Class_33 car1 = new Classes.Class_33("Ford", "Mustang", "red", 2022);
+            Classes.Class_33 car2 = new Classes.Class_33("Chevy", "Corvette", "blue", 2021);
 
             car1.Drive();
             car2.Drive();
@@ -1111,9 +1108,9 @@ class Program
 
             // Note: if the class is static, one cant make objects out of it. Like the Math class.
             //       the class we are using tho isn't static.
-            Class_34 car1 = new Class_34("Mustang");
-            Class_34 car2 = new Class_34("Corvette");
-            Class_34 car3 = new Class_34("Lambo");
+            Classes.Class_34 car1 = new Classes.Class_34("Mustang");
+            Classes.Class_34 car2 = new Classes.Class_34("Corvette");
+            Classes.Class_34 car3 = new Classes.Class_34("Lambo");
 
             // Both will print out the number 1 because they are copies of the class aka they are objects and therefore independent.
             Console.WriteLine(car1.numberOfCars);
@@ -1122,11 +1119,11 @@ class Program
 
             // We have to do that in a static way. We do this by making the variable in the class static,
             // and by calling the class itself rather than the object of it.
-            Console.WriteLine(Class_34.staticNumberOfCars);
-            Console.WriteLine(Class_34.staticNumberOfCars);
+            Console.WriteLine(Classes.Class_34.staticNumberOfCars);
+            Console.WriteLine(Classes.Class_34.staticNumberOfCars);
 
             // A static method. All the objects share it instead of each one having its own method.
-            Class_34.StartRace();
+            Classes.Class_34.StartRace();
         }
 
         static void Method_35()
@@ -1141,8 +1138,8 @@ class Program
             //  Helper:
             //      Class_35
 
-            Class_35 pizza = new Class_35("stuffed crust", "red sauce", "mozzarella", "pepperoni"); // 4 arguments
-            Class_35 pizzaMozzarella = new Class_35("stuffed crust", "red sauce", "mozzarella"); // 3 arguments
+            Classes.Class_35 pizza = new Classes.Class_35("stuffed crust", "red sauce", "mozzarella", "pepperoni"); // 4 arguments
+            Classes.Class_35 pizzaMozzarella = new Classes.Class_35("stuffed crust", "red sauce", "mozzarella"); // 3 arguments
         }
 
         static void Method_36()
@@ -1158,9 +1155,9 @@ class Program
             //      Class_36_Helper2
             //      Class_36_Helper3
 
-            Class_36_Helper1 car = new Class_36_Helper1();
-            Class_36_Helper2 bike = new Class_36_Helper2();
-            Class_36_Helper3 boat = new Class_36_Helper3();
+            Classes.Class_36_Helper1 car = new Classes.Class_36_Helper1();
+            Classes.Class_36_Helper2 bike = new Classes.Class_36_Helper2();
+            Classes.Class_36_Helper3 boat = new Classes.Class_36_Helper3();
 
             Console.WriteLine(car.speed); // Speed is 0 cause we stated that in the class Class_36
             Console.WriteLine(car.wheels); // Wheels is 4 cause we stated that in the class Class_36_helper1
@@ -1188,9 +1185,9 @@ class Program
             //      Class_37_Helper2
             //      Class_37_Helper3
 
-            Class_37_Helper1 car = new Class_37_Helper1();
-            Class_37_Helper2 bike = new Class_37_Helper2();
-            Class_37_Helper3 boat = new Class_37_Helper3();
+            Classes.Class_37_Helper1 car = new Classes.Class_37_Helper1();
+            Classes.Class_37_Helper2 bike = new Classes.Class_37_Helper2();
+            Classes.Class_37_Helper3 boat = new Classes.Class_37_Helper3();
 
             // Lets say someone picks a method aka car to play in a race.
             // We wouldn't want a player picking a method that doesn't provide everything needed.
@@ -1211,11 +1208,11 @@ class Program
             //  Helper:
             //      Class_38
 
-            Class_38[] garage = new Class_38[3]; // The array containing the objects.
+            Classes.Class_38[] garage = new Classes.Class_38[3]; // The array containing the objects.
 
-            Class_38 car1 = new Class_38("Mustang"); // An object
-            Class_38 car2 = new Class_38("Corvette");
-            Class_38 car3 = new Class_38("Lambo");
+            Classes.Class_38 car1 = new Classes.Class_38("Mustang"); // An object
+            Classes.Class_38 car2 = new Classes.Class_38("Corvette");
+            Classes.Class_38 car3 = new Classes.Class_38("Lambo");
 
             garage[0] = car1; // Assigning the objects to the array
             garage[1] = car2;
@@ -1233,7 +1230,7 @@ class Program
 
             Console.WriteLine();
 
-            foreach (Class_38 car in garage)
+            foreach (Classes.Class_38 car in garage)
             {
                 Console.WriteLine(car.model); // Now iterating thru the array to display all models.
             }
@@ -1243,7 +1240,7 @@ class Program
             //?       I wont cover them, but you gotta remember that there is some
             //?       difference between normal objects.
 
-            Class_38[] anotherGarage = { new Class_38("Mustang"), new Class_38("Corvette"), new Class_38("Lambo") };
+            Classes.Class_38[] anotherGarage = { new Classes.Class_38("Mustang"), new Classes.Class_38("Corvette"), new Classes.Class_38("Lambo") };
         }
 
         static void Method_39()
@@ -1258,14 +1255,14 @@ class Program
             //      Class_39
 
             // Passing in red mustang
-            Class_39 car1 = new Class_39("Mustang", "red");
+            Classes.Class_39 car1 = new Classes.Class_39("Mustang", "red");
 
             // Changing color of mustang to silver without needing to re-assign it from within the class.
             // Makes things simpler, separate and reusable!
-            Method_39_Helper(car1, "silver");
+            Methods.Method_39_Helper(car1, "silver");
 
             // Here we copy car1 and make car2 with the same properties as car 1
-            Class_39 car2 = Method_39_Helper1(car1);
+            Classes.Class_39 car2 = Methods.Method_39_Helper1(car1);
 
             Console.WriteLine($"car1 {car1} {car1.color} {car1.model}");
             Console.WriteLine($"car2 {car2} {car2.color} {car2.model}");
@@ -1285,12 +1282,11 @@ class Program
             //      Class_40_Helper1
             //      Class_40_Helper2
 
-            Class_40_Helper1 dog = new Class_40_Helper1();
-            Class_40_Helper2 cat = new Class_40_Helper2();
+            Classes.Class_40_Helper1 dog = new Classes.Class_40_Helper1();
+            Classes.Class_40_Helper2 cat = new Classes.Class_40_Helper2();
 
             dog.Speak();
             cat.Speak();
-
         }
 
         //* Remove/Add comment to enable/disable a function.
@@ -1336,237 +1332,4 @@ class Program
         //Method_39();
         Method_40();
     }
-
-    //! --- Helper methods (Use these as reference!) --- :
-
-    static void Method_23_Helper(string birthdayGirl, int age)
-    {
-        Console.WriteLine($"Happy birthday to {birthdayGirl}!");
-        Console.WriteLine($"Happy birthday to {birthdayGirl}!");
-        Console.WriteLine($"Happy birthday dear {birthdayGirl.ToUpper()}!");
-        Console.WriteLine($"You're {age} years old!");
-        Console.WriteLine($"Happy birthday to {birthdayGirl}!");
-        Console.WriteLine($"This kinda feels dry...\n");
-    }
-
-    static double Method_24_Helper(double x, double y)
-    {
-        double z = x * y;
-        return z;
-        /*
-        One could also shorten it:
-        return x * y;
-        */
-    }
-
-    static double Method_25_Helper(double x, double y)
-    {
-        return x * y;
-    }
-    static double Method_25_Helper(double x, double y, double z)
-    {   // Same name, different method, different parameters.
-        return x * y * z;
-    }
-
-    static double Method_26_Helper(params double[] prices)
-    {
-        double total = 0;
-
-        foreach (double price in prices)
-        {
-            total += price;
-        }
-        return total;
-    }
-
-    static void Method_39_Helper(Class_39 car, string color)  // Would call this method "ChangeColor" if it wasn't for practice.
-    {   // Changes color of an existing object
-        car.color = color;
-    }
-    static Class_39 Method_39_Helper1(Class_39 car)  // Would call this method "Copy" if it wasn't for practice.
-    {   // Copies an object and makes a new one.
-        return new Class_39(car.model, car.color);
-    }
 }
-
-//! --- Helper classes (Use these as reference!) --- :
-
-//? There is a class that is in a separate file called "Class_31.cs"
-//? Its not included here! For reference, you gotta open it separately
-
-class Class_32 // Would call this class "Human" if it wasn't for practice.
-{
-    // Don't recommend "public" for security purposes but its needed as an example here to access these methods.
-
-    // These are fields, defining characteristics of an object.
-    public string name;
-    public int age;
-
-    // These are objects, the actions of an object.
-    public void Eat()
-    {
-        Console.WriteLine($"{name} is eating.");
-    }
-    public void Sleep()
-    {
-        Console.WriteLine($"{name} is sleeping.");
-    }
-}
-
-class Class_33 // Would call this class "Car" if it wasn't for practice.
-{
-    string make;
-    string model;
-    string color;
-    int year;
-
-    public Class_33(string make, string model, string color, int year) // This is a constructor
-    {
-        this.make = make;
-        this.model = model;
-        this.color = color;
-        this.year = year;
-    }
-
-    public void Drive()
-    {
-        Console.WriteLine($"You drive the {make} {model}");
-    }
-}
-
-class Class_34 // Would call this class "Car" if it wasn't for practice.
-{
-    string model;
-    public int numberOfCars;              // Not static and object bound
-    public static int staticNumberOfCars; // Static and class bound
-
-    public Class_34(string model)
-    {
-        this.model = model;
-        numberOfCars++;       // Adds 1 to any specific object making it not possible to count the amount of cars.
-        staticNumberOfCars++; // Adds 1 to the class itself making it possible to actually count the amount of cars.
-    }
-
-    public static void StartRace()
-    {
-        Console.WriteLine("The race has begun!");
-    }
-}
-
-class Class_35 // Would call this class "Pizza" if it wasn't for practice.
-{
-    string bread;
-    string sauce;
-    string cheese;
-    string topping;
-
-    public Class_35(string bread, string sauce, string cheese)
-    {
-        this.bread = bread;
-        this.sauce = sauce;
-        this.cheese = cheese;
-    }
-
-    public Class_35(string bread, string sauce, string cheese, string topping) // Same constructor but with more arguments
-    {
-        this.bread = bread;
-        this.sauce = sauce;
-        this.cheese = cheese;
-        this.topping = topping;
-    }
-}
-
-class Class_36 // Would call this class "Vehicle" if it wasn't for practice.
-{
-    public int speed = 0;
-
-    public void go()
-    {
-        Console.WriteLine($"This vehicle is moving {speed}km/h");
-    }
-}
-// These are children classes. They inherit everything from the parent class (Class_36).
-class Class_36_Helper1 /* aka "car" */ : Class_36
-{
-    public int wheels = 4;
-}
-class Class_36_Helper2 /* aka "bike" */ : Class_36
-{
-    public int wheels = 2;
-}
-class Class_36_Helper3 /* aka "boat" */ : Class_36
-{
-    public int wheels = 0;
-}
-
-// Since "Class_37" has abstract in it, one can't make an object with it, adding security.
-abstract class Class_37 // Would call this class "Vehicle" if it wasn't for practice.
-{
-    public int speed = 0;
-
-    public void go()
-    {
-        Console.WriteLine($"This vehicle is moving {speed}km/h");
-    }
-}
-class Class_37_Helper1 : Class_37
-{
-    public int wheels = 4;
-}
-class Class_37_Helper2 : Class_37
-{
-    public int wheels = 2;
-}
-class Class_37_Helper3 : Class_37
-{
-    public int wheels = 0;
-}
-
-class Class_38 // Would call this class "Car" if it wasn't for practice.
-{
-    public string model;
-
-    public Class_38(string model)
-    {
-        this.model = model;
-    }
-}
-
-class Class_39 // Would call this class "Car" if it wasn't for practice.
-{
-    public string model;
-    public string color;
-
-    public Class_39(string model, string color)
-    {
-        this.model = model;
-        this.color = color;
-    }
-}
-
-class Class_40 // Would call this class "Animal" if it wasn't for practice.
-{
-    // Must be abstract, virtual, or already overridden.
-    // Used virtual.
-    public virtual void Speak()
-    {
-        Console.WriteLine("The animal makes a sound");
-    }
-}
-class Class_40_Helper1 /* aka "Dog" */ : Class_40
-{
-    // Added override to override the Speak method.
-    public override void Speak()
-    {
-        Console.WriteLine("The dog goes *WOOF*");
-    }
-}
-class Class_40_Helper2 /* aka "Cat" */ : Class_40
-{
-    // Added override to override the Speak method.
-    public override void Speak()
-    {
-        Console.WriteLine("The cat goes *MEOW*");
-    }
-}
-

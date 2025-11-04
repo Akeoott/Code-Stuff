@@ -13,7 +13,7 @@ abstract internal class CryptRNG
         ====================================
         | Projects by Ame (Akeoott/Akeoot) |
         ====================================
-        =======| Cryptographically  |=======
+        =========| Cryptographic  |=========
         ====| Random Number Generator  |====
         ====================================
 
