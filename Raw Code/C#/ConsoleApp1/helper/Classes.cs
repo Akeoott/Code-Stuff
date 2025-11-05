@@ -199,4 +199,26 @@ internal class Classes
             Console.WriteLine("The cat goes *MEOW*");
         }
     }
+
+    internal class Class_41 // Would call this class "Car" if it wasn't for practice.
+    {
+        string make;
+        string model;
+        string color;
+        int year;
+
+        internal Class_41(string make, string model, string color, int year)
+        {
+            this.make = make;
+            this.model = model;
+            this.color = color;
+            this.year = year;
+        }
+
+        // Overode ToString() method to return own message.
+        public override string ToString()
+        {
+            return $"This is a {make} {model}";
+        }
+    }
 }

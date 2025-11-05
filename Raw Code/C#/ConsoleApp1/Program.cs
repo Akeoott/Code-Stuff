@@ -28,6 +28,8 @@
 //? Don't forget to make the program executable!
 // `chmod +x ./program`
 
+// わたしはあめちゃん
+
 namespace Practice;
 
 internal class Program
@@ -1289,6 +1291,26 @@ internal class Program
             cat.Speak();
         }
 
+        static void Method_41()
+        {
+            /*
+                --- 41 - ToString()! ---
+            */
+            //  ToString()  = converts an object to its string representation so that it is suitable for display
+
+            //  Helper:
+            //      Class_41
+
+            // Less modern:
+            Classes.Class_41 someCar = new Classes.Class_41("Chevy", "Corvette", "blue", 2022);
+            // More modern:
+            Classes.Class_41 car1 = new("Chevy", "Corvette", "blue", 2022);
+
+            //? Look in Class_41 for more info.
+            Console.WriteLine(car1.ToString());
+            Console.WriteLine(car1);
+        }
+
         //* Remove/Add comment to enable/disable a function.
 
         //Method_1();
@@ -1330,6 +1352,7 @@ internal class Program
         //Method_37();
         //Method_38();
         //Method_39();
-        Method_40();
+        //Method_40();
+        Method_41();
     }
 }
