@@ -221,4 +221,32 @@ internal class Classes
             return $"This is a {make} {model}";
         }
     }
+
+    internal class Class_42 // Would call this class "Vehicle" if it wasn't for practice.
+    {
+        // Basically declare existence of a `Go` method
+        internal virtual void Go() { }
+    }
+    internal class Class_42_Helper1 : Class_42
+    {
+        // Override `Go` method
+        internal override void Go()
+        {
+            Console.WriteLine($"The car is moving");
+        }
+    }
+    internal class Class_42_Helper2 : Class_42
+    {
+        internal override void Go()
+        {
+            Console.WriteLine($"The bicycle is moving");
+        }
+    }
+    internal class Class_42_Helper3 : Class_42
+    {
+        internal override void Go()
+        {
+            Console.WriteLine($"The boat is moving");
+        }
+    }
 }

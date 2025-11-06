@@ -1302,13 +1302,52 @@ internal class Program
             //      Class_41
 
             // Less modern:
-            Classes.Class_41 someCar = new Classes.Class_41("Chevy", "Corvette", "blue", 2022);
+            Classes.Class_41 carExample = new Classes.Class_41("Chevy", "Corvette", "blue", 2022);
             // More modern:
             Classes.Class_41 car1 = new("Chevy", "Corvette", "blue", 2022);
 
             //? Look in Class_41 for more info.
             Console.WriteLine(car1.ToString());
             Console.WriteLine(car1);
+        }
+
+        static void Method_42()
+        {
+            /*
+                --- 42 - Polymorphism! ---
+            */
+            //  polymorphism    = Greek word that means to "have many forms”
+            //                    Objects can be identified by more than one type
+            //                    Ex. A Dog is also: Canine, Animal, Organism
+
+            //  Helper:
+            //      Class_42
+            //      Class_42_Helper1
+            //      Class_42_Helper2
+            //      Class_42_Helper3
+
+            // All Class_Helper's inherit from Class_42
+            Classes.Class_42_Helper1 car = new();
+            Classes.Class_42_Helper2 bicycle = new();
+            Classes.Class_42_Helper3 boat = new();
+
+            // Only cause all of these classes inherit from Class_42,
+            // can I put all these objects in one array.
+            Classes.Class_42[] vehicles = { car, bicycle, boat };
+
+            // Call the `Go` method on each object in the `vehicles` array.
+            // The objects in this array are subclasses of `Class_42` and have overridden the `Go` method defined in the `Class_42` base class.
+
+            vehicles[0].Go();
+            vehicles[1].Go();
+            vehicles[2].Go();
+
+            Console.WriteLine();
+
+            foreach (Classes.Class_42 vehicle in vehicles)
+            {
+                vehicle.Go();
+            }
         }
 
         //* Remove/Add comment to enable/disable a function.
@@ -1353,6 +1392,7 @@ internal class Program
         //Method_38();
         //Method_39();
         //Method_40();
-        Method_41();
+        //Method_41();
+        Method_42();
     }
 }
