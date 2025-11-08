@@ -249,4 +249,39 @@ internal class Classes
             Console.WriteLine($"The boat is moving");
         }
     }
+
+    interface IClass_43_1 // Would call this class "Prey" if it wasn't for practice.
+    {
+        void Flee(); // Declare
+    }
+    interface IClass_43_2 // Would call this class "Predator" if it wasn't for practice.
+    {
+        void Hunt();
+    }
+    internal class Class_43_1 : IClass_43_1 // Would call this class "Rabbit" if it wasn't for practice.
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The rabbit flees!");
+        }
+    }
+    internal class Class_43_2 : IClass_43_2 // Would call this class "Hawk" if it wasn't for practice.
+    {
+        public void Hunt()
+        {
+            Console.WriteLine("The hawk hunts!");
+        }
+    }
+    internal class Class_43_3 : IClass_43_1, IClass_43_2// Would call this class "Fish" if it wasn't for practice.
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The fish flees!");
+        }
+
+        public void Hunt()
+        {
+            Console.WriteLine("The fish hunts!");
+        }
+    }
 }

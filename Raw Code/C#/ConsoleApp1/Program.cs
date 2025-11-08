@@ -1350,6 +1350,44 @@ internal class Program
             }
         }
 
+        static void Method_43()
+        {
+            /*
+                --- 43 - Interface! ---
+            */
+            //  Interface   = defines a “contract” that all the classes inheriting from should follow
+
+            //                An interface declares "what a class should have"
+            //                An inheriting class defines "how it should do it"
+
+            //                Benefit = security + multiple inheritance + "plug-and-play"
+
+            //  Helper:
+            //      Interfaces:
+            //          IClass_43_1
+            //          IClass_43_2
+            //      Classes:
+            //          Class_43_1
+            //          Class_43_2
+            //          Class_43_3
+
+            // from IClass_43_1 interface representing prey
+            Classes.Class_43_1 rabbit = new();
+
+            // from IClass_43_2 interface representing predator
+            Classes.Class_43_2 hawk = new();
+
+            // from IClass_43_1 and IClass_43_2 interface representing prey and predator
+            Classes.Class_43_3 fish = new();
+
+            rabbit.Flee();
+            hawk.Hunt();
+
+            fish.Flee();
+            fish.Hunt();
+
+        }
+
         //* Remove/Add comment to enable/disable a function.
 
         //Method_1();
@@ -1393,6 +1431,7 @@ internal class Program
         //Method_39();
         //Method_40();
         //Method_41();
-        Method_42();
+        //Method_42();
+        Method_43();
     }
 }
