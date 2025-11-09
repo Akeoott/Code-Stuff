@@ -30,6 +30,9 @@
 
 // わたしはあめちゃん
 
+using System;
+using System.Collections.Generic;
+
 namespace Practice;
 
 internal class Program
@@ -1355,7 +1358,7 @@ internal class Program
             /*
                 --- 43 - Interface! ---
             */
-            //  Interface   = defines a “contract” that all the classes inheriting from should follow
+            //  interface   = defines a “contract” that all the classes inheriting from should follow
 
             //                An interface declares "what a class should have"
             //                An inheriting class defines "how it should do it"
@@ -1385,7 +1388,69 @@ internal class Program
 
             fish.Flee();
             fish.Hunt();
+        }
 
+        static void Method_44()
+        {
+            /*
+                --- 44 - Lists! ---
+            */
+            //  lists   = data structure that represents a list of objects that can be accessed by index.
+            //            Similar to array, but can dynamically increase/decrease in size
+            //            using System.Collections.Generic;
+
+            //  note    : a list uses more memory than an array
+
+            List<string> foodList = new List<string>();
+
+            foodList.Add("pizza");
+            foodList.Add("hamburger");
+            foodList.Add("hotdog");
+            foodList.Add("sushi");
+
+            // Can dynamically add things to a list.
+            foodList.Add("fries");
+
+            // Can dynamically remove things from a list.
+            foodList.Remove("fries");
+
+            // Can dynamically insert things to a list.
+            foodList.Insert(0, "sushi");
+
+            // Get the size of a list.
+            Console.WriteLine(foodList.Count);
+
+            // Get the index of an item.
+            Console.WriteLine(foodList.IndexOf("pizza"));
+
+            // Get the last index of an item.
+            Console.WriteLine(foodList.LastIndexOf("sushi"));
+
+            // Check if a list contains a specific item.
+            Console.WriteLine(foodList.Contains("pizza"));
+
+            // Alphabetically sort a list (from A to Z).
+            foodList.Sort();
+
+            // Reverse Alphabetically sort a list (from Z to A).
+            foodList.Reverse();
+
+            // Clears entire list.
+            foodList.Clear();
+
+            // Convert list to array.
+            string[] foodArray = foodList.ToArray();
+
+            // Display the content of the list and array.
+            foreach (string food in foodList)
+            {
+                Console.WriteLine(food);
+            }
+
+            foreach (string food in foodArray)
+            {
+                Console.WriteLine(food);
+            }
         }
 
         //* Remove/Add comment to enable/disable a function.
@@ -1432,6 +1497,7 @@ internal class Program
         //Method_40();
         //Method_41();
         //Method_42();
-        Method_43();
+        //Method_43();
+        Method_44();
     }
 }
