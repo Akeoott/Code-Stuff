@@ -1,12 +1,13 @@
-// Copyright (c) Akeoott <amejanin00@gmail.com>. Licensed under the LGPL-3.0 License.
+// Copyright (c) Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
-//! NOTE: The code below was intentionally made to be simple and possibly insecure for production code.
-//!       I'm simply learning syntax here and I am not going to make this code secure or stable.
-//!       DON'T take this code and the comments as a reliable source of information about C#.
-//!       As stated in the License, its not my fault if you do something bad with this code
-//!       or the information obtained thru my comments. Anyway, have fun reading!
-//!       (Heh I don't expect anyone to see this file anyway)
+//! README: The code below was intentionally made to be simple, void of error handling,
+//!         reliant on comments, unoptimized and possibly insecure for production code.
+//!         I'm simply learning syntax here and I am not going to make this code secure, performant or stable.
+//!         DON'T take this code and the comments as a reliable source of information about C#.
+//!         As stated in the License, its not my fault if you do something bad with this code
+//!         or the information obtained thru my comments. Anyway, have fun reading!
+//!         (Heh I don't expect anyone to see this file anyway)
 
 // Disabling warnings for practice
 #pragma warning disable
@@ -29,6 +30,7 @@
 // `chmod +x ./program`
 
 // わたしはあめちゃん
+// ばか :P
 
 using System;
 using System.Collections.Generic;
@@ -1496,7 +1498,7 @@ internal class Program
             }
         }
 
-        //* Remove/Add comment to enable/disable a function.
+        //* Add/Remove comments to enable/disable a method.
 
         //Method_1();
         //Method_2();
