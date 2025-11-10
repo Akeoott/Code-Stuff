@@ -294,4 +294,38 @@ internal class Classes
             this.userName = userName;
         }
     }
+
+    internal class Class_46 // Would call this class "Car" if it wasn't for practice.
+    {
+        private int speed; // is private to prevent tampering outside of set bounds made by the `Speed` property
+
+        internal Class_46(int speed)
+        {
+            // we will assign property speed instead of assigning the field
+            Speed = speed;
+        }
+
+        // speed property
+        internal int Speed
+        {
+            get // read
+            {
+                return speed;
+            }
+            set // write
+            {
+                // prevents setting the value above 500 when someone attempts to change the value
+                if (value > 500)
+                {
+                    speed = 500;
+                }
+                else
+                {
+                    speed = value;
+                }
+
+                speed = value;
+            }
+        }
+    }
 }

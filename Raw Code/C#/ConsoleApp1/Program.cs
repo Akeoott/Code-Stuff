@@ -1498,6 +1498,35 @@ internal class Program
             }
         }
 
+        static void Method_46()
+        {
+            /*
+                --- 46 - Getters & Setters! ---
+            */
+            //  getters & setters   = add security to fields by encapsulation
+            //                        They're accessors found within properties
+
+            //  properties          = combine aspects of both fields and methods (share name with a field)
+            //  get accessor        = used to return the property value
+            //  set accessor        = used to assign a new value
+            //  value keyword       = defines the value being assigned by the set (parameter)
+
+            //  Helper:
+            //      Class_46
+
+            Classes.Class_46 car = new(404);
+
+            Console.WriteLine(car.Speed);
+
+            // can only access property instead of field.
+            // this allows "adding" logic to fields. In his example,
+            // `speed` gets limited by the logic inside of `Speed` so no one can exploit it.
+
+            car.Speed = 1000000000; // will actually set to 500 cause of custom limitation.
+
+            Console.WriteLine(car.Speed);
+        }
+
         //* Add/Remove comments to enable/disable a method.
 
         //Method_1();
@@ -1544,6 +1573,7 @@ internal class Program
         //Method_42();
         //Method_43();
         //Method_44();
-        Method_45();
+        //Method_45();
+        Method_46();
     }
 }
