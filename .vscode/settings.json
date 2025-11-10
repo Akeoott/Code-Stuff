@@ -1,3 +1,22 @@
 {
-    "dotnet.defaultSolution": "ConsoleApp1.sln"
+    "dotnet.defaultSolution": "ConsoleApp1.sln",
+    // Spell check
+    "cSpell.caseSensitive": true,
+    "cSpell.autoFormatConfigFile": true,
+    "cSpell.ignoreRegExpList": [
+        "/[A-Z][a-z]+/", // Ignore proper nouns (capitalized words)
+        "/[a-z]+[A-Z][a-z]+/", // Ignore camelCase
+        "/^[A-Z]+$/", // Ignore ALL CAPS
+        "/[0-9]/" // Ignore words with numbers
+    ],
+    "cSpell.userWords": [
+        "Akeoot",
+        "Akeoott",
+        "DIGGI",
+        "dotnet",
+        "DUMM",
+        "hidplayers",
+        "linux",
+        "toyota"
+    ],
 }

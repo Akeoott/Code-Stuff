@@ -284,4 +284,14 @@ internal class Classes
             Console.WriteLine("The fish hunts!");
         }
     }
+
+    internal class Class_45 // Would call this class "Player" if it wasn't for practice.
+    {
+        internal string userName;
+
+        internal Class_45(string userName)
+        {
+            this.userName = userName;
+        }
+    }
 }

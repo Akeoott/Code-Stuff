@@ -1453,6 +1453,49 @@ internal class Program
             }
         }
 
+        static void Method_45()
+        {
+            /*
+                --- 45 - List Of Objects! ---
+            */
+
+            //  Helper:
+            //      Class_45
+
+            // make a list
+            List<Classes.Class_45> players = new();
+
+            // make objects
+            Classes.Class_45 player1 = new("Bob");
+            Classes.Class_45 player2 = new("Chad");
+            Classes.Class_45 player3 = new("Steve");
+
+            // add objects to list
+            players.Add(player1);
+            players.Add(player2);
+            players.Add(player3);
+
+            foreach (Classes.Class_45 player in players)
+            {
+                Console.WriteLine(player.userName);
+            }
+
+            // or make anonymous list
+
+            // make a list
+            List<Classes.Class_45> hidplayers = new();
+
+            // make and add objects to list with no name
+            hidplayers.Add(new("Bob"));
+            hidplayers.Add(new("Chad"));
+            hidplayers.Add(new("Steve"));
+
+            foreach (Classes.Class_45 player in hidplayers)
+            {
+                Console.WriteLine(player.userName);
+            }
+        }
+
         //* Remove/Add comment to enable/disable a function.
 
         //Method_1();
@@ -1498,6 +1541,7 @@ internal class Program
         //Method_41();
         //Method_42();
         //Method_43();
-        Method_44();
+        //Method_44();
+        Method_45();
     }
 }
