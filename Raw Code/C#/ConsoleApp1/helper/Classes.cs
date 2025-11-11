@@ -302,7 +302,7 @@ internal class Classes
         internal Class_46(int speed)
         {
             // we will assign property speed instead of assigning the field
-            Speed = speed;
+            this.Speed = speed;
         }
 
         // speed property
@@ -323,9 +323,19 @@ internal class Classes
                 {
                     speed = value;
                 }
-
-                speed = value;
             }
+        }
+    }
+
+    internal class Class_47 // Would call this class "Car" if it wasn't for practice.
+    {
+        // if you got no additional logic,
+        // you can instantiate the property in one line.
+        internal string Model { get; set; }
+
+        internal Class_47(string model)
+        {
+            this.Model = model;
         }
     }
 }

@@ -1527,6 +1527,24 @@ internal class Program
             Console.WriteLine(car.Speed);
         }
 
+        static void Method_47()
+        {
+            /*
+                --- 47 - Auto Implemented Properties! ---
+            */
+            //  auto implemented properties = shortcut when no additional logic is required in the property
+            //                                you do not have to define a field for a property,
+            //                                you only have to write get; and/or set; inside the property
+
+            //  Helper:
+            //      Class_47
+
+            // look in Class_47 for context
+            Classes.Class_47 car = new("Porsche");
+
+            Console.WriteLine(car.Model);
+        }
+
         //* Add/Remove comments to enable/disable a method.
 
         //Method_1();
@@ -1574,6 +1592,7 @@ internal class Program
         //Method_43();
         //Method_44();
         //Method_45();
-        Method_46();
+        //Method_46();
+        Method_47();
     }
 }
