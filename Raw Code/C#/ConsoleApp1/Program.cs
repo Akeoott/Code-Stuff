@@ -1,4 +1,4 @@
-// Copyright (c) Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
+// Copyright (c) Ame aka Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
 //! README: The code below was intentionally made to be simple, void of error handling,
@@ -1576,6 +1576,27 @@ internal class Program
             }
         }
 
+        static void Method_49()
+        {
+            /*
+                --- 49 - Generic! ---
+            */
+            //  generic = “not specific to a particular data type"
+            //            add<T> to: classes, methods, fields, etc.
+            //            allows for code reusability for different data types
+
+            //  Helper:
+            //      Class_48
+
+            int[] intArray = { 1, 2, 3, 4, 5 };
+            double[] doubleArray = { 1.1, 2.2, 3.3, 4.4, 5.5 };
+            string[] stringArray = { "Ame", "is", "a", "developer" };
+
+            Methods.Method_48_Helper(intArray);
+            Methods.Method_48_Helper(doubleArray);
+            Methods.Method_48_Helper(stringArray);
+        }
+
         //* Add/Remove comments to enable/disable a method.
 
         //Method_1();
@@ -1625,6 +1646,7 @@ internal class Program
         //Method_45();
         //Method_46();
         //Method_47();
-        Method_48();
+        //Method_48();
+        Method_49();
     }
 }
