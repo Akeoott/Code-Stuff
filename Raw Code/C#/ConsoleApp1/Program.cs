@@ -1545,6 +1545,37 @@ internal class Program
             Console.WriteLine(car.Model);
         }
 
+        static void Method_48()
+        {
+            /*
+                --- 48 - Enums! ---
+            */
+            //  enums   = special “class” that contains a set of named integer constants.
+            //            Use enums when you have values that you know will not change,
+            //            To get the integer value from an item, you must explicitly convert to an int
+            //            name = integer
+
+            //  Helper:
+            //      Class_48_1
+            //      Class_48_2
+
+            string name = Classes.Class_48_1.Pluto.ToString();
+            int num = (int)Classes.Class_48_1.Pluto;
+            int radius = (int)Classes.Class_48_2.Pluto;
+            double volume = Methods.Method_48_Helper(radius);
+
+            Console.WriteLine($"{name} is a planet.");
+            Console.WriteLine($"Its number is {num}.");
+            Console.WriteLine($"Its radius is {radius}km.");
+            Console.WriteLine($"Its volume is {volume}km^3\n");
+
+            for (int i = 1; i <= 9; i++)
+            {
+                Classes.Class_48_1 planet = (Classes.Class_48_1)i;
+                Console.WriteLine($"{i}: {planet}");
+            }
+        }
+
         //* Add/Remove comments to enable/disable a method.
 
         //Method_1();
@@ -1593,6 +1624,7 @@ internal class Program
         //Method_44();
         //Method_45();
         //Method_46();
-        Method_47();
+        //Method_47();
+        Method_48();
     }
 }

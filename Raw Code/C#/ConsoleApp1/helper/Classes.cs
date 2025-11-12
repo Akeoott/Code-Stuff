@@ -338,4 +338,29 @@ internal class Classes
             this.Model = model;
         }
     }
+
+    internal enum Class_48_1 // Would call this class/enum "Planets" if it wasn't for practice.
+    {
+        Mercury = 1,
+        Venus = 2,
+        Earth = 3,
+        Mars = 4,
+        Jupiter = 5,
+        Saturn = 6,
+        Uranus = 7,
+        Neptune = 8,
+        Pluto = 9
+    }
+    internal enum Class_48_2 // Would call this class/enum "Planetradius" if it wasn't for practice.
+    {
+        Mercury = 2439,
+        Venus = 6051,
+        Earth = 6371,
+        Mars = 3389,
+        Jupiter = 69911,
+        Saturn = 58232,
+        Uranus = 25362,
+        Neptune = 24622,
+        Pluto = 1188
+    }
 }
