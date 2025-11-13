@@ -34,6 +34,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Practice;
 
@@ -1597,6 +1598,37 @@ internal class Program
             Methods.Method_48_Helper(stringArray);
         }
 
+        static void Method_50()
+        {
+            /*
+                --- 50 - Multithreading! ---
+            */
+            //  thread  = an execution path of a program
+            //            We can use multiple threads to perform,
+            //            different tasks of our program at the same time.
+            //            Current thread running is “main” thread
+            //            using System.Threading;
+
+            //  Helper:
+            //      Class_48
+
+            // Main thread
+            Thread mainThread = Thread.CurrentThread;
+            mainThread.Name = "Main Thread";
+
+            //                   || Lambda expression '() => method()' to pass parameters to the method.
+            // New threads       || This won't be covered, you can ignore it for now.
+            Thread thread1 = new Thread(() => Methods.Method_50_Helper("Thread1")); // Countdown on new thread
+            Thread thread2 = new Thread(() => Methods.Method_50_Helper1("Thread2")); // Countup on new thread
+
+            // Start the threads
+            thread1.Start();
+            thread2.Start();
+
+            Console.WriteLine($"{mainThread.Name} is complete!");
+
+        }
+
         //* Add/Remove comments to enable/disable a method.
 
         //Method_1();
@@ -1647,6 +1679,7 @@ internal class Program
         //Method_46();
         //Method_47();
         //Method_48();
-        Method_49();
+        //Method_49();
+        Method_50();
     }
 }

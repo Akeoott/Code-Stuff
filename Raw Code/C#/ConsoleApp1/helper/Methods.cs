@@ -77,4 +77,23 @@ internal static class Methods
         }
         Console.WriteLine();
     }
+
+    internal static void Method_50_Helper(string name) // Would call this method "CountDown" if it wasn't for practice.
+    {
+        for (int i = 10; i >= 0; i--)
+        {
+            Console.WriteLine($"Thread '{name}': {i}");
+            Thread.Sleep(1000); // Pause for 1 second
+        }
+        Console.WriteLine($"Timer 1# '{name}' finished!");
+    }
+    internal static void Method_50_Helper1(string name) // Would call this method "CountUp" if it wasn't for practice.
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine($"Thread '{name}': {i}");
+            Thread.Sleep(1000); // Pause for 1 second
+        }
+        Console.WriteLine($"Timer 2# '{name}' finished!");
+    }
 }
