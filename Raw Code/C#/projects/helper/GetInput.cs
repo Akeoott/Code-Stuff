@@ -8,16 +8,10 @@ internal static class GetInput
     internal static string GetString(string prompt)
     {
         string? value;
-
         do
         {
             Console.Write(prompt);
             value = Console.ReadLine();
-
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                Console.WriteLine("Please enter a non-empty value.");
-            }
         } while (string.IsNullOrWhiteSpace(value));
         return value;
     }
@@ -41,6 +35,17 @@ internal static class GetInput
             if (int.TryParse(Console.ReadLine(), out int value))
                 return value;
             Console.WriteLine("Invalid number, try again.");
+        }
+    }
+
+    internal static bool GetBool(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            if (bool.TryParse(Console.ReadLine(), out bool value))
+                return value;
+            Console.WriteLine("Invalid boolean, try again.");
         }
     }
 }

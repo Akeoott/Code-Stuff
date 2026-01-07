@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 
 namespace Program;
 
-internal class CryptRNG
+internal static class CryptRNG
 {
     const string Header =
         """

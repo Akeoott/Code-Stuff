@@ -89,7 +89,7 @@ internal static class FactorialCalc
     {
         if (input <= 1) return 1;
 
-        List<BigInteger> products = new List<BigInteger>();
+        List<BigInteger> products = [];
 
         for (int i = 2; i <= input; i += 2)
         {
@@ -101,7 +101,7 @@ internal static class FactorialCalc
 
         while (products.Count > 1)
         {
-            List<BigInteger> newProducts = new List<BigInteger>();
+            List<BigInteger> newProducts = [];
             for (int i = 0; i < products.Count; i += 2)
             {
                 if (i + 1 < products.Count)
@@ -131,7 +131,7 @@ internal static class FactorialCalc
 
         if (mantissaDigits.Length > 6)
         {
-            mantissaDigits = mantissaDigits.Substring(0, 6);
+            mantissaDigits = mantissaDigits[..6];
         }
         else if (mantissaDigits.Length < 6)
         {

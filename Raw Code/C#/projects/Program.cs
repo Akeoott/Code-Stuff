@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace Program;
 
-internal sealed class RunProgram
+internal static class RunProgram
 {
     private const string Header =
         """
@@ -18,10 +18,11 @@ internal sealed class RunProgram
     private const string Options =
         """
         Options:
-            Enter 'exit' to exit application
+            Enter 'exit' to exit application (Get outta here)
             Enter '1'    for UnitConverter   (Convert units)
             Enter '2'    for FactorialCalc   (Calculate factorials)
             Enter '3'    for CryptRNG        (Generates random numbers)
+            Enter '4'    for RollDice        (Rolles a dice till it gets the best result)
 
         """;
 
@@ -66,8 +67,14 @@ internal sealed class RunProgram
                     CryptRNG.RunCryptRNG();
                     return;
 
+                case "4":
+                    Console.Clear();
+                    RollDice.RunRollDice();
+                    return;
+
                 default:
                     Console.WriteLine("Invalid option.");
+                    Console.WriteLine(Options);
                     break;
             }
         }
