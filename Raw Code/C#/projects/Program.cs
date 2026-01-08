@@ -19,10 +19,9 @@ internal static class RunProgram
         """
         Options:
             Enter 'exit' to exit application (Get outta here)
-            Enter '1'    for UnitConverter   (Convert units)
-            Enter '2'    for FactorialCalc   (Calculate factorials)
+            Enter '1'    for FactorialCalc   (Calculate factorials)
+            Enter '2'    for RollDice        (Rolles a dice till it gets the best result)
             Enter '3'    for CryptRNG        (Generates random numbers)
-            Enter '4'    for RollDice        (Rolles a dice till it gets the best result)
 
         """;
 
@@ -54,22 +53,17 @@ internal static class RunProgram
 
                 case "1":
                     Console.Clear();
-                    UnitConverter.RunUnitConverter();
+                    FactorialCalc.RunFactorialCalc();
                     return;
 
                 case "2":
                     Console.Clear();
-                    FactorialCalc.RunFactorialCalc();
+                    RollDice.RunRollDice();
                     return;
 
                 case "3":
                     Console.Clear();
                     CryptRNG.RunCryptRNG();
-                    return;
-
-                case "4":
-                    Console.Clear();
-                    RollDice.RunRollDice();
                     return;
 
                 default:
