@@ -79,7 +79,7 @@ internal static class UnitConverter
             Console.WriteLine(Options);
             string from = GetInput.GetString("Convert from : ").ToLower(CultureInfo.CurrentCulture).Trim();
             string to = GetInput.GetString("Convert to   : ").ToLower(CultureInfo.CurrentCulture).Trim();
-            float value = GetInput.GetFloat("Value        : ");
+            double value = GetInput.GetDouble("Value        : ");
 
             int GetPower(string unit) => unit switch
             {
@@ -106,7 +106,7 @@ internal static class UnitConverter
                 continue;
             }
 
-            float result = fromPow < toPow
+            double result = fromPow < toPow
                 ? value / MathF.Pow(1024f, toPow - fromPow)
                 : value * MathF.Pow(1024f, fromPow - toPow);
 
@@ -139,7 +139,7 @@ internal static class UnitConverter
             Console.WriteLine(Options);
             string from = GetInput.GetString("Convert from : ").ToLower(CultureInfo.CurrentCulture).Trim();
             string to = GetInput.GetString("Convert to   : ").ToLower(CultureInfo.CurrentCulture).Trim();
-            float value = GetInput.GetFloat("Value        : ");
+            double value = GetInput.GetDouble("Value        : ");
 
             int GetPower(string unit) => unit switch
             {
@@ -166,7 +166,7 @@ internal static class UnitConverter
                 continue;
             }
 
-            float result = fromPow > toPow
+            double result = fromPow > toPow
                 ? value / MathF.Pow(1000f, toPow - fromPow)
                 : value * MathF.Pow(1000f, fromPow - toPow);
 

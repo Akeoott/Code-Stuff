@@ -1,6 +1,8 @@
 // Copyright (c) Ame aka Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
+using System.Numerics;
+
 namespace Program;
 
 internal static class GetInput
@@ -16,14 +18,18 @@ internal static class GetInput
         return value;
     }
 
-    internal static float GetFloat(string prompt)
+    internal static double GetDouble(string prompt)
     {
         while (true)
         {
             Console.Write(prompt);
-            if (float.TryParse(Console.ReadLine(), out float value))
-                return value;
-            Console.WriteLine("Invalid number, try again.");
+            if (double.TryParse(Console.ReadLine(), out double value))
+                if (0 != value)
+                    return value;
+                else
+                    Console.WriteLine("Value can't be 0.");
+            else
+                Console.WriteLine("Invalid number, try again.");
         }
     }
 
@@ -33,8 +39,12 @@ internal static class GetInput
         {
             Console.Write(prompt);
             if (int.TryParse(Console.ReadLine(), out int value))
-                return value;
-            Console.WriteLine("Invalid number, try again.");
+                if (0 != value)
+                    return value;
+                else
+                    Console.WriteLine("Value can't be 0.");
+            else
+                Console.WriteLine("Invalid number, try again.");
         }
     }
 
