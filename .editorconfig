@@ -24,7 +24,7 @@ indent_size = 4
 # IDE0073: Require file header
 
 # EXAMPLE FILE HEADER TEMPLATE
-file_header_template = Copyright (c) Ame aka Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.\nSee the LICENSE file in the repository root for full license text.
+file_header_template = Copyright (c) Ame (Akeoott) <ame@akeoot.org>. Licensed under the LGPL-3.0 License.\nSee the LICENSE file in the repository root for full license text.
 
 # IDE0073 Severity: Force this to be a suggestion/warning
 dotnet_diagnostic.IDE0073.severity = error

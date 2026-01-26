@@ -1,4 +1,4 @@
-﻿// Copyright (c) Ame aka Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
+﻿// Copyright (c) Ame (Akeoott) <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
 using System.Globalization;
@@ -18,10 +18,10 @@ internal static class RunProgram
     private const string Options =
         """
         Options:
-            Enter 'exit' to exit application (Get outta here)
-            Enter '1'    for FactorialCalc   (Calculate factorials)
-            Enter '2'    for RollDice        (Rolles a dice till it gets the best result)
-            Enter '3'    for CryptRNG        (Generates random numbers)
+            Enter 'exit' to exit application  (Get outta here)
+            Enter '1'    for FactorialCalc    (Calculate factorials)
+            Enter '2'    for SimpleStack      (Access a simple stack)
+            Enter '3'    for CryptRNG         (Generates random numbers)
 
         """;
 
@@ -53,17 +53,17 @@ internal static class RunProgram
 
                 case "1":
                     Console.Clear();
-                    FactorialCalc.RunFactorialCalc();
+                    FactorialCalc.Run();
                     return;
 
                 case "2":
                     Console.Clear();
-                    RollDice.RunRollDice();
+                    SimpleStack.Run();
                     return;
 
                 case "3":
                     Console.Clear();
-                    CryptRNG.RunCryptRNG();
+                    CryptRNG.Run();
                     return;
 
                 default:

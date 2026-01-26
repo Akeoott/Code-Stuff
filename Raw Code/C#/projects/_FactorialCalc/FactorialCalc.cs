@@ -1,4 +1,4 @@
-// Copyright (c) Ame aka Akeoott <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
+// Copyright (c) Ame (Akeoott) <ame@akeoot.org>. Licensed under the LGPL-3.0 License.
 // See the LICENSE file in the repository root for full license text.
 
 using System.Numerics;
@@ -28,7 +28,7 @@ internal static class FactorialCalc
 
         """;
 
-    internal static void RunFactorialCalc()
+    internal static void Run()
     {
         Console.WriteLine(Header);
         Console.WriteLine(Hello);
