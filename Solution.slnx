@@ -1,0 +1,12 @@
+<?xml-model href="Solution.xsd"?>
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Raw Code/C#/">
+    <Project Path="Raw Code/C#/ConsoleApp1/ConsoleApp1.csproj" />
+    <Project Path="Raw Code/C#/projects/projects.csproj" />
+  </Folder>
+</Solution>
