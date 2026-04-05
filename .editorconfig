@@ -1,42 +1,40 @@
-# top-most EditorConfig file
 root = true
 
-# ==================================
-# General Settings (applies to all files)
-# ==================================
+# ================
+# General Settings
 
 [*]
 # Core settings
 charset = utf-8
 end_of_line = lf
-insert_final_newline = true
 trim_trailing_whitespace = true
 
-# Indentation
+# Default Indentation
 indent_style = space
 indent_size = 4
 
-# ==================================
+# ====================
+# Web Styling Settings
+
+[*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,vue}]
+indent_size = 4
+[*.{css,scss,sass,less,styl}]
+indent_size = 2
+
+# ==============================
 # C# (.NET SDK) Styling Settings
-# ==================================
 
 [*.cs]
-# IDE0073: Require file header
-
-# EXAMPLE FILE HEADER TEMPLATE
+# File Header
 file_header_template = Copyright (c) Ame (Akeoott) <ame@akeoot.org>. Licensed under the LGPL-3.0 License.\nSee the LICENSE file in the repository root for full license text.
-
-# IDE0073 Severity: Force this to be a suggestion/warning
 dotnet_diagnostic.IDE0073.severity = error
 
-# C# Specific Naming and Styling Rules
+# using
+dotnet_separate_import_directive_groups = true
+csharp_style_using_directive_placement = outside_namespace:suggestion
 csharp_style_namespace_declaration = file_scoped:suggestion
 
-# IDE0005: Remove unnecessary usings
-dotnet_separate_import_directive_groups = false
-csharp_style_using_directive_placement = outside_namespace:suggestion
-
-# Code Block Preferences (Braces, Newlines)
+# Code Block
 csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true
@@ -45,18 +43,24 @@ csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_preserve_single_line_blocks = true
 
-# ==================================
+insert_final_newline = true
+
+# xml based files
+[*.{xml,axaml,slnx,csproj}]
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+# =======================
 # Python Styling Settings
-# ==================================
 
 [*.py]
-# Python's PEP 8 standard recommends 4 spaces for indentation
+insert_final_newline = true
 indent_style = space
 indent_size = 4
 
-# ==================================
+# =======================
 # Markdown and Text Files
-# ==================================
 
 [*.{md,txt}]
 trim_trailing_whitespace = true
