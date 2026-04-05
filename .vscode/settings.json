@@ -1,5 +1,5 @@
 {
-    "dotnet.defaultSolution": "ConsoleApp1.sln",
+    "dotnet.defaultSolution": "Solution.slnx",
     // Spell check
     "cSpell.caseSensitive": true,
     "cSpell.autoFormatConfigFile": true,
