@@ -24,7 +24,7 @@ internal static class FactorialCalc
         """
         Hello, World!
         This is a factorial calculator made by Akeoott!
-        (Handles the 5 Millionth factorial in around ~94s for my system)
+        (Handles the 5 Millionth factorial in around ~69s (calculation only) for my system)
 
         """;
 
@@ -117,32 +117,24 @@ internal static class FactorialCalc
 
     private static string GetNotation(BigInteger number)
     {
-        if (number == 0) return "0e0";
+        if (number.IsZero) return "0e0";
 
-        bool isNegative = number < 0;
-        BigInteger absValue = isNegative ? -number : number;
-
-        int exponent = (int)BigInteger.Log10(absValue);
-
-        BigInteger scale = BigInteger.Pow(10, exponent);
-        BigInteger scaledValue = absValue * 1_000_000 / scale;
-
-        string mantissaDigits = scaledValue.ToString(CultureInfo.InvariantCulture);
-
-        if (mantissaDigits.Length > 6)
+        try
         {
-            mantissaDigits = mantissaDigits[..6];
+            bool isNegative = number.Sign < 0;
+
+            BigInteger absValue = BigInteger.Abs(number);
+            double log10 = BigInteger.Log10(absValue);
+            long exponent = (long)Math.Floor(log10);
+            double mantissaValue = Math.Pow(10, log10 - (double)exponent);
+
+            string sign = isNegative ? "-" : "";
+            return $"{sign}{mantissaValue:0.00000}e{exponent}";
         }
-        else if (mantissaDigits.Length < 6)
+        catch (Exception ex)
         {
-            mantissaDigits = mantissaDigits.PadRight(6, '0');
+            return $"Error: {ex.Message}";
         }
-
-        string mantissa = mantissaDigits.Length > 1
-            ? string.Concat(mantissaDigits.AsSpan(0, 1), ".", mantissaDigits.AsSpan(1))
-            : mantissaDigits;
-
-        string sign = isNegative ? "-" : "";
-        return $"{sign}{mantissa}e{exponent}";
     }
+
 }
