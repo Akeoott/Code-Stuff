@@ -3,6 +3,8 @@
 
 using System.Globalization;
 
+using sorting;
+
 namespace Program;
 
 internal static class RunProgram
@@ -22,6 +24,7 @@ internal static class RunProgram
             Enter '1'    for FactorialCalc    (Calculate factorials)
             Enter '2'    for SimpleStack      (Access a simple stack)
             Enter '3'    for CryptRNG         (Generates random numbers)
+            Enter '4'    for BogoSort         (Guessing algorithm)
 
         """;
 
@@ -64,6 +67,11 @@ internal static class RunProgram
                 case "3":
                     Console.Clear();
                     CryptRNG.Run();
+                    return;
+
+                case "4":
+                    Console.Clear();
+                    BogoSort.Run();
                     return;
 
                 default:

@@ -85,7 +85,7 @@ internal static class FactorialCalc
             """);
     }
 
-    private static BigInteger CalcFactorial(int input)
+    internal static BigInteger CalcFactorial(int input)
     {
         if (input <= 1) return 1;
 
@@ -115,7 +115,7 @@ internal static class FactorialCalc
         return products[0];
     }
 
-    private static string GetNotation(BigInteger number)
+    internal static string GetNotation(BigInteger number)
     {
         if (number.IsZero) return "0e0";
 
@@ -129,7 +129,7 @@ internal static class FactorialCalc
             double mantissaValue = Math.Pow(10, log10 - (double)exponent);
 
             string sign = isNegative ? "-" : "";
-            return $"{sign}{mantissaValue:0.00000}e{exponent}";
+            return $"{sign}{mantissaValue:0.00000}e+{exponent}";
         }
         catch (Exception ex)
         {
